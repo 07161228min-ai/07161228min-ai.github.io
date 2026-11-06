@@ -126,9 +126,11 @@ h1 em { font-style:normal; color:var(--pu); }
     <div class="ctas">
       <button class="btn main" id="sharebtn" onclick="shareTest()">👨 아빠는 무슨 유형일까? 보내기</button>
       <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
+      <div id="promo">
       <a class="btn kakao" href="http://pf.kakao.com/_AxnaSxb" target="_blank" rel="noopener" onclick="track('kakao')">💬 카톡 친구 추가하고 우리 유형 루틴표 받기</a>
       <p class="count" style="margin-top:6px">친구 추가하면 유형별 '아침 10분 루틴표'가 바로 와요</p>
       <a class="btn mint" href="https://link.inpock.co.kr/mdcr7" target="_blank" rel="noopener" onclick="track('inpock')">📚 등원·생활 루틴 무료 자료 보기</a>
+      </div>
       <button class="btn line" onclick="restart()" style="border-color:#cfc4e2;color:var(--sub)">↺ 다시 하기</button>
     </div>
     <div class="sec" style="padding-top:0"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
@@ -188,6 +190,9 @@ const from = QS.get("from") || "direct";
 const WHO = QS.get("who")==="dad" ? "dad" : "mom";
 const ROLE = WHO==="dad" ? "아빠" : "엄마", OTHER = WHO==="dad" ? "엄마" : "아빠";
 const IMG = WHO==="dad" ? "d" : "";
+// 번개쇼츠에서 온 사람(b=1): 홍보 버튼 없이 재미·공유만. 공유 링크에도 b=1을 이어 붙임
+const BG = QS.get("b")==="1";
+const BGQ = BG ? "&b=1" : "";
 const PT = TYPES[QS.get("pt")] ? QS.get("pt") : null;
 const R = s => WHO==="dad" ? s.replaceAll("엄마","아빠") : s;           // 내 쪽 문구
 const RO = s => WHO==="dad" ? s.replaceAll("아빠","엄마") : s;          // 짝꿍 쪽 문구
@@ -238,8 +243,8 @@ function finish(){
   // 동점이면 마지막 문항 쪽(최근 답)에 가까운 유형
   const tied = ORDER.filter(k=>s[k]===s[top]);
   if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
-  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}`;
-  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k]).join("")}${keep}`);
+  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}${BGQ}`;
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k].toString(16)).join("")}${keep}`);
   window._mine = top;
   showResult(top, s);
   track('finish');
@@ -278,7 +283,7 @@ function showResult(k, s){
   show("result");
 }
 function peek(x){ const s = window._res ? window._res.s : {T:0,N:0,F:0,P:0}; showResult(x, s); toast(`${nm(x)} 구경 중이에요`); }
-function restart(){ const q = `${WHO==="dad"?"who=dad":""}${PT?(WHO==="dad"?"&":"")+"pt="+PT:""}`; history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
+function restart(){ const q = [WHO==="dad"?"who=dad":"", PT?"pt="+PT:"", BG?"b=1":"", from!=="direct"?"from="+from:""].filter(Boolean).join("&"); history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
 function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
 
 async function shareTest(){
@@ -287,11 +292,11 @@ async function shareTest(){
   const base = location.origin + location.pathname;
   let url, text;
   if (PT){ // 둘 다 끝남 → 궁합 결과 보여 주는 링크
-    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x]).join("");
-    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share`;
+    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x].toString(16)).join("");
+    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share${BGQ}`;
     text = `우리 집 아침 궁합 ${c.s}점, '${c.t}'래 😆 나는 ${TYPES[k].emoji} ${nm(k)}!`;
   } else {  // 상대에게 테스트 보내기 → 끝나면 궁합이 나옴
-    url = `${base}?who=${WHO==="mom"?"dad":"mom"}&pt=${k}&from=share`;
+    url = `${base}?who=${WHO==="mom"?"dad":"mom"}&pt=${k}&from=share${BGQ}`;
     text = `나는 ${TYPES[k].emoji} ${nm(k)}래 😂 ${OTHER}는 무슨 유형일까? 1분이면 끝, 다 하면 우리 궁합 나와!`;
   }
   if (navigator.share){ try { await navigator.share({title:"아침 등원 전쟁, 나는 무슨 엄마·아빠?", text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
@@ -346,11 +351,12 @@ function saveCard(){
 
 // 공유 링크로 들어온 결과(?r=) 바로 보여 주기 대신, 받은 사람은 테스트부터 하게
 (function(){ const r = QS.get("r"), m = QS.get("m");
+  if (BG) $("promo").classList.add("hide");
   if (WHO==="dad"){ $("h1role").textContent = "무슨 아빠"; document.title = "아침 등원 전쟁, 나는 무슨 아빠? | 맘들의 정보터"; }
   $("rnote").innerHTML = `재미로 보는 테스트예요. 정답인 ${ROLE} 유형은 없어요 💜<br>맘들의 정보터`;
   if (PT){ $("invite").innerHTML = `${OTHER}는 ${TYPES[PT].emoji} <b>${ptName(PT)}</b>래요!<br>내 유형까지 알면 💑 우리 집 아침 궁합이 나와요`; $("invite").classList.remove("hide"); }
-  if (r && TYPES[r] && m && /^\d{4}$/.test(m) && (from==="direct" || QS.get("v")==="1")){
-    const s={}; ORDER.forEach((k,i)=>s[k]=+m[i]); window._mine = r; showResult(r, s); } })();
+  if (r && TYPES[r] && m && /^[0-9a]{4}$/.test(m) && (from==="direct" || QS.get("v")==="1")){
+    const s={}; ORDER.forEach((k,i)=>s[k]=parseInt(m[i],16)); window._mine = r; showResult(r, s); } })();
 </script>
 </body>
 </html>
