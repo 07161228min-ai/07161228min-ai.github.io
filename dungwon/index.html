@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>아침 등원 전쟁, 나는 무슨 엄마? | 맘들의 정보터</title>
 <meta name="description" content="10문항 1분! 아침 등원 전쟁 속 나의 엄마 유형을 알아보세요. 시계토끼·협상가·소방관·느긋 판다 중 나는?">
-<meta property="og:title" content="아침 등원 전쟁, 나는 무슨 엄마? 🏃‍♀️">
-<meta property="og:description" content="10문항 1분 테스트 · 시계토끼·협상가·소방관·느긋 판다 중 나는?">
-<meta property="og:image" content="img/cover.jpg">
+<meta property="og:title" content="아침 등원 전쟁, 나는 무슨 엄마·아빠? 🏃‍♀️">
+<meta property="og:description" content="10문항 1분 테스트 · 끝나면 우리 부부 아침 궁합까지!">
+<meta property="og:image" content="https://07161228min-ai.github.io/dungwon/img/cover.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -69,6 +69,15 @@ h1 em { font-style:normal; color:var(--pu); }
 .others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
 .others button { border:0; background:#f8f5fc; border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; }
 .others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
+.invite { background:#fff4d6; border-radius:14px; padding:10px 14px; font-size:15px; font-weight:700; margin-top:12px; }
+.compat { margin:16px 20px 4px; background:linear-gradient(135deg,#f6f1fc,#fff4f0); border:2px solid #eadff7; border-radius:18px; padding:16px; text-align:center; }
+.compat .ct { font-size:14px; font-weight:800; color:var(--sub); }
+.compat .cp { font-size:17px; font-weight:800; margin-top:6px; }
+.compat .cs { font-size:40px; font-weight:900; color:var(--pu); line-height:1.1; margin-top:6px; }
+.compat .cs small { font-size:18px; }
+.compat .cn { font-size:18px; font-weight:900; margin-top:2px; }
+.compat .cd { font-size:15px; color:#433d4d; margin-top:8px; text-align:left; }
+.compat .ctip { font-size:14px; color:var(--mint); font-weight:700; margin-top:8px; text-align:left; }
 </style>
 </head>
 <body>
@@ -79,8 +88,9 @@ h1 em { font-style:normal; color:var(--pu); }
   <section id="start" class="card">
     <div class="hero"><img src="img/cover.jpg" alt="양말을 안 신겠다는 아이와 시계를 보는 엄마"></div>
     <div class="pad">
-      <h1>아침 등원 전쟁,<br>나는 <em>무슨 엄마</em>일까?</h1>
+      <h1>아침 등원 전쟁,<br>나는 <em id="h1role">무슨 엄마</em>일까?</h1>
       <p class="lead">양말 거부, 머리 묶기, 갑자기 시작된 그림 그리기…<br>10문항으로 알아보는 나의 아침 유형</p>
+      <div class="invite hide" id="invite"></div>
       <div class="chips"><span class="chip">⏰ 시계토끼</span><span class="chip">🤝 협상가</span><span class="chip">🚒 소방관</span><span class="chip">🐼 느긋 판다</span></div>
       <button class="btn main" onclick="begin()">테스트 시작하기</button>
       <p class="count">10문항 · 약 1분 · 답은 저장되지 않아요</p>
@@ -108,20 +118,22 @@ h1 em { font-style:normal; color:var(--pu); }
     <div class="sec mix"><h3>📊 나의 아침 성분표</h3><div id="mix"></div></div>
     <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
     <div class="sec"><h3>⏱ 내일 아침 10분 아끼는 팁</h3><ul id="rtips"></ul></div>
+    <div class="compat hide" id="compat"></div>
     <div class="sec"><div class="pair">
-      <div><b>찰떡 짝꿍 아빠</b><span id="rbest"></span></div>
-      <div><b>아침마다 부딪히는 아빠</b><span id="rworst"></span></div>
+      <div><b id="lbest">찰떡 짝꿍 아빠</b><span id="rbest"></span></div>
+      <div><b id="lworst">아침마다 부딪히는 아빠</b><span id="rworst"></span></div>
     </div></div>
     <div class="ctas">
-      <button class="btn main" onclick="shareTest()">👨 아빠는 무슨 유형일까? 보내기</button>
+      <button class="btn main" id="sharebtn" onclick="shareTest()">👨 아빠는 무슨 유형일까? 보내기</button>
       <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
-      <a class="btn kakao" href="http://pf.kakao.com/_AxnaSxb" target="_blank" rel="noopener" onclick="track('kakao')">💬 카톡 친구 추가하고 새 테스트 먼저 받기</a>
+      <a class="btn kakao" href="http://pf.kakao.com/_AxnaSxb" target="_blank" rel="noopener" onclick="track('kakao')">💬 카톡 친구 추가하고 우리 유형 루틴표 받기</a>
+      <p class="count" style="margin-top:6px">친구 추가하면 유형별 '아침 10분 루틴표'가 바로 와요</p>
       <a class="btn mint" href="https://link.inpock.co.kr/mdcr7" target="_blank" rel="noopener" onclick="track('inpock')">📚 등원·생활 루틴 무료 자료 보기</a>
       <button class="btn line" onclick="restart()" style="border-color:#cfc4e2;color:var(--sub)">↺ 다시 하기</button>
     </div>
     <div class="sec" style="padding-top:0"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
     <div class="others" id="others"></div>
-    <p class="note" style="padding:0 20px 18px">재미로 보는 테스트예요. 정답인 엄마 유형은 없어요 💜<br>맘들의 정보터</p>
+    <p class="note" id="rnote" style="padding:0 20px 18px">재미로 보는 테스트예요. 정답인 엄마 유형은 없어요 💜<br>맘들의 정보터</p>
   </section>
 
   <canvas id="cv" width="1080" height="1350" class="hide"></canvas>
@@ -170,7 +182,33 @@ const Q = [
 const ORDER = ["T","N","F","P"];
 let cur = 0, ans = [];
 const $ = id => document.getElementById(id);
-const from = new URLSearchParams(location.search).get("from") || "direct";
+const QS = new URLSearchParams(location.search);
+const from = QS.get("from") || "direct";
+// 엄마/아빠 모드 + 상대 유형(pt)
+const WHO = QS.get("who")==="dad" ? "dad" : "mom";
+const ROLE = WHO==="dad" ? "아빠" : "엄마", OTHER = WHO==="dad" ? "엄마" : "아빠";
+const IMG = WHO==="dad" ? "d" : "";
+const PT = TYPES[QS.get("pt")] ? QS.get("pt") : null;
+const R = s => WHO==="dad" ? s.replaceAll("엄마","아빠") : s;           // 내 쪽 문구
+const RO = s => WHO==="dad" ? s.replaceAll("아빠","엄마") : s;          // 짝꿍 쪽 문구
+const nm = k => TYPES[k].name.replace("엄마", ROLE);                   // 내 유형 이름
+const ptName = k => TYPES[k].name.replace("엄마", OTHER);              // 상대 유형 이름
+if (WHO==="dad") Q[6] = ["우리 집 아침, 내 역할은?", [["T","정해진 내 담당이 있다 (예: 등원 차량)"],["N","\"오늘은 내가 할게\" 그날그날 정한다"],["F","눈 뜨자마자 투입, 닥치는 대로"],["P","아이랑 놀아 주며 천천히 준비시킨다"]]];
+// 부부 아침 궁합 (순서 무관, 재미용)
+const COMPAT = {
+  TN:{s:95, t:"환상의 진행팀", d:"한 사람은 시간표를, 한 사람은 아이 마음을 맡아요. 역할만 나눠 두면 아침이 제일 조용한 조합이에요.", tip:"시간 담당·달래기 담당을 아예 정해 두기"},
+  FP:{s:92, t:"엑셀과 브레이크", d:"급한 사람과 느긋한 사람이 서로 속도를 맞춰 줘요. 한쪽이 서두르면 한쪽이 숨을 돌리게 해 주는 조합이에요.", tip:"출발 10분 전 신호는 급한 쪽이, 아이 달래기는 느긋한 쪽이"},
+  TT:{s:88, t:"칼각 2인조", d:"둘 다 계획파라 아침이 기차 시간표처럼 굴러가요. 대신 계획이 틀어진 날엔 서로 예민해질 수 있어요.", tip:"'늦는 날 플랜 B' 하나만 미리 정해 두기"},
+  NN:{s:80, t:"토론하는 가족", d:"아이 말을 잘 들어 주는 집이에요. 다만 셋이 협상을 시작하면 시계가 멈춰요.", tip:"마감 시간은 한 사람이 정하기"},
+  TF:{s:78, t:"계획과 현장", d:"한 사람은 전날 밤에, 한 사람은 아침 돌발 상황에 강해요. 각자 잘하는 시간대가 달라요.", tip:"전날 밤 준비는 계획파, 아침 돌발은 출동파 담당"},
+  NP:{s:75, t:"다정한 늦잠팀", d:"아이 마음은 최고로 챙기는데, 시계는 아무도 안 보는 집이에요.", tip:"출발 알람 하나만 같이 맞춰 두기"},
+  PP:{s:72, t:"주말 같은 평일", d:"아침 분위기가 제일 평화로운 집이에요. 시간이 정해진 날만 조금 아슬아슬해요.", tip:"체험학습·행사 날만 알람 2개"},
+  FF:{s:70, t:"출동 2인조", d:"위기 대응은 최강인데, 둘 다 전날 준비를 안 해서 매일 아침이 실전이에요.", tip:"가방 하나만 전날 밤 현관에 두기"},
+  NF:{s:60, t:"말 vs 행동", d:"한 사람은 아직 설득 중인데, 한 사람은 이미 아이를 안고 나가요.", tip:"아이 앞에서 서로 방식을 뒤집지 않기로 약속"},
+  TP:{s:58, t:"시계 vs 달력", d:"한 사람은 분 단위, 한 사람은 하루 단위로 움직여요. 서로 답답할 수 있어요.", tip:"아침 담당 요일을 나눠서 각자 방식대로"}
+};
+const ckey = (a,b) => [a,b].sort((x,y)=>ORDER.indexOf(x)-ORDER.indexOf(y)).join("");
+const getCompat = (a,b) => COMPAT[ckey(a,b)];
 
 function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
 function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
@@ -200,37 +238,63 @@ function finish(){
   // 동점이면 마지막 문항 쪽(최근 답)에 가까운 유형
   const tied = ORDER.filter(k=>s[k]===s[top]);
   if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
-  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k]).join("")}${from!=="direct"?"&from="+from:""}`);
+  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}`;
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k]).join("")}${keep}`);
+  window._mine = top;
   showResult(top, s);
   track('finish');
 }
 function showResult(k, s){
   const t = TYPES[k];
-  $("rname").textContent = `${t.emoji} ${t.name}`;
+  $("rname").textContent = `${t.emoji} ${nm(k)}`;
   $("rname").style.color = t.color;
   $("rline").textContent = t.line;
-  $("rimg").src = `img/${k}.jpg`; $("rimg").alt = t.name;
-  $("rdesc").textContent = t.desc;
-  $("rgood").innerHTML = t.good.map(x=>`<li>${x}</li>`).join("");
-  $("rtips").innerHTML = t.tips.map(x=>`<li>${x}</li>`).join("");
-  $("rbest").textContent = t.best; $("rworst").textContent = t.worst;
+  $("rimg").src = `img/${IMG}${k}.jpg`; $("rimg").alt = nm(k);
+  $("rdesc").textContent = R(t.desc);
+  $("rgood").innerHTML = t.good.map(x=>`<li>${R(x)}</li>`).join("");
+  $("rtips").innerHTML = t.tips.map(x=>`<li>${R(x)}</li>`).join("");
+  $("lbest").textContent = `찰떡 짝꿍 ${OTHER}`; $("lworst").textContent = `아침마다 부딪히는 ${OTHER}`;
+  $("rbest").textContent = RO(t.best); $("rworst").textContent = RO(t.worst);
   const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
   $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
     return `<div class="row"><span>${TYPES[x].emoji} ${TYPES[x].name.replace(" 엄마","")}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
-  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="peek('${x}')"><img src="img/${x}.jpg" alt="">${TYPES[x].emoji} ${TYPES[x].name}</button>`).join("");
-  window._res = {k, s};
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="peek('${x}')"><img src="img/${IMG}${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
+  // 궁합 카드 (상대 유형을 알 때만, 내 진짜 결과 기준)
+  const mine = window._mine || k;
+  if (PT && k===mine){
+    const c = getCompat(mine, PT);
+    const momK = WHO==="mom" ? mine : PT, dadK = WHO==="mom" ? PT : mine;
+    $("compat").innerHTML = `<div class="ct">💑 우리 집 아침 궁합</div>
+      <div class="cp">엄마 ${TYPES[momK].emoji} ${TYPES[momK].name.replace(" 엄마","")} × 아빠 ${TYPES[dadK].emoji} ${TYPES[dadK].name.replace(" 엄마","")}</div>
+      <div class="cs">${c.s}<small>점</small></div><div class="cn">${c.t}</div>
+      <div class="cd">${c.d}</div><div class="ctip">💡 ${c.tip}</div>`;
+    $("compat").classList.remove("hide");
+    $("sharebtn").textContent = `💑 우리 궁합 결과 ${OTHER}에게 보내기`;
+  } else {
+    $("compat").classList.add("hide");
+    $("sharebtn").textContent = WHO==="mom" ? "👨 아빠는 무슨 유형일까? 보내기" : "👩 엄마는 무슨 유형일까? 보내기";
+  }
+  window._res = {k: mine, s};
   show("result");
 }
-function peek(x){ const s = window._res ? window._res.s : {T:0,N:0,F:0,P:0}; showResult(x, s); toast(`${TYPES[x].name} 구경 중이에요`); }
-function restart(){ history.replaceState(null,"",location.pathname); show("start"); }
+function peek(x){ const s = window._res ? window._res.s : {T:0,N:0,F:0,P:0}; showResult(x, s); toast(`${nm(x)} 구경 중이에요`); }
+function restart(){ const q = `${WHO==="dad"?"who=dad":""}${PT?(WHO==="dad"?"&":"")+"pt="+PT:""}`; history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
 function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
 
 async function shareTest(){
   track('share');
   const k = window._res ? window._res.k : "T";
-  const url = location.origin + location.pathname + "?from=share";
-  const text = `나는 ${TYPES[k].emoji} ${TYPES[k].name}래 😂 아빠는 무슨 유형일까? 1분 테스트 해 봐!`;
-  if (navigator.share){ try { await navigator.share({title:"아침 등원 전쟁, 나는 무슨 엄마?", text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
+  const base = location.origin + location.pathname;
+  let url, text;
+  if (PT){ // 둘 다 끝남 → 궁합 결과 보여 주는 링크
+    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x]).join("");
+    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share`;
+    text = `우리 집 아침 궁합 ${c.s}점, '${c.t}'래 😆 나는 ${TYPES[k].emoji} ${nm(k)}!`;
+  } else {  // 상대에게 테스트 보내기 → 끝나면 궁합이 나옴
+    url = `${base}?who=${WHO==="mom"?"dad":"mom"}&pt=${k}&from=share`;
+    text = `나는 ${TYPES[k].emoji} ${nm(k)}래 😂 ${OTHER}는 무슨 유형일까? 1분이면 끝, 다 하면 우리 궁합 나와!`;
+  }
+  if (navigator.share){ try { await navigator.share({title:"아침 등원 전쟁, 나는 무슨 엄마·아빠?", text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
   try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("링크를 복사했어요. 카톡에 붙여 넣어 보내세요!"); }
   catch(e){ prompt("이 주소를 복사해서 보내 주세요", url); }
 }
@@ -244,7 +308,7 @@ function saveCard(){
   track('save');
   const {k, s} = window._res; const t = TYPES[k];
   const cv = $("cv"), ctx = cv.getContext("2d");
-  const img = new Image(); img.src = `img/${k}.jpg`;
+  const img = new Image(); img.src = `img/${IMG}${k}.jpg`;
   img.onload = () => {
     ctx.fillStyle = "#fbf8f3"; ctx.fillRect(0,0,1080,1350);
     // 그림: 위쪽 1080x700으로 잘라 넣기
@@ -255,7 +319,7 @@ function saveCard(){
     ctx.textAlign = "center"; ctx.fillStyle = "#6b6577"; ctx.font = "700 36px Pretendard, sans-serif";
     ctx.fillText("나의 아침 등원 유형은", 540, gy);
     ctx.fillStyle = t.color; ctx.font = "900 84px Pretendard, sans-serif";
-    ctx.fillText(`${t.emoji} ${t.name}`, 540, gy+100);
+    ctx.fillText(`${t.emoji} ${nm(k)}`, 540, gy+100);
     ctx.fillStyle = "#2f2b36"; ctx.font = "700 40px Pretendard, sans-serif";
     ctx.fillText(t.line, 540, gy+170);
     const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
@@ -265,10 +329,14 @@ function saveCard(){
       ctx.fillStyle="#f0ebf7"; ctx.beginPath(); ctx.roundRect(360, y+6, 520, 26, 13); ctx.fill();
       ctx.fillStyle=TYPES[x].color; ctx.beginPath(); ctx.roundRect(360, y+6, Math.max(26,520*p/100), 26, 13); ctx.fill();
       ctx.fillStyle="#2f2b36"; ctx.textAlign="right"; ctx.fillText(`${p}%`, 970, y+30); ctx.textAlign="left"; });
-    ctx.textAlign = "center"; ctx.fillStyle = "#6a4a9c"; ctx.font = "800 30px Pretendard, sans-serif";
+    ctx.textAlign = "center";
+    if (PT){ const c = getCompat(k, PT);
+      ctx.fillStyle = "#6a4a9c"; ctx.font = "900 38px Pretendard, sans-serif";
+      ctx.fillText(`💑 우리 집 아침 궁합 ${c.s}점 · ${c.t}`, 540, 1250); }
+    ctx.fillStyle = "#6a4a9c"; ctx.font = "800 30px Pretendard, sans-serif";
     ctx.fillText("맘들의 정보터 · 아침 등원 전쟁 1분 테스트", 540, 1310);
     cv.toBlob(async b => {
-      const f = new File([b], `등원유형_${t.name}.png`, {type:"image/png"});
+      const f = new File([b], `등원유형_${nm(k)}.png`, {type:"image/png"});
       if (navigator.canShare && navigator.canShare({files:[f]})){ try { await navigator.share({files:[f]}); return; } catch(e){ if (e.name==="AbortError") return; } }
       const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = f.name; a.click();
       toast("결과 카드를 저장했어요");
@@ -277,8 +345,12 @@ function saveCard(){
 }
 
 // 공유 링크로 들어온 결과(?r=) 바로 보여 주기 대신, 받은 사람은 테스트부터 하게
-(function(){ const p = new URLSearchParams(location.search); const r = p.get("r"), m = p.get("m");
-  if (r && TYPES[r] && m && /^\d{4}$/.test(m) && from==="direct"){ const s={}; ORDER.forEach((k,i)=>s[k]=+m[i]); showResult(r, s); } })();
+(function(){ const r = QS.get("r"), m = QS.get("m");
+  if (WHO==="dad"){ $("h1role").textContent = "무슨 아빠"; document.title = "아침 등원 전쟁, 나는 무슨 아빠? | 맘들의 정보터"; }
+  $("rnote").innerHTML = `재미로 보는 테스트예요. 정답인 ${ROLE} 유형은 없어요 💜<br>맘들의 정보터`;
+  if (PT){ $("invite").innerHTML = `${OTHER}는 ${TYPES[PT].emoji} <b>${ptName(PT)}</b>래요!<br>내 유형까지 알면 💑 우리 집 아침 궁합이 나와요`; $("invite").classList.remove("hide"); }
+  if (r && TYPES[r] && m && /^\d{4}$/.test(m) && (from==="direct" || QS.get("v")==="1")){
+    const s={}; ORDER.forEach((k,i)=>s[k]=+m[i]); window._mine = r; showResult(r, s); } })();
 </script>
 </body>
 </html>
