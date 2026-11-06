@@ -51,7 +51,14 @@ h3 small { font-size:12px; color:var(--sub); font-weight:700; }
 .b1 { background:var(--pu); color:#fff; }
 .b2 { background:#fff; color:var(--pu); border:2px solid var(--pu); }
 .note { text-align:center; color:var(--sub); font-size:13px; margin-top:10px; }
+.gift2 { display:flex; align-items:center; gap:12px; margin-top:16px; background:#fff; border:2px solid #f3d9a8; border-radius:16px; padding:14px; text-decoration:none; color:var(--ink); }
+.gift2 span { font-size:30px; }
+.gift2 div { flex:1; }
+.gift2 b { display:block; font-size:15px; font-weight:800; }
+.gift2 small { display:block; font-size:13px; color:var(--sub); margin-top:2px; }
+.gift2 i { font-style:normal; font-size:24px; color:#c07a2c; font-weight:900; }
 @media print {
+  .gift2 { display:none !important; }
   @page { size:A4; margin:12mm; }
   body { background:#fff; }
   .wrap { max-width:none; padding:0; }
@@ -66,6 +73,8 @@ h3 small { font-size:12px; color:var(--sub); font-weight:700; }
 <div class="wrap">
   <div class="brand">맘들의 정보터 · 카톡 친구 선물 🎁</div>
   <h1>우리 유형 아침 10분 루틴표</h1>
+  <!-- 카톡 웰컴 메시지 버튼 2 '친구 선물 받기'가 여기로 옴 -->
+
   <p class="lead">테스트에서 나온 유형을 골라 보세요.<br>인쇄하거나 캡처해서 냉장고·현관에 붙여 두면 돼요.</p>
   <div class="tabs" id="tabs"></div>
   <div class="sheet" id="sheet"></div>
@@ -74,6 +83,8 @@ h3 small { font-size:12px; color:var(--sub); font-weight:700; }
     <a class="btn b2" href="./">🔁 테스트 하러 가기</a>
   </div>
   <p class="note">휴대폰에서는 화면 캡처가 제일 간편해요.<br>시간 칸은 우리 집 등원 시간에 맞춰 직접 적어 주세요.</p>
+  <a class="gift2" href="https://drive.google.com/file/d/1MsGbMouiFsHbbHOM3d92iwdVmXJ9h0fA/preview" target="_blank" rel="noopener">
+    <span>🧯</span><div><b>선물 하나 더 · 겨울 우리 집 안전 점검표</b><small>아이 방 + 부모님 댁 체크 20개 · A4 1장 PDF</small></div><i>›</i></a>
 </div>
 <script>
 const R = {
