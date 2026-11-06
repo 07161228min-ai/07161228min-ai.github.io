@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>아침 등원 전쟁, 나는 무슨 엄마? | 맘들의 정보터</title>
+<meta name="description" content="10문항 1분! 아침 등원 전쟁 속 나의 엄마 유형을 알아보세요. 시계토끼·협상가·소방관·느긋 판다 중 나는?">
+<meta property="og:title" content="아침 등원 전쟁, 나는 무슨 엄마? 🏃‍♀️">
+<meta property="og:description" content="10문항 1분 테스트 · 시계토끼·협상가·소방관·느긋 판다 중 나는?">
+<meta property="og:image" content="img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#6a4a9c; --pu2:#8a6bbd; --mint:#3d8a68; --bg:#fbf8f3; --ink:#2f2b36; --sub:#6b6577; --line:#e8e1f1; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.5; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(106,74,156,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:#f3eefa; color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 #4f3577; }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 #4f3577; }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.btn.kakao { background:#fee500; color:#191600; margin-top:10px; }
+.btn.mint { background:var(--mint); color:#fff; margin-top:10px; }
+.count { text-align:center; color:var(--sub); font-size:13px; margin-top:12px; }
+/* 질문 */
+.bar { height:8px; background:#ece6f5; border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qno { font-size:14px; font-weight:800; color:var(--pu); }
+.qtext { font-size:21px; font-weight:800; line-height:1.38; margin:6px 0 16px; letter-spacing:-.3px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:#f6f1fc; }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+/* 결과 */
+.rtop { text-align:center; padding:20px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:30px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:12px; }
+.sec { padding:16px 20px 4px; }
+.sec h3 { font-size:16px; font-weight:800; margin-bottom:8px; }
+.sec p, .sec li { font-size:15px; color:#433d4d; }
+.sec ul { list-style:none; }
+.sec li { padding-left:20px; position:relative; margin-bottom:6px; }
+.sec li::before { content:"✔"; position:absolute; left:0; color:var(--mint); font-weight:900; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:7px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:96px; flex:none; }
+.mix .track { flex:1; height:12px; background:#f0ebf7; border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; }
+.mix .row b { width:40px; text-align:right; flex:none; }
+.pair { display:flex; gap:10px; }
+.pair div { flex:1; background:#f8f5fc; border-radius:14px; padding:10px 12px; font-size:14px; }
+.pair b { display:block; font-size:13px; color:var(--sub); margin-bottom:2px; }
+.ctas { padding:10px 20px 22px; }
+.note { font-size:12px; color:#9a94a5; text-align:center; margin-top:16px; line-height:1.6; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#2f2b36; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+.others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
+.others button { border:0; background:#f8f5fc; border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; }
+.others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">맘들의 정보터 · 1분 테스트</div>
+
+  <!-- 시작 -->
+  <section id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="양말을 안 신겠다는 아이와 시계를 보는 엄마"></div>
+    <div class="pad">
+      <h1>아침 등원 전쟁,<br>나는 <em>무슨 엄마</em>일까?</h1>
+      <p class="lead">양말 거부, 머리 묶기, 갑자기 시작된 그림 그리기…<br>10문항으로 알아보는 나의 아침 유형</p>
+      <div class="chips"><span class="chip">⏰ 시계토끼</span><span class="chip">🤝 협상가</span><span class="chip">🚒 소방관</span><span class="chip">🐼 느긋 판다</span></div>
+      <button class="btn main" onclick="begin()">테스트 시작하기</button>
+      <p class="count">10문항 · 약 1분 · 답은 저장되지 않아요</p>
+    </div>
+  </section>
+
+  <!-- 질문 -->
+  <section id="quiz" class="card hide"><div class="pad">
+    <div class="qno" id="qno"></div>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back" onclick="prev()">← 이전 문항</button>
+  </div></section>
+
+  <!-- 결과 -->
+  <section id="result" class="card hide">
+    <div class="rtop">
+      <div class="rsmall">나의 아침 등원 유형은</div>
+      <div class="rname" id="rname"></div>
+      <div class="rline" id="rline"></div>
+    </div>
+    <img class="rimg" id="rimg" alt="">
+    <div class="sec"><p id="rdesc"></p></div>
+    <div class="sec mix"><h3>📊 나의 아침 성분표</h3><div id="mix"></div></div>
+    <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
+    <div class="sec"><h3>⏱ 내일 아침 10분 아끼는 팁</h3><ul id="rtips"></ul></div>
+    <div class="sec"><div class="pair">
+      <div><b>찰떡 짝꿍 아빠</b><span id="rbest"></span></div>
+      <div><b>아침마다 부딪히는 아빠</b><span id="rworst"></span></div>
+    </div></div>
+    <div class="ctas">
+      <button class="btn main" onclick="shareTest()">👨 아빠는 무슨 유형일까? 보내기</button>
+      <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
+      <a class="btn kakao" href="http://pf.kakao.com/_AxnaSxb" target="_blank" rel="noopener" onclick="track('kakao')">💬 카톡 친구 추가하고 새 테스트 먼저 받기</a>
+      <a class="btn mint" href="https://link.inpock.co.kr/mdcr7" target="_blank" rel="noopener" onclick="track('inpock')">📚 등원·생활 루틴 무료 자료 보기</a>
+      <button class="btn line" onclick="restart()" style="border-color:#cfc4e2;color:var(--sub)">↺ 다시 하기</button>
+    </div>
+    <div class="sec" style="padding-top:0"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
+    <div class="others" id="others"></div>
+    <p class="note" style="padding:0 20px 18px">재미로 보는 테스트예요. 정답인 엄마 유형은 없어요 💜<br>맘들의 정보터</p>
+  </section>
+
+  <canvas id="cv" width="1080" height="1350" class="hide"></canvas>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const TYPES = {
+  T: { emoji:"⏰", name:"시계토끼 엄마", color:"#6a4a9c",
+       line:"\"내일 입을 옷은 이미 의자 위에\"",
+       desc:"아침은 전날 밤에 이미 시작돼요. 옷·가방·준비물이 자기 자리에 있고, 출발 시간에서 거꾸로 계산해 움직여요. 계획이 틀어지는 날 제일 힘든 것도 바로 이 유형이에요.",
+       good:["전날 밤 10분 준비로 아침이 조용해요","아이도 순서를 외워서 스스로 움직여요","지각 걱정이 거의 없어요"],
+       tips:["계획표에 '아무것도 안 하는 5분'을 넣어 두세요. 아이가 늦장 부려도 화가 덜 나요","순서를 그림 카드로 현관에 붙이면 엄마 말 대신 카드가 잔소리해요"],
+       best:"🤝 협상가 아빠", worst:"🐼 느긋 판다 아빠" },
+  N: { emoji:"🤝", name:"협상가 엄마", color:"#3d8a68",
+       line:"\"파란 양말? 노란 양말?\"",
+       desc:"싸우는 대신 고르게 해요. '할래 말래' 대신 '이거 할래 저거 할래'로 아이가 직접 정한 것처럼 만드는 기술자예요. 다만 협상이 길어지는 날엔 시계를 같이 봐 주세요.",
+       good:["아이가 스스로 골랐다고 느껴서 떼가 짧아요","아침에 큰소리가 잘 안 나요","아이의 말 실력이 쑥쑥 늘어요"],
+       tips:["선택지는 딱 2개, 둘 다 엄마가 괜찮은 것만","'긴 바늘이 6에 가면 출발'처럼 협상 마감 시간도 같이 정해요"],
+       best:"⏰ 시계토끼 아빠", worst:"🚒 소방관 아빠" },
+  F: { emoji:"🚒", name:"소방관 엄마", color:"#d62828",
+       line:"\"출동! 일단 나가면서 생각해\"",
+       desc:"닥치면 다 해내는 실전형이에요. 머리는 엘리베이터에서 묶고, 아침은 차에서 먹고, 준비물은 가는 길에 사요. 결국 늘 도착하지만, 엄마 체력이 매일 바닥나요.",
+       good:["어떤 돌발 상황에도 당황하지 않아요","결국 지각은 안 해요 (아슬아슬하게)","아이에게 '괜찮아, 방법이 있어'를 보여 줘요"],
+       tips:["딱 하나만 전날 밤으로: 가방 + 내일 옷을 현관에 두기","현관 문고리에 '양말·마스크·물통' 바구니를 걸어 두면 출동 시간이 줄어요"],
+       best:"🐼 느긋 판다 아빠", worst:"🤝 협상가 아빠" },
+  P: { emoji:"🐼", name:"느긋 판다 엄마", color:"#c07a2c",
+       line:"\"조금 늦어도 괜찮아, 혼자 신어 봐\"",
+       desc:"아이 속도를 기다려 주는 여유파예요. 신발을 혼자 신을 때까지 기다리니 아이의 '내가 할래'가 쑥쑥 자라요. 다만 시간이 정해진 날엔 엄마만 느긋할 수 있어요.",
+       good:["아이가 혼자 하는 게 많아져요","아침 분위기가 평화로워요","엄마도 아이도 마음이 덜 다쳐요"],
+       tips:["기다리는 시간을 미리 넣어 '평소보다 10분 일찍' 시작해요","체험학습·특별한 날만큼은 전날 밤 준비물 체크 1분"],
+       best:"🚒 소방관 아빠", worst:"⏰ 시계토끼 아빠" }
+};
+const Q = [
+  ["알람이 울리고 첫 5분, 나는?", [["T","이미 일어나서 아침 준비 중"],["N","아이 옆에 누워 \"5분만 더?\" 같이 협상"],["F","시계 보고 벌떡! 그때부터 전력 질주"],["P","일단 따뜻한 커피 한 잔부터"]]],
+  ["아이가 \"양말 싫어!\" 하고 드러누웠다", [["T","어제 같이 골라 둔 양말을 꺼낸다"],["N","\"파란 거, 노란 거? 네가 골라\""],["F","3초 만에 신겨 버린다"],["P","\"그럼 오늘은 양말 없이 가 볼까?\""]]],
+  ["오늘 아침밥은?", [["T","전날 정해 둔 메뉴 그대로"],["N","\"주먹밥이랑 시리얼 중에 뭐 먹을래?\""],["F","가는 길에 먹는 바나나·김밥"],["P","먹고 싶은 만큼만, 천천히"]]],
+  ["머리 묶을 시간!", [["T","정해진 스타일로 1분 컷"],["N","\"오늘은 무슨 머리 할까?\" 아이가 고르기"],["F","고무줄 입에 물고 걸어가며 묶기"],["P","\"오늘은 풀고 가자~\""]]],
+  ["출발 10분 전, 아이가 갑자기 그림을 그리기 시작했다", [["T","타이머를 맞춘다. \"이 소리 나면 출발!\""],["N","\"하나만 다 그리고 갈까, 가서 그릴까?\""],["F","스케치북째 들고 같이 출발"],["P","다 그릴 때까지 기다려 준다"]]],
+  ["\"내일 준비물: 솔방울 3개\" 공지를 봤다면", [["T","어젯밤 이미 가방에 넣어 뒀다"],["N","아이랑 같이 \"뭐 챙길까?\" 체크한다"],["F","현관에서 생각나서 놀이터로 질주"],["P","\"선생님이 이해해 주시겠지~\""]]],
+  ["우리 집 아침, 아빠는?", [["T","시간표에 아빠 담당 칸이 있다"],["N","\"오늘은 누가 할래?\" 아침마다 정한다"],["F","아빠 깨우는 것까지 내 일"],["P","아빠가 하면 하는 대로 둔다"]]],
+  ["현관에서 아이가 갑자기 울음을 터뜨렸다", [["T","울 시간까지 계산해서 원래 일찍 시작한다"],["N","안아 주고 \"뭐가 속상했어?\" 물어본다"],["F","일단 안고 출발, 가면서 달랜다"],["P","다 울 때까지 같이 앉아 있는다"]]],
+  ["아이를 보내고 난 뒤 내 모습은?", [["T","계획대로 끝! 뿌듯하다"],["N","오늘도 대화로 이겼다"],["F","머리는 산발, 그래도 도착했다"],["P","햇살 맞으며 천천히 걸어 돌아온다"]]],
+  ["내 아침을 노래 제목으로 하면?", [["T","〈째깍째깍 정시 출발〉"],["N","〈우리 얘기 좀 해〉"],["F","〈출동! 아침 구조대〉"],["P","〈천천히 가도 괜찮아〉"]]]
+];
+const ORDER = ["T","N","F","P"];
+let cur = 0, ans = [];
+const $ = id => document.getElementById(id);
+const from = new URLSearchParams(location.search).get("from") || "direct";
+
+function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
+function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
+function begin(){ cur=0; ans=[]; show("quiz"); render(); track('start'); }
+function render(){
+  const [q, opts] = Q[cur];
+  $("qno").textContent = `Q${cur+1} / ${Q.length}`;
+  $("prog").style.width = `${(cur)/Q.length*100}%`;
+  $("qtext").textContent = q;
+  $("opts").innerHTML = "";
+  // 보기 순서를 섞어서 유형이 티 나지 않게
+  const shuffled = opts.map((o,i)=>[o,(i*7+cur*3)%4]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  shuffled.forEach(([t,label])=>{
+    const b=document.createElement("button"); b.className="opt"; b.textContent=label;
+    if (ans[cur]===t) b.classList.add("on");
+    b.onclick=()=>{ b.classList.add("on"); ans[cur]=t; setTimeout(next,170); };
+    $("opts").appendChild(b);
+  });
+  $("back").style.visibility = cur ? "visible" : "hidden";
+}
+function next(){ if (cur < Q.length-1){ cur++; render(); } else finish(); }
+function prev(){ if (cur>0){ cur--; render(); } }
+function scores(a){ const s={T:0,N:0,F:0,P:0}; a.forEach(t=>s[t]++); return s; }
+function finish(){
+  const s = scores(ans);
+  let top = ORDER.reduce((a,b)=> s[b]>s[a]?b:a, "T");
+  // 동점이면 마지막 문항 쪽(최근 답)에 가까운 유형
+  const tied = ORDER.filter(k=>s[k]===s[top]);
+  if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k]).join("")}${from!=="direct"?"&from="+from:""}`);
+  showResult(top, s);
+  track('finish');
+}
+function showResult(k, s){
+  const t = TYPES[k];
+  $("rname").textContent = `${t.emoji} ${t.name}`;
+  $("rname").style.color = t.color;
+  $("rline").textContent = t.line;
+  $("rimg").src = `img/${k}.jpg`; $("rimg").alt = t.name;
+  $("rdesc").textContent = t.desc;
+  $("rgood").innerHTML = t.good.map(x=>`<li>${x}</li>`).join("");
+  $("rtips").innerHTML = t.tips.map(x=>`<li>${x}</li>`).join("");
+  $("rbest").textContent = t.best; $("rworst").textContent = t.worst;
+  const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+  $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
+    return `<div class="row"><span>${TYPES[x].emoji} ${TYPES[x].name.replace(" 엄마","")}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="peek('${x}')"><img src="img/${x}.jpg" alt="">${TYPES[x].emoji} ${TYPES[x].name}</button>`).join("");
+  window._res = {k, s};
+  show("result");
+}
+function peek(x){ const s = window._res ? window._res.s : {T:0,N:0,F:0,P:0}; showResult(x, s); toast(`${TYPES[x].name} 구경 중이에요`); }
+function restart(){ history.replaceState(null,"",location.pathname); show("start"); }
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
+
+async function shareTest(){
+  track('share');
+  const k = window._res ? window._res.k : "T";
+  const url = location.origin + location.pathname + "?from=share";
+  const text = `나는 ${TYPES[k].emoji} ${TYPES[k].name}래 😂 아빠는 무슨 유형일까? 1분 테스트 해 봐!`;
+  if (navigator.share){ try { await navigator.share({title:"아침 등원 전쟁, 나는 무슨 엄마?", text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
+  try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("링크를 복사했어요. 카톡에 붙여 넣어 보내세요!"); }
+  catch(e){ prompt("이 주소를 복사해서 보내 주세요", url); }
+}
+
+function wrapText(ctx, text, x, y, maxW, lh){
+  const words = text.split(" "); let line = "";
+  for (const w of words){ const t = line ? line+" "+w : w; if (ctx.measureText(t).width > maxW && line){ ctx.fillText(line, x, y); y += lh; line = w; } else line = t; }
+  if (line) ctx.fillText(line, x, y); return y + lh;
+}
+function saveCard(){
+  track('save');
+  const {k, s} = window._res; const t = TYPES[k];
+  const cv = $("cv"), ctx = cv.getContext("2d");
+  const img = new Image(); img.src = `img/${k}.jpg`;
+  img.onload = () => {
+    ctx.fillStyle = "#fbf8f3"; ctx.fillRect(0,0,1080,1350);
+    // 그림: 위쪽 1080x700으로 잘라 넣기
+    const GH = 700, sh = img.width * GH / 1080;
+    ctx.drawImage(img, 0, img.height*0.04, img.width, sh, 0, 0, 1080, GH);
+    const gy = GH + 20;
+    ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.roundRect(40, GH-60, 1000, 1350-GH+20, 40); ctx.fill();
+    ctx.textAlign = "center"; ctx.fillStyle = "#6b6577"; ctx.font = "700 36px Pretendard, sans-serif";
+    ctx.fillText("나의 아침 등원 유형은", 540, gy);
+    ctx.fillStyle = t.color; ctx.font = "900 84px Pretendard, sans-serif";
+    ctx.fillText(`${t.emoji} ${t.name}`, 540, gy+100);
+    ctx.fillStyle = "#2f2b36"; ctx.font = "700 40px Pretendard, sans-serif";
+    ctx.fillText(t.line, 540, gy+170);
+    const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+    ctx.textAlign = "left"; ctx.font = "700 32px Pretendard, sans-serif";
+    ORDER.forEach((x,i)=>{ const y = gy+235+i*52, p = Math.round(s[x]/total*100);
+      ctx.fillStyle="#2f2b36"; ctx.fillText(`${TYPES[x].emoji} ${TYPES[x].name.replace(" 엄마","")}`, 110, y+28);
+      ctx.fillStyle="#f0ebf7"; ctx.beginPath(); ctx.roundRect(360, y+6, 520, 26, 13); ctx.fill();
+      ctx.fillStyle=TYPES[x].color; ctx.beginPath(); ctx.roundRect(360, y+6, Math.max(26,520*p/100), 26, 13); ctx.fill();
+      ctx.fillStyle="#2f2b36"; ctx.textAlign="right"; ctx.fillText(`${p}%`, 970, y+30); ctx.textAlign="left"; });
+    ctx.textAlign = "center"; ctx.fillStyle = "#6a4a9c"; ctx.font = "800 30px Pretendard, sans-serif";
+    ctx.fillText("맘들의 정보터 · 아침 등원 전쟁 1분 테스트", 540, 1310);
+    cv.toBlob(async b => {
+      const f = new File([b], `등원유형_${t.name}.png`, {type:"image/png"});
+      if (navigator.canShare && navigator.canShare({files:[f]})){ try { await navigator.share({files:[f]}); return; } catch(e){ if (e.name==="AbortError") return; } }
+      const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = f.name; a.click();
+      toast("결과 카드를 저장했어요");
+    }, "image/png");
+  };
+}
+
+// 공유 링크로 들어온 결과(?r=) 바로 보여 주기 대신, 받은 사람은 테스트부터 하게
+(function(){ const p = new URLSearchParams(location.search); const r = p.get("r"), m = p.get("m");
+  if (r && TYPES[r] && m && /^\d{4}$/.test(m) && from==="direct"){ const s={}; ORDER.forEach((k,i)=>s[k]=+m[i]); showResult(r, s); } })();
+</script>
+</body>
+</html>
