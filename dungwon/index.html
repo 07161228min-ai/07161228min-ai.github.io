@@ -109,13 +109,14 @@ h1 em { font-style:normal; color:var(--pu); }
   <!-- 결과 -->
   <section id="result" class="card hide">
     <div class="rtop">
-      <div class="rsmall">나의 아침 등원 유형은</div>
+      <div class="rsmall" id="rsmall">나의 아침 등원 유형은</div>
       <div class="rname" id="rname"></div>
       <div class="rline" id="rline"></div>
+      <button class="btn line hide" id="mybtn" onclick="backMine()" style="margin-top:12px;padding:10px;font-size:15px">← 내 결과로 돌아가기</button>
     </div>
     <img class="rimg" id="rimg" alt="">
     <div class="sec"><p id="rdesc"></p></div>
-    <div class="sec mix"><h3>📊 나의 아침 성분표</h3><div id="mix"></div></div>
+    <div class="sec mix" id="mixsec"><h3>📊 나의 아침 성분표</h3><div id="mix"></div></div>
     <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
     <div class="sec"><h3>⏱ 내일 아침 10분 아끼는 팁</h3><ul id="rtips"></ul></div>
     <div class="compat hide" id="compat"></div>
@@ -249,8 +250,10 @@ function finish(){
   showResult(top, s);
   track('finish');
 }
-function showResult(k, s){
+function showResult(k, s, pk=false){
   const t = TYPES[k];
+  $("mixsec").classList.toggle("hide", pk); $("mybtn").classList.toggle("hide", !pk);
+  $("rsmall").textContent = pk ? "다른 유형 구경 중 👀" : "나의 아침 등원 유형은";
   $("rname").textContent = `${t.emoji} ${nm(k)}`;
   $("rname").style.color = t.color;
   $("rline").textContent = t.line;
@@ -263,10 +266,10 @@ function showResult(k, s){
   const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
   $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
     return `<div class="row"><span>${TYPES[x].emoji} ${TYPES[x].name.replace(" 엄마","")}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
-  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="peek('${x}')"><img src="img/${IMG}${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="${x===(window._mine||k)?'backMine()':`peek('${x}')`}"><img src="img/${IMG}${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
   // 궁합 카드 (상대 유형을 알 때만, 내 진짜 결과 기준)
   const mine = window._mine || k;
-  if (PT && k===mine){
+  if (PT && k===mine && !pk){
     const c = getCompat(mine, PT);
     const momK = WHO==="mom" ? mine : PT, dadK = WHO==="mom" ? PT : mine;
     $("compat").innerHTML = `<div class="ct">💑 우리 집 아침 궁합</div>
@@ -282,7 +285,8 @@ function showResult(k, s){
   window._res = {k: mine, s};
   show("result");
 }
-function peek(x){ const s = window._res ? window._res.s : {T:0,N:0,F:0,P:0}; showResult(x, s); toast(`${nm(x)} 구경 중이에요`); }
+function peek(x){ const s = window._res ? window._res.s : {T:0,N:0,F:0,P:0}; showResult(x, s, true); }
+function backMine(){ if (window._res) showResult(window._res.k, window._res.s); }
 function restart(){ const q = [WHO==="dad"?"who=dad":"", PT?"pt="+PT:"", BG?"b=1":"", from!=="direct"?"from="+from:""].filter(Boolean).join("&"); history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
 function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
 
