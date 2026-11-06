@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>장보기 카트로 보는 엄마 유형 | 맘들의 정보터</title>
+<meta name="description" content="7문항 1분! 마트 카트에 뭐가 담기냐로 보는 나의 장보기 유형. 리스트 장인·1+1 사냥꾼·간식 협상가·일단 담고 보는 엄마 중 나는?">
+<meta property="og:title" content="장보기 카트로 보는 나는 무슨 엄마·아빠? 🛒">
+<meta property="og:description" content="7문항 1분 테스트 · 끝나면 우리 부부 장보기 궁합까지!">
+<meta property="og:image" content="https://07161228min-ai.github.io/cart/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#d2553a; --pu2:#ec8a6d; --mint:#3d8a68; --bg:#fbf8f3; --ink:#2f2b36; --sub:#6b6577; --line:#e8e1f1; --soft:#fdf0ec; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.5; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(60,40,90,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.25); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.25); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.count { text-align:center; color:var(--sub); font-size:13px; margin-top:12px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qno { font-size:14px; font-weight:800; color:var(--pu); }
+.qtext { font-size:21px; font-weight:800; line-height:1.38; margin:6px 0 16px; letter-spacing:-.3px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:20px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:30px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:12px; }
+.sec { padding:16px 20px 4px; }
+.sec h3 { font-size:16px; font-weight:800; margin-bottom:8px; }
+.sec p, .sec li { font-size:15px; color:#433d4d; }
+.sec ul { list-style:none; }
+.sec li { padding-left:20px; position:relative; margin-bottom:6px; }
+.sec li::before { content:"✔"; position:absolute; left:0; color:var(--mint); font-weight:900; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:7px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:110px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; }
+.mix .row b { width:40px; text-align:right; flex:none; }
+.pair { display:flex; gap:10px; }
+.pair div { flex:1; background:var(--soft); border-radius:14px; padding:10px 12px; font-size:14px; }
+.pair b { display:block; font-size:13px; color:var(--sub); margin-bottom:2px; }
+.ctas { padding:10px 20px 18px; }
+.note { font-size:12px; color:#9a94a5; text-align:center; margin-top:16px; line-height:1.6; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#2f2b36; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+.others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
+.others button { border:0; background:var(--soft); border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; text-align:left; }
+.others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
+.invite { background:#fff4d6; border-radius:14px; padding:10px 14px; font-size:15px; font-weight:700; margin-top:12px; }
+.compat { margin:16px 20px 4px; background:linear-gradient(135deg,var(--soft),#fff4f0); border:2px solid var(--line); border-radius:18px; padding:16px; text-align:center; }
+.compat .ct { font-size:14px; font-weight:800; color:var(--sub); }
+.compat .cp { font-size:17px; font-weight:800; margin-top:6px; }
+.compat .cs { font-size:40px; font-weight:900; color:var(--pu); line-height:1.1; margin-top:6px; }
+.compat .cs small { font-size:18px; }
+.compat .cn { font-size:18px; font-weight:900; margin-top:2px; }
+.compat .cd { font-size:15px; color:#433d4d; margin-top:8px; text-align:left; }
+.compat .ctip { font-size:14px; color:var(--mint); font-weight:700; margin-top:8px; text-align:left; }
+.more { margin:8px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:56px; height:70px; object-fit:cover; border-radius:10px; flex:none; }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">맘들의 정보터 · 1분 테스트</div>
+
+  <section id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="마트에서 카트를 밀며 고민하는 엄마와 아이"></div>
+    <div class="pad">
+      <h1>장보기 카트로 보는<br>나는 <em>무슨 엄마</em>일까?</h1>
+      <p class="lead">우유 하나 사러 갔다가 카트 한가득…<br>7문항으로 알아보는 나의 장보기 유형</p>
+      <div class="invite hide" id="invite"></div>
+      <div class="chips" id="chips"></div>
+      <button class="btn main" onclick="begin()">테스트 시작하기</button>
+      <p class="count" id="count"></p>
+    </div>
+  </section>
+
+  <section id="quiz" class="card hide"><div class="pad">
+    <div class="qno" id="qno"></div>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back" onclick="prev()">← 이전 문항</button>
+  </div></section>
+
+  <section id="result" class="card hide">
+    <div class="rtop">
+      <div class="rsmall" id="rsmall"></div>
+      <div class="rname" id="rname"></div>
+      <div class="rline" id="rline"></div>
+    </div>
+    <img class="rimg" id="rimg" alt="">
+    <div class="sec"><p id="rdesc"></p></div>
+    <div class="sec mix"><h3 id="hmix"></h3><div id="mix"></div></div>
+    <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
+    <div class="sec"><h3 id="htips"></h3><ul id="rtips"></ul></div>
+    <div class="compat hide" id="compat"></div>
+    <div class="sec"><div class="pair">
+      <div><b id="lbest"></b><span id="rbest"></span></div>
+      <div><b id="lworst"></b><span id="rworst"></span></div>
+    </div></div>
+    <div class="ctas">
+      <button class="btn main" id="sharebtn" onclick="shareTest()"></button>
+      <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
+      <button class="btn line" onclick="restart()" style="border-color:#d8d2e0;color:var(--sub)">↺ 다시 하기</button>
+    </div>
+    <div class="more" id="more"></div>
+    <div class="sec" style="padding-top:8px"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
+    <div class="others" id="others"></div>
+    <p class="note" id="rnote" style="padding:0 20px 18px"></p>
+  </section>
+
+  <canvas id="cv" width="1080" height="1350" class="hide"></canvas>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const D = {"slug": "cart", "brand": "맘들의 정보터", "title": "장보기 카트로 보는 엄마 유형", "main": "#d2553a", "label": {"result": "나의 장보기 유형은", "mix": "📊 나의 장바구니 성분표", "tips": "🛒 다음 장보기 때 써먹는 팁", "best": "장보기 찰떡 짝꿍 {OTHER}", "worst": "카트에서 부딪히는 {OTHER}", "compat": "우리 집 장보기 궁합", "compatShort": "장보기 궁합", "card": "맘들의 정보터 · 장보기 카트 1분 테스트"}, "types": {"A": {"emoji": "📝", "name": "리스트 장인 엄마", "color": "#4a5a9c", "line": "\"메모에 없는 건 안 사요\"", "desc": "집에서 냉장고 사진 찍고, 메모 순서대로 동선까지 짜서 들어가는 유형. 계산대에서 제일 당당해요. 다만 아이가 고른 간식 하나에 계획이 흔들리기도 해요.", "good": ["장보기가 20분이면 끝나요", "냉장고에서 버리는 게 적어요", "한 달 식비가 예상대로 나와요"], "tips": ["메모에 '아이 간식 1개' 칸을 미리 넣어 두기", "냉장고 사진은 문 안쪽까지 찍기"], "best": "B", "worst": "D"}, "B": {"emoji": "🏷️", "name": "1+1 사냥꾼 엄마", "color": "#d2553a", "line": "\"어머, 이건 사야 해. 하나 더 주잖아\"", "desc": "노란 가격표만 보면 카트가 멈춰요. 행사 상품을 기가 막히게 찾아내서 영수증의 '할인 금액'에 뿌듯. 집에 와 보면 같은 게 이미 세 개 있을 때도…", "good": ["생필품을 제일 싸게 사요", "행사 정보력이 최강이에요", "집에 휴지·세제가 떨어질 일이 없어요"], "tips": ["행사 상품은 집에 있는 개수 사진 한 장 보고 사기", "1+1은 친정·이웃과 나누면 더 뿌듯해요"], "best": "A", "worst": "D"}, "C": {"emoji": "🍭", "name": "간식 협상가 엄마", "color": "#3d8a68", "line": "\"과자는 딱 하나만 고르는 거야\"", "desc": "장보기가 곧 아이와의 협상 시간. 과자 코너 앞에서 '하나만'을 지키는 기술자예요. 덕분에 아이는 고르는 연습을 하는데, 엄마는 매번 진이 빠져요.", "good": ["아이가 스스로 고르는 연습을 해요", "마트에서 떼쓰기가 짧아요", "아이도 장보기를 좋아해요"], "tips": ["마트 들어가기 전에 '하나만' 약속하고 들어가기", "과자 코너는 맨 마지막 동선으로"], "best": "A", "worst": "D"}, "D": {"emoji": "🛒", "name": "일단 담고 보는 엄마", "color": "#c07a2c", "line": "\"어? 이것도 필요할 것 같은데?\"", "desc": "들어갈 땐 우유 하나, 나올 땐 카트 한가득. 보이는 대로 담는 직감형이라 새 메뉴와 신상품을 제일 먼저 찾아내요. 계산대 금액 보고 놀라는 건 덤이에요.", "good": ["신상품·새 메뉴 발견 왕", "장보기가 제일 즐거워요", "냉장고가 늘 꽉 차 있어요"], "tips": ["카트 대신 바구니 들고 시작하기", "계산 전에 카트 한 바퀴 보고 2개 빼기"], "best": "C", "worst": "A"}}, "questions": [["마트 가기 전, 나는?", [["A", "냉장고 확인하고 메모 완성"], ["B", "마트 앱 행사 전단부터 확인"], ["C", "아이랑 '과자는 하나' 약속부터"], ["D", "그냥 간다. 가서 보면 생각나"]]], ["입구에서 시식 코너 발견!", [["A", "메모에 없으니 지나간다"], ["B", "행사 중이면 하나 집는다"], ["C", "아이 한 입, 나 한 입 하고 다음 코너"], ["D", "맛있으면 바로 카트에 쏙"]]], ["아이가 장난감 코너 앞에서 멈췄다", [["A", "\"오늘은 장난감 사는 날 아니야\" 하고 지나가기"], ["B", "할인 중이면… 생일 선물로 미리?"], ["C", "\"구경만 5분, 그다음 출발!\""], ["D", "어머 귀엽다, 같이 구경 삼매경"]]], ["우유 코너, 내 선택은?", [["A", "늘 사는 그 우유"], ["B", "2개 묶음 행사 우유"], ["C", "아이가 좋아하는 바나나우유 하나 추가"], ["D", "새로 나온 우유가 궁금하다"]]], ["계산대 앞, 내 카트는?", [["A", "메모랑 똑같다"], ["B", "노란 가격표 상품 가득"], ["C", "과자 딱 하나, 약속 성공"], ["D", "들어올 땐 우유 하나였는데…"]]], ["집에 와서 정리할 때", [["A", "자리가 다 정해져 있어서 5분 컷"], ["B", "같은 게 이미 2개 있었다…"], ["C", "아이가 고른 과자부터 꺼낸다"], ["D", "어디 넣지? 냉장고 테트리스"]]], ["내 장보기를 노래 제목으로 하면?", [["A", "〈메모대로 간다〉"], ["B", "〈하나 더 주세요〉"], ["C", "〈딱 하나만〉"], ["D", "〈카트야 멈춰〉"]]]], "compat": {"AB": {"s": 93, "t": "알뜰 환상팀", "d": "메모파가 필요한 걸 정하고, 사냥꾼이 그걸 제일 싸게 찾아요. 식비가 제일 덜 나오는 조합이에요.", "tip": "메모는 리스트파가, 행사 찾기는 사냥꾼이"}, "AC": {"s": 88, "t": "계획과 협상", "d": "메모대로 장보는 사이 다른 한 사람이 아이와 과자 협상을 맡아요. 아이도 즐겁고 예산도 지켜요.", "tip": "과자 코너 담당 정하기"}, "AA": {"s": 85, "t": "칼각 장보기", "d": "둘 다 메모파라 마트에서 각자 동선을 나눠 10분 컷. 대신 즉흥 맛집 발견은 없어요.", "tip": "메모 앱 하나로 같이 쓰기"}, "CC": {"s": 80, "t": "다정한 협상팀", "d": "아이와 대화가 제일 많은 장보기. 시간은 조금 오래 걸려요.", "tip": "장보기 시간 30분 정해 두기"}, "BC": {"s": 78, "t": "행사 간식 파티", "d": "과자가 1+1이면 협상이 쉬워져요. 아이는 행복, 간식 서랍은 꽉.", "tip": "1+1 과자 하나는 숨겨 두기"}, "CD": {"s": 74, "t": "즉흥 소풍", "d": "보이는 대로 담고, 아이랑 놀듯이 장을 봐요. 시간은 오래, 추억은 많이.", "tip": "같이 가는 장보기는 주말에만"}, "BB": {"s": 72, "t": "창고형 가족", "d": "둘 다 행사에 약해서 베란다가 창고가 돼요. 휴지는 1년 치.", "tip": "같은 행사는 한 사람만 사기"}, "DD": {"s": 68, "t": "카트 두 대", "d": "둘 다 담고 보는 파라 계산대에서 같이 놀라요. 그래도 장보기가 제일 신나는 집.", "tip": "카트는 한 대만"}, "BD": {"s": 62, "t": "계산대의 충격", "d": "한 사람은 행사 상품을, 한 사람은 신상품을 담아요. 영수증이 제일 긴 조합이에요.", "tip": "계산 전 카트 점검은 사냥꾼이"}, "AD": {"s": 60, "t": "메모 vs 즉흥", "d": "한 사람은 메모만 보고, 한 사람은 옆 코너에서 카트를 채워요. 서로 답답할 수 있어요.", "tip": "'메모 밖 3개까지'만 허락하기"}}, "note": ""};
+const REC = [{"url": "https://07161228min-ai.github.io/dungwon/", "img": "https://07161228min-ai.github.io/dungwon/img/cover.jpg", "title": "아침 등원 전쟁, 나는 무슨 엄마?", "sub": "시계토끼 · 협상가 · 소방관 · 느긋 판다"}, {"url": "https://07161228min-ai.github.io/jamjari/", "img": "https://07161228min-ai.github.io/jamjari/img/cover.jpg", "title": "재우기 전쟁, 나는 무슨 엄마?", "sub": "루틴 장인 · 책 협상가 · 같이 잠드는 · 몰래 탈출러"}];
+const TYPES = D.types, ORDER = Object.keys(TYPES), Q = D.questions;
+let cur = 0, ans = [];
+const $ = id => document.getElementById(id);
+const QS = new URLSearchParams(location.search);
+const from = QS.get("from") || "direct";
+const WHO = QS.get("who")==="dad" ? "dad" : "mom";
+const ROLE = WHO==="dad" ? "아빠" : "엄마", OTHER = WHO==="dad" ? "엄마" : "아빠";
+const BG = QS.get("b")==="1", BGQ = BG ? "&b=1" : "";
+const PT = TYPES[QS.get("pt")] ? QS.get("pt") : null;
+const R = s => WHO==="dad" ? s.replaceAll("엄마","아빠") : s;
+const RO = s => WHO==="dad" ? s.replaceAll("아빠","엄마") : s;
+const F = s => s.replaceAll("{ROLE}", ROLE).replaceAll("{OTHER}", OTHER);
+const nm = k => TYPES[k].name.replace("엄마", ROLE);
+const ptName = k => TYPES[k].name.replace("엄마", OTHER);
+const short = k => TYPES[k].name.replace(" 엄마","");
+const ckey = (a,b) => [a,b].sort((x,y)=>ORDER.indexOf(x)-ORDER.indexOf(y)).join("");
+const getCompat = (a,b) => D.compat[ckey(a,b)];
+
+function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
+function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
+function begin(){ cur=0; ans=[]; show("quiz"); render(); track('start'); }
+function render(){
+  const [q, opts] = Q[cur];
+  $("qno").textContent = `Q${cur+1} / ${Q.length}`;
+  $("prog").style.width = `${cur/Q.length*100}%`;
+  $("qtext").textContent = R(q);
+  $("opts").innerHTML = "";
+  const shuffled = opts.map((o,i)=>[o,(i*7+cur*3)%4]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  shuffled.forEach(([t,label])=>{
+    const b=document.createElement("button"); b.className="opt"; b.textContent=R(label);
+    if (ans[cur]===t) b.classList.add("on");
+    b.onclick=()=>{ b.classList.add("on"); ans[cur]=t; setTimeout(next,170); };
+    $("opts").appendChild(b);
+  });
+  $("back").style.visibility = cur ? "visible" : "hidden";
+}
+function next(){ if (cur < Q.length-1){ cur++; render(); } else finish(); }
+function prev(){ if (cur>0){ cur--; render(); } }
+function scores(a){ const s={}; ORDER.forEach(k=>s[k]=0); a.forEach(t=>s[t]++); return s; }
+function finish(){
+  const s = scores(ans);
+  let top = ORDER.reduce((a,b)=> s[b]>s[a]?b:a, ORDER[0]);
+  const tied = ORDER.filter(k=>s[k]===s[top]);
+  if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
+  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}${BGQ}`;
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k].toString(16)).join("")}${keep}`);
+  window._mine = top;
+  showResult(top, s);
+  track('finish');
+}
+function showResult(k, s){
+  const t = TYPES[k];
+  $("rsmall").textContent = F(D.label.result);
+  $("rname").textContent = `${t.emoji} ${nm(k)}`;
+  $("rname").style.color = t.color;
+  $("rline").textContent = R(t.line);
+  $("rimg").src = `img/${k}.jpg`; $("rimg").alt = nm(k);
+  $("rdesc").textContent = R(t.desc);
+  $("hmix").textContent = D.label.mix;
+  $("htips").textContent = D.label.tips;
+  $("rgood").innerHTML = t.good.map(x=>`<li>${R(x)}</li>`).join("");
+  $("rtips").innerHTML = t.tips.map(x=>`<li>${R(x)}</li>`).join("");
+  $("lbest").textContent = F(D.label.best); $("lworst").textContent = F(D.label.worst);
+  $("rbest").textContent = `${TYPES[t.best].emoji} ${ptName(t.best)}`;
+  $("rworst").textContent = `${TYPES[t.worst].emoji} ${ptName(t.worst)}`;
+  const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+  $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
+    return `<div class="row"><span>${TYPES[x].emoji} ${short(x)}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="peek('${x}')"><img src="img/${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
+  const mine = window._mine || k;
+  if (PT && k===mine){
+    const c = getCompat(mine, PT);
+    const momK = WHO==="mom" ? mine : PT, dadK = WHO==="mom" ? PT : mine;
+    $("compat").innerHTML = `<div class="ct">💑 ${D.label.compat}</div>
+      <div class="cp">엄마 ${TYPES[momK].emoji} ${short(momK)} × 아빠 ${TYPES[dadK].emoji} ${short(dadK)}</div>
+      <div class="cs">${c.s}<small>점</small></div><div class="cn">${c.t}</div>
+      <div class="cd">${c.d}</div><div class="ctip">💡 ${c.tip}</div>`;
+    $("compat").classList.remove("hide");
+    $("sharebtn").textContent = `💑 우리 궁합 결과 ${OTHER}에게 보내기`;
+  } else {
+    $("compat").classList.add("hide");
+    $("sharebtn").textContent = WHO==="mom" ? "👨 아빠는 무슨 유형일까? 보내기" : "👩 엄마는 무슨 유형일까? 보내기";
+  }
+  window._res = {k: mine, s};
+  show("result");
+}
+function peek(x){ const s = window._res ? window._res.s : scores([]); showResult(x, s); toast(`${nm(x)} 구경 중이에요`); }
+function restart(){ const q = [WHO==="dad"?"who=dad":"", PT?"pt="+PT:"", BG?"b=1":"", from!=="direct"?"from="+from:""].filter(Boolean).join("&"); history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
+
+async function shareTest(){
+  track('share');
+  const k = window._res ? window._res.k : ORDER[0];
+  const base = location.origin + location.pathname;
+  let url, text;
+  if (PT){
+    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x].toString(16)).join("");
+    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share${BGQ}`;
+    text = `우리 집 ${D.label.compatShort} ${c.s}점, '${c.t}'래 😆 나는 ${TYPES[k].emoji} ${nm(k)}!`;
+  } else {
+    url = `${base}?who=${WHO==="mom"?"dad":"mom"}&pt=${k}&from=share${BGQ}`;
+    text = `나는 ${TYPES[k].emoji} ${nm(k)}래 😂 ${OTHER}는 무슨 유형일까? 1분이면 끝, 다 하면 우리 궁합 나와!`;
+  }
+  if (navigator.share){ try { await navigator.share({title:D.title, text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
+  try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("링크를 복사했어요. 카톡에 붙여 넣어 보내세요!"); }
+  catch(e){ prompt("이 주소를 복사해서 보내 주세요", url); }
+}
+
+function saveCard(){
+  track('save');
+  const {k, s} = window._res; const t = TYPES[k];
+  const cv = $("cv"), ctx = cv.getContext("2d");
+  const img = new Image(); img.src = `img/${k}.jpg`;
+  img.onload = () => {
+    ctx.fillStyle = "#fbf8f3"; ctx.fillRect(0,0,1080,1350);
+    const GH = 700, sh = img.width * GH / 1080;
+    ctx.drawImage(img, 0, img.height*0.04, img.width, sh, 0, 0, 1080, GH);
+    const gy = GH + 20;
+    ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.roundRect(40, GH-60, 1000, 1350-GH+20, 40); ctx.fill();
+    ctx.textAlign = "center"; ctx.fillStyle = "#6b6577"; ctx.font = "700 36px Pretendard, sans-serif";
+    ctx.fillText(F(D.label.result), 540, gy);
+    ctx.fillStyle = t.color; ctx.font = "900 80px Pretendard, sans-serif";
+    ctx.fillText(`${t.emoji} ${nm(k)}`, 540, gy+100);
+    ctx.fillStyle = "#2f2b36"; ctx.font = "700 38px Pretendard, sans-serif";
+    ctx.fillText(R(t.line), 540, gy+170);
+    const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+    ctx.textAlign = "left"; ctx.font = "700 32px Pretendard, sans-serif";
+    ORDER.forEach((x,i)=>{ const y = gy+235+i*52, p = Math.round(s[x]/total*100);
+      ctx.fillStyle="#2f2b36"; ctx.fillText(`${TYPES[x].emoji} ${short(x)}`, 100, y+28);
+      ctx.fillStyle="#efeaf5"; ctx.beginPath(); ctx.roundRect(380, y+6, 500, 26, 13); ctx.fill();
+      ctx.fillStyle=TYPES[x].color; ctx.beginPath(); ctx.roundRect(380, y+6, Math.max(26,500*p/100), 26, 13); ctx.fill();
+      ctx.fillStyle="#2f2b36"; ctx.textAlign="right"; ctx.fillText(`${p}%`, 980, y+30); ctx.textAlign="left"; });
+    ctx.textAlign = "center";
+    if (PT){ const c = getCompat(k, PT);
+      ctx.fillStyle = D.main; ctx.font = "900 38px Pretendard, sans-serif";
+      ctx.fillText(`💑 ${D.label.compatShort} ${c.s}점 · ${c.t}`, 540, 1250); }
+    ctx.fillStyle = D.main; ctx.font = "800 30px Pretendard, sans-serif";
+    ctx.fillText(D.label.card, 540, 1310);
+    cv.toBlob(async b => {
+      const f = new File([b], `${D.slug}_${nm(k)}.png`, {type:"image/png"});
+      if (navigator.canShare && navigator.canShare({files:[f]})){ try { await navigator.share({files:[f]}); return; } catch(e){ if (e.name==="AbortError") return; } }
+      const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = f.name; a.click();
+      toast("결과 카드를 저장했어요");
+    }, "image/png");
+  };
+}
+
+(function(){
+  const r = QS.get("r"), m = QS.get("m");
+  $("chips").innerHTML = ORDER.map(k=>`<span class="chip">${TYPES[k].emoji} ${short(k)}</span>`).join("");
+  $("count").textContent = `${Q.length}문항 · 약 1분 · 답은 저장되지 않아요`;
+  if (WHO==="dad"){ document.querySelectorAll("h1 em").forEach(e=>e.textContent=e.textContent.replace("엄마","아빠")); document.title = R(document.title); }
+  $("rnote").innerHTML = `재미로 보는 테스트예요. 정답인 ${ROLE} 유형은 없어요 💜${D.note?"<br>"+D.note:""}<br>${D.brand}`;
+  $("more").innerHTML = `<h3>🎲 이 테스트도 해 보세요</h3>` + REC.map(x=>`<a href="${x.url}?from=rec${BGQ}" onclick="track('rec')"><img src="${x.img}" alt="" loading="lazy"><div><b>${x.title}</b><span>${x.sub}</span></div></a>`).join("");
+  if (PT){ $("invite").innerHTML = `${OTHER}는 ${TYPES[PT].emoji} <b>${ptName(PT)}</b>래요!<br>내 유형까지 알면 💑 우리 집 궁합이 나와요`; $("invite").classList.remove("hide"); }
+  if (r && TYPES[r] && m && new RegExp(`^[0-9a-f]{${ORDER.length}}$`).test(m) && (from==="direct" || QS.get("v")==="1")){
+    const s={}; ORDER.forEach((k,i)=>s[k]=parseInt(m[i],16)); window._mine = r; showResult(r, s); }
+})();
+</script>
+</body>
+</html>
