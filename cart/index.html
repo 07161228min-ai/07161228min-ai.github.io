@@ -62,6 +62,8 @@ h1 em { font-style:normal; color:var(--pu); }
 .toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#2f2b36; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
 .toast.on { opacity:.95; }
 .hide { display:none !important; }
+.both { margin-top:16px; font-size:14px; font-weight:700; color:var(--sub); text-align:center; }
+.both + .btn.main { margin-top:8px; }
 .others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
 .others button { border:0; background:var(--soft); border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; text-align:left; }
 .others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
@@ -93,7 +95,9 @@ h1 em { font-style:normal; color:var(--pu); }
       <p class="lead">우유 하나 사러 갔다가 카트 한가득…<br>7문항으로 알아보는 나의 장보기 유형</p>
       <div class="invite hide" id="invite"></div>
       <div class="chips" id="chips"></div>
-      <button class="btn main" onclick="begin()">테스트 시작하기</button>
+      <p class="both" id="both">아빠도 할 수 있어요 · 둘 다 하면 궁합이 나와요 💑</p>
+      <button class="btn main" id="btnmom" onclick="begin()">👩 엄마로 시작하기</button>
+      <button class="btn line" id="btndad" onclick="startAs()">👨 아빠로 시작하기</button>
       <p class="count" id="count"></p>
     </div>
   </section>
@@ -161,6 +165,7 @@ const getCompat = (a,b) => D.compat[ckey(a,b)];
 
 function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
 function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
+function startAs(){ const q=new URLSearchParams(location.search); ['r','m','v','pt'].forEach(x=>q.delete(x)); q.set('who','dad'); q.set('go','1'); location.replace(location.pathname+'?'+q.toString()); }
 function begin(){ cur=0; ans=[]; show("quiz"); render(); track('start'); }
 function render(){
   const [q, opts] = Q[cur];
@@ -291,6 +296,8 @@ function saveCard(){
 }
 
 (function(){
+  if (QS.has('who') || PT){ $('both').classList.add('hide'); $('btndad').classList.add('hide'); $('btnmom').textContent = '테스트 시작하기'; }
+  if (QS.get('go')==='1'){ const q=new URLSearchParams(location.search); q.delete('go'); history.replaceState(null,'',location.pathname+'?'+q.toString()); setTimeout(begin,0); }
   const r = QS.get("r"), m = QS.get("m");
   $("chips").innerHTML = ORDER.map(k=>`<span class="chip">${TYPES[k].emoji} ${short(k)}</span>`).join("");
   $("count").textContent = `${Q.length}문항 · 약 1분 · 답은 저장되지 않아요`;
