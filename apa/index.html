@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>아플 때, 나는 무슨 엄마 환자? | 건강마컨</title>
+<meta name="description" content="7문항 1분! 아플 때 나는 무슨 환자일까? 참는 곰·검색왕·바로 병원·SOS 전화 중 나는? 부부가 둘 다 하면 아플 때 궁합까지!">
+<meta property="og:title" content="아플 때 나는 무슨 엄마·아빠 환자? 🤒">
+<meta property="og:description" content="7문항 1분 테스트 · 끝나면 우리 부부 아플 때 궁합까지!">
+<meta property="og:image" content="https://07161228min-ai.github.io/apa/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#d9534f; --pu2:#ec8a86; --mint:#3d8a68; --bg:#fbf8f3; --ink:#2f2b36; --sub:#6b6577; --line:#e8e1f1; --soft:#fdecec; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.5; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(60,40,90,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.25); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.25); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.count { text-align:center; color:var(--sub); font-size:13px; margin-top:12px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qno { font-size:14px; font-weight:800; color:var(--pu); }
+.qtext { font-size:21px; font-weight:800; line-height:1.38; margin:6px 0 16px; letter-spacing:-.3px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:20px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:30px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:12px; }
+.sec { padding:16px 20px 4px; }
+.sec h3 { font-size:16px; font-weight:800; margin-bottom:8px; }
+.sec p, .sec li { font-size:15px; color:#433d4d; }
+.sec ul { list-style:none; }
+.sec li { padding-left:20px; position:relative; margin-bottom:6px; }
+.sec li::before { content:"✔"; position:absolute; left:0; color:var(--mint); font-weight:900; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:7px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:110px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; }
+.mix .row b { width:40px; text-align:right; flex:none; }
+.pair { display:flex; gap:10px; }
+.pair div { flex:1; background:var(--soft); border-radius:14px; padding:10px 12px; font-size:14px; }
+.pair b { display:block; font-size:13px; color:var(--sub); margin-bottom:2px; }
+.ctas { padding:10px 20px 18px; }
+.note { font-size:12px; color:#9a94a5; text-align:center; margin-top:16px; line-height:1.6; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#2f2b36; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+.both { margin-top:16px; font-size:14px; font-weight:700; color:var(--sub); text-align:center; }
+.both + .btn.main { margin-top:8px; }
+.others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
+.others button { border:0; background:var(--soft); border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; text-align:left; }
+.others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
+.invite { background:#fff4d6; border-radius:14px; padding:10px 14px; font-size:15px; font-weight:700; margin-top:12px; }
+.compat { margin:16px 20px 4px; background:linear-gradient(135deg,var(--soft),#fff4f0); border:2px solid var(--line); border-radius:18px; padding:16px; text-align:center; }
+.compat .ct { font-size:14px; font-weight:800; color:var(--sub); }
+.compat .cp { font-size:17px; font-weight:800; margin-top:6px; }
+.compat .cs { font-size:40px; font-weight:900; color:var(--pu); line-height:1.1; margin-top:6px; }
+.compat .cs small { font-size:18px; }
+.compat .cn { font-size:18px; font-weight:900; margin-top:2px; }
+.compat .cd { font-size:15px; color:#433d4d; margin-top:8px; text-align:left; }
+.compat .ctip { font-size:14px; color:var(--mint); font-weight:700; margin-top:8px; text-align:left; }
+.more { margin:8px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:56px; height:70px; object-fit:cover; border-radius:10px; flex:none; }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">건강마컨 · 1분 테스트</div>
+
+  <section id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="열이 나는데도 국을 끓이는 엄마"></div>
+    <div class="pad">
+      <h1>아플 때 나는<br><em>무슨 엄마 환자</em>일까?</h1>
+      <p class="lead">39도인데 밥은 차리고 누웠다, 나만 그래?<br>7문항으로 알아보는 나의 아플 때 유형</p>
+      <div class="invite hide" id="invite"></div>
+      <div class="chips" id="chips"></div>
+      <p class="both" id="both">아빠도 할 수 있어요 · 둘 다 하면 궁합이 나와요 💑</p>
+      <button class="btn main" id="btnmom" onclick="begin()">👩 엄마로 시작하기</button>
+      <button class="btn line" id="btndad" onclick="startAs()">👨 아빠로 시작하기</button>
+      <p class="count" id="count"></p>
+    </div>
+  </section>
+
+  <section id="quiz" class="card hide"><div class="pad">
+    <div class="qno" id="qno"></div>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back" onclick="prev()">← 이전 문항</button>
+  </div></section>
+
+  <section id="result" class="card hide">
+    <div class="rtop">
+      <div class="rsmall" id="rsmall"></div>
+      <div class="rname" id="rname"></div>
+      <div class="rline" id="rline"></div>
+      <button class="btn line hide" id="mybtn" onclick="backMine()" style="margin-top:12px;padding:10px;font-size:15px">← 내 결과로 돌아가기</button>
+    </div>
+    <img class="rimg" id="rimg" alt="">
+    <div class="sec"><p id="rdesc"></p></div>
+    <div class="sec mix" id="mixsec"><h3 id="hmix"></h3><div id="mix"></div></div>
+    <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
+    <div class="sec"><h3 id="htips"></h3><ul id="rtips"></ul></div>
+    <div class="compat hide" id="compat"></div>
+    <div class="sec"><div class="pair">
+      <div><b id="lbest"></b><span id="rbest"></span></div>
+      <div><b id="lworst"></b><span id="rworst"></span></div>
+    </div></div>
+    <div class="ctas">
+      <button class="btn main" id="sharebtn" onclick="shareTest()"></button>
+      <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
+      <button class="btn line" onclick="restart()" style="border-color:#d8d2e0;color:var(--sub)">↺ 다시 하기</button>
+    </div>
+    <div class="more" id="more"></div>
+    <div class="sec" style="padding-top:8px"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
+    <div class="others" id="others"></div>
+    <p class="note" id="rnote" style="padding:0 20px 18px"></p>
+  </section>
+
+  <canvas id="cv" width="1080" height="1350" class="hide"></canvas>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const D = {"slug": "apa", "brand": "건강마컨", "title": "아플 때, 나는 무슨 엄마 환자?", "main": "#d9534f", "label": {"result": "아플 때 나의 유형은", "mix": "📊 나의 아플 때 성분표", "tips": "🩺 나에게 필요한 한마디", "best": "아플 때 찰떡 짝꿍 {OTHER}", "worst": "아플 때 답답한 {OTHER}", "compat": "우리 집 아플 때 궁합", "compatShort": "아플 때 궁합", "card": "건강마컨 · 아플 때 유형 1분 테스트"}, "types": {"A": {"emoji": "🐻", "name": "참는 곰 엄마", "color": "#8a6b4a", "line": "\"자고 일어나면 괜찮아\"", "desc": "열이 나도, 허리가 아파도 '이 정도는 괜찮아'로 버티는 유형. 아이 밥 차리고 빨래까지 다 끝낸 뒤에야 눕는데, 그때는 이미 많이 아파요. 가족이 끌고 가야 겨우 병원에 가요.", "good": ["웬만한 일에 흔들리지 않아요", "가족을 먼저 챙기는 마음이 커요", "아파도 집안이 멈추지 않아요"], "tips": ["'괜찮아' 대신 '오늘 병원 갈게' 말하기", "아픈 날은 집안일 하나 빼기"], "best": "C", "worst": "B"}, "B": {"emoji": "🔍", "name": "검색왕 엄마", "color": "#3a6ea5", "line": "\"증상 검색만 2시간째\"", "desc": "아프면 일단 휴대폰부터. 증상을 검색하고, 후기를 읽고, 비슷한 사례를 찾다 보면 2시간이 지나 있어요. 검색할수록 걱정은 커지는데 병원은 아직 안 갔어요.", "good": ["내 몸에 관심이 많아요", "진료 때 설명을 잘해요", "가족이 아플 때도 정보가 빨라요"], "tips": ["검색이 30분 넘으면 그냥 진료 예약", "인터넷 글보다 진료가 먼저"], "best": "C", "worst": "A"}, "C": {"emoji": "🏥", "name": "바로 병원 엄마", "color": "#3d8a68", "line": "\"문 열자마자 1등 접수\"", "desc": "조금만 이상해도 바로 병원으로. 진료 접수 앱이 휴대폰 첫 화면에 있고, 동네 병원 점심시간까지 외우고 있어요. 걱정을 오래 끌지 않는 실천파예요.", "good": ["작은 신호를 놓치지 않아요", "가족 건강 일정도 잘 챙겨요", "걱정을 오래 끌지 않아요"], "tips": ["진료 기록은 사진으로 한곳에 모으기", "가족 것 챙기며 내 검진도 함께"], "best": "A", "worst": "D"}, "D": {"emoji": "📞", "name": "SOS 전화 엄마", "color": "#d0568f", "line": "\"여보세요… 나 아파…\"", "desc": "아프면 제일 먼저 부모님께 전화해요. 전화 한 통에 죽, 반찬, 아이 돌봄까지 해결돼요. 몇 살이 되어도 아플 땐 부모님이 최고인 유형이에요.", "good": ["도움을 청할 줄 알아요", "가족끼리 정이 넘쳐요", "혼자 끙끙 앓지 않아요"], "tips": ["도움받으면서 진료도 꼭 받기", "다 나으면 부모님께 안부 전화도"], "best": "A", "worst": "C"}}, "questions": [["아침에 일어났는데 몸이 으슬으슬하다", [["A", "일단 아이 등원부터 시킨다"], ["B", "누워서 '오한 원인' 검색"], ["C", "병원 접수 앱부터 연다"], ["D", "부모님께 전화한다"]]], ["열이 난다. 제일 먼저 찾는 것은?", [["A", "오늘 할 일 목록"], ["B", "휴대폰 검색창"], ["C", "신분증과 가까운 병원"], ["D", "부모님 연락처"]]], ["가족이 '병원 가 봐' 하면", [["A", "\"괜찮다니까\""], ["B", "\"잠깐, 이것만 더 찾아보고\""], ["C", "\"이미 예약했어\""], ["D", "\"우리 집에서 죽 가져오신대\""]]], ["약 먹을 때 나는?", [["A", "참다 참다 결국 먹는다"], ["B", "설명서를 끝까지 읽는다"], ["C", "처방받은 대로 시간 맞춰"], ["D", "부모님이 챙겨 주신다"]]], ["아픈 날 집안일은?", [["A", "다 하고 눕는다"], ["B", "누워서 '집안일 줄이는 법' 검색"], ["C", "병원 다녀와서 꼭 필요한 것만"], ["D", "부모님이 와 계신다"]]], ["아이가 '아파?' 하고 물으면", [["A", "\"아니, 하나도 안 아파!\""], ["B", "\"응, 지금 원인 찾는 중이야\""], ["C", "\"응, 그래서 병원 다녀왔어\""], ["D", "\"할머니 오신대!\""]]], ["아플 때 나를 한 단어로?", [["A", "〈버티기〉"], ["B", "〈검색〉"], ["C", "〈접수〉"], ["D", "〈SOS〉"]]]], "compat": {"AA": {"s": 60, "t": "둘 다 버티는 곰", "d": "둘 다 '괜찮아'만 하다가 같이 앓아누워요. 서로 병원 가라고만 하고 아무도 안 가요.", "tip": "아프면 서로 진료 예약 대신 잡아 주기"}, "AB": {"s": 64, "t": "버티기와 검색", "d": "한 사람은 참고, 한 사람은 검색만 해요. 걱정은 많은데 병원은 아무도 안 가요.", "tip": "검색 대신 진료 예약 버튼 누르기"}, "AC": {"s": 92, "t": "끌고 가는 사람", "d": "참는 사람을 바로 병원 타입이 끌고 가요. 덕분에 일이 커지기 전에 진료를 받아요.", "tip": "끌고 갈 땐 따뜻한 말 한마디도"}, "AD": {"s": 80, "t": "든든한 지원군", "d": "한 사람이 버틸 때 SOS 타입이 부모님 지원군을 불러요. 결국 다 같이 챙겨요.", "tip": "도움받는 날엔 푹 쉬기"}, "BB": {"s": 66, "t": "검색 부부", "d": "둘이 같이 증상을 검색하다가 걱정만 두 배가 돼요.", "tip": "검색은 10분, 그다음은 병원"}, "BC": {"s": 88, "t": "정보와 실천", "d": "검색왕이 정보를 모으고, 바로 병원 타입이 실천해요. 아플 때 손발이 척척 맞아요.", "tip": "검색한 내용은 진료 때 질문으로"}, "BD": {"s": 74, "t": "검색과 전화", "d": "한 사람은 검색하고 한 사람은 부모님께 전화해요. 둘 다 바쁜데 병원은 아직이에요.", "tip": "전화하고 나서 병원도 꼭"}, "CC": {"s": 84, "t": "건강 관리 부부", "d": "둘 다 바로 병원 가는 타입. 동네 병원 선생님이 가족 이름을 다 외워요.", "tip": "가족 검진 날짜 함께 적어 두기"}, "CD": {"s": 86, "t": "병원과 죽", "d": "한 사람은 병원에 데려가고, 부모님은 죽을 들고 오세요. 아플 때 제일 든든한 조합이에요.", "tip": "부모님께 고맙다는 전화 한 통"}, "DD": {"s": 70, "t": "양가 SOS", "d": "둘 다 아프면 양가 부모님이 동시에 출동해요. 집이 북적북적해요.", "tip": "부모님 건강도 함께 챙기기"}}, "note": "증상이 있으면 참지 말고 병원에서 진료받아 보세요."};
+const REC = [{"url": "https://07161228min-ai.github.io/coffee/", "img": "https://07161228min-ai.github.io/coffee/img/cover.jpg", "title": "엄마 커피로 보는 나는 무슨 엄마?", "sub": "생존 커피 · 식은 커피 수집가 · 디카페인 전향 · 믹스 한 봉"}, {"url": "https://07161228min-ai.github.io/vitamin/", "img": "https://07161228min-ai.github.io/vitamin/img/cover.jpg", "title": "영양제 서랍으로 보는 나는 무슨 엄마?", "sub": "사 놓고 잊는 · 알람 장인 · 가족 것만 챙기는 · 하나도 없는"}, {"url": "https://07161228min-ai.github.io/nagging/", "img": "https://07161228min-ai.github.io/nagging/img/cover.jpg", "title": "우리 어머니는 무슨 잔소리 유형?", "sub": "밥은 먹었니 · 옷 따뜻하게 · 병원 가 봐 · 말없이 반찬 택배"}];
+const TYPES = D.types, ORDER = Object.keys(TYPES), Q = D.questions;
+let cur = 0, ans = [];
+const $ = id => document.getElementById(id);
+const QS = new URLSearchParams(location.search);
+const from = QS.get("from") || "direct";
+const WHO = QS.get("who")==="dad" ? "dad" : "mom";
+const ROLE = WHO==="dad" ? "아빠" : "엄마", OTHER = WHO==="dad" ? "엄마" : "아빠";
+const BG = QS.get("b")==="1", BGQ = BG ? "&b=1" : "";
+const PT = TYPES[QS.get("pt")] ? QS.get("pt") : null;
+const R = s => WHO==="dad" ? s.replaceAll("엄마","아빠") : s;
+const RO = s => WHO==="dad" ? s.replaceAll("아빠","엄마") : s;
+const F = s => s.replaceAll("{ROLE}", ROLE).replaceAll("{OTHER}", OTHER);
+const nm = k => TYPES[k].name.replace("엄마", ROLE);
+const ptName = k => TYPES[k].name.replace("엄마", OTHER);
+const short = k => TYPES[k].name.replace(" 엄마","");
+const ckey = (a,b) => [a,b].sort((x,y)=>ORDER.indexOf(x)-ORDER.indexOf(y)).join("");
+const getCompat = (a,b) => D.compat[ckey(a,b)];
+
+function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
+function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
+function startAs(){ const q=new URLSearchParams(location.search); ['r','m','v','pt'].forEach(x=>q.delete(x)); q.set('who','dad'); q.set('go','1'); location.replace(location.pathname+'?'+q.toString()); }
+function begin(){ cur=0; ans=[]; show("quiz"); render(); track('start'); }
+function render(){
+  const [q, opts] = Q[cur];
+  $("qno").textContent = `Q${cur+1} / ${Q.length}`;
+  $("prog").style.width = `${cur/Q.length*100}%`;
+  $("qtext").textContent = R(q);
+  $("opts").innerHTML = "";
+  const shuffled = opts.map((o,i)=>[o,(i*7+cur*3)%4]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  shuffled.forEach(([t,label])=>{
+    const b=document.createElement("button"); b.className="opt"; b.textContent=R(label);
+    if (ans[cur]===t) b.classList.add("on");
+    b.onclick=()=>{ b.classList.add("on"); ans[cur]=t; setTimeout(next,170); };
+    $("opts").appendChild(b);
+  });
+  $("back").style.visibility = cur ? "visible" : "hidden";
+}
+function next(){ if (cur < Q.length-1){ cur++; render(); } else finish(); }
+function prev(){ if (cur>0){ cur--; render(); } }
+function scores(a){ const s={}; ORDER.forEach(k=>s[k]=0); a.forEach(t=>s[t]++); return s; }
+function finish(){
+  const s = scores(ans);
+  let top = ORDER.reduce((a,b)=> s[b]>s[a]?b:a, ORDER[0]);
+  const tied = ORDER.filter(k=>s[k]===s[top]);
+  if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
+  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}${BGQ}`;
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k].toString(16)).join("")}${keep}`);
+  window._mine = top;
+  showResult(top, s);
+  track('finish');
+}
+function showResult(k, s, pk=false){
+  const t = TYPES[k];
+  $("mixsec").classList.toggle("hide", pk); $("mybtn").classList.toggle("hide", !pk);
+  $("rsmall").textContent = pk ? "다른 유형 구경 중 👀" : F(D.label.result);
+  $("rname").textContent = `${t.emoji} ${nm(k)}`;
+  $("rname").style.color = t.color;
+  $("rline").textContent = R(t.line);
+  $("rimg").src = `img/${k}.jpg`; $("rimg").alt = nm(k);
+  $("rdesc").textContent = R(t.desc);
+  $("hmix").textContent = D.label.mix;
+  $("htips").textContent = D.label.tips;
+  $("rgood").innerHTML = t.good.map(x=>`<li>${R(x)}</li>`).join("");
+  $("rtips").innerHTML = t.tips.map(x=>`<li>${R(x)}</li>`).join("");
+  $("lbest").textContent = F(D.label.best); $("lworst").textContent = F(D.label.worst);
+  $("rbest").textContent = `${TYPES[t.best].emoji} ${ptName(t.best)}`;
+  $("rworst").textContent = `${TYPES[t.worst].emoji} ${ptName(t.worst)}`;
+  const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+  $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
+    return `<div class="row"><span>${TYPES[x].emoji} ${short(x)}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="${x===(window._mine||k)?'backMine()':`peek('${x}')`}"><img src="img/${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
+  const mine = window._mine || k;
+  if (PT && k===mine && !pk){
+    const c = getCompat(mine, PT);
+    const momK = WHO==="mom" ? mine : PT, dadK = WHO==="mom" ? PT : mine;
+    $("compat").innerHTML = `<div class="ct">💑 ${D.label.compat}</div>
+      <div class="cp">엄마 ${TYPES[momK].emoji} ${short(momK)} × 아빠 ${TYPES[dadK].emoji} ${short(dadK)}</div>
+      <div class="cs">${c.s}<small>점</small></div><div class="cn">${c.t}</div>
+      <div class="cd">${c.d}</div><div class="ctip">💡 ${c.tip}</div>`;
+    $("compat").classList.remove("hide");
+    $("sharebtn").textContent = `💑 우리 궁합 결과 ${OTHER}에게 보내기`;
+  } else {
+    $("compat").classList.add("hide");
+    $("sharebtn").textContent = WHO==="mom" ? "👨 아빠는 무슨 유형일까? 보내기" : "👩 엄마는 무슨 유형일까? 보내기";
+  }
+  window._res = {k: mine, s};
+  show("result");
+}
+function peek(x){ const s = window._res ? window._res.s : scores([]); showResult(x, s, true); }
+function backMine(){ if (window._res) showResult(window._res.k, window._res.s); }
+function restart(){ const q = [WHO==="dad"?"who=dad":"", PT?"pt="+PT:"", BG?"b=1":"", from!=="direct"?"from="+from:""].filter(Boolean).join("&"); history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
+
+async function shareTest(){
+  track('share');
+  const k = window._res ? window._res.k : ORDER[0];
+  const base = location.origin + location.pathname;
+  let url, text;
+  if (PT){
+    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x].toString(16)).join("");
+    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share${BGQ}`;
+    text = `우리 집 ${D.label.compatShort} ${c.s}점, '${c.t}'래 😆 나는 ${TYPES[k].emoji} ${nm(k)}!`;
+  } else {
+    url = `${base}?who=${WHO==="mom"?"dad":"mom"}&pt=${k}&from=share${BGQ}`;
+    text = `나는 ${TYPES[k].emoji} ${nm(k)}래 😂 ${OTHER}는 무슨 유형일까? 1분이면 끝, 다 하면 우리 궁합 나와!`;
+  }
+  if (navigator.share){ try { await navigator.share({title:D.title, text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
+  try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("링크를 복사했어요. 카톡에 붙여 넣어 보내세요!"); }
+  catch(e){ prompt("이 주소를 복사해서 보내 주세요", url); }
+}
+
+function saveCard(){
+  track('save');
+  const {k, s} = window._res; const t = TYPES[k];
+  const cv = $("cv"), ctx = cv.getContext("2d");
+  const img = new Image(); img.src = `img/${k}.jpg`;
+  img.onload = () => {
+    ctx.fillStyle = "#fbf8f3"; ctx.fillRect(0,0,1080,1350);
+    const GH = 700, sh = img.width * GH / 1080;
+    ctx.drawImage(img, 0, img.height*0.04, img.width, sh, 0, 0, 1080, GH);
+    const gy = GH + 20;
+    ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.roundRect(40, GH-60, 1000, 1350-GH+20, 40); ctx.fill();
+    ctx.textAlign = "center"; ctx.fillStyle = "#6b6577"; ctx.font = "700 36px Pretendard, sans-serif";
+    ctx.fillText(F(D.label.result), 540, gy);
+    ctx.fillStyle = t.color; ctx.font = "900 80px Pretendard, sans-serif";
+    ctx.fillText(`${t.emoji} ${nm(k)}`, 540, gy+100);
+    ctx.fillStyle = "#2f2b36"; ctx.font = "700 38px Pretendard, sans-serif";
+    ctx.fillText(R(t.line), 540, gy+170);
+    const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+    ctx.textAlign = "left"; ctx.font = "700 32px Pretendard, sans-serif";
+    ORDER.forEach((x,i)=>{ const y = gy+235+i*52, p = Math.round(s[x]/total*100);
+      ctx.fillStyle="#2f2b36"; ctx.fillText(`${TYPES[x].emoji} ${short(x)}`, 100, y+28);
+      ctx.fillStyle="#efeaf5"; ctx.beginPath(); ctx.roundRect(380, y+6, 500, 26, 13); ctx.fill();
+      ctx.fillStyle=TYPES[x].color; ctx.beginPath(); ctx.roundRect(380, y+6, Math.max(26,500*p/100), 26, 13); ctx.fill();
+      ctx.fillStyle="#2f2b36"; ctx.textAlign="right"; ctx.fillText(`${p}%`, 980, y+30); ctx.textAlign="left"; });
+    ctx.textAlign = "center";
+    if (PT){ const c = getCompat(k, PT);
+      ctx.fillStyle = D.main; ctx.font = "900 38px Pretendard, sans-serif";
+      ctx.fillText(`💑 ${D.label.compatShort} ${c.s}점 · ${c.t}`, 540, 1250); }
+    ctx.fillStyle = D.main; ctx.font = "800 30px Pretendard, sans-serif";
+    ctx.fillText(D.label.card, 540, 1310);
+    cv.toBlob(async b => {
+      const f = new File([b], `${D.slug}_${nm(k)}.png`, {type:"image/png"});
+      if (navigator.canShare && navigator.canShare({files:[f]})){ try { await navigator.share({files:[f]}); return; } catch(e){ if (e.name==="AbortError") return; } }
+      const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = f.name; a.click();
+      toast("결과 카드를 저장했어요");
+    }, "image/png");
+  };
+}
+
+(function(){
+  if (QS.has('who') || PT){ $('both').classList.add('hide'); $('btndad').classList.add('hide'); $('btnmom').textContent = '테스트 시작하기'; }
+  if (QS.get('go')==='1'){ const q=new URLSearchParams(location.search); q.delete('go'); history.replaceState(null,'',location.pathname+'?'+q.toString()); setTimeout(begin,0); }
+  const r = QS.get("r"), m = QS.get("m");
+  $("chips").innerHTML = ORDER.map(k=>`<span class="chip">${TYPES[k].emoji} ${short(k)}</span>`).join("");
+  $("count").textContent = `${Q.length}문항 · 약 1분 · 답은 저장되지 않아요`;
+  if (WHO==="dad"){ document.querySelectorAll("h1 em").forEach(e=>e.textContent=e.textContent.replace("엄마","아빠")); document.title = R(document.title); }
+  $("rnote").innerHTML = `재미로 보는 테스트예요. 정답인 ${ROLE} 유형은 없어요 💜${D.note?"<br>"+D.note:""}<br>${D.brand}`;
+  $("more").innerHTML = `<h3>🎲 이 테스트도 해 보세요</h3>` + REC.map(x=>`<a href="${x.url}?from=rec${BGQ}" onclick="track('rec')"><img src="${x.img}" alt="" loading="lazy"><div><b>${x.title}</b><span>${x.sub}</span></div></a>`).join("");
+  if (PT){ $("invite").innerHTML = `${OTHER}는 ${TYPES[PT].emoji} <b>${ptName(PT)}</b>래요!<br>내 유형까지 알면 💑 우리 집 궁합이 나와요`; $("invite").classList.remove("hide"); }
+  if (r && TYPES[r] && m && new RegExp(`^[0-9a-f]{${ORDER.length}}$`).test(m) && (from==="direct" || QS.get("v")==="1")){
+    const s={}; ORDER.forEach((k,i)=>s[k]=parseInt(m[i],16)); window._mine = r; showResult(r, s); }
+})();
+</script>
+</body>
+</html>
