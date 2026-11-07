@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>살까 말까, 나는 무슨 고민 유형? | 대신골라줌</title>
+<meta name="description" content="7문항 1분! 살까 말까 고민할 때 나는 무슨 유형? 3초 결제러·비교표 작성러·장바구니 숙성러·대신 골라줘러. 같이 쇼핑하는 사람이랑 둘 다 하면 쇼핑 궁합까지!">
+<meta property="og:title" content="살까 말까, 나는 무슨 고민 유형? 🛒">
+<meta property="og:description" content="7문항 1분 테스트 · 둘 다 하면 '우리 쇼핑 궁합'까지!">
+<meta property="og:image" content="https://07161228min-ai.github.io/d/buy/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#e0603a; --pu2:#f09a72; --mint:#3d8a68; --bg:#fbf8f3; --ink:#2f2b36; --sub:#6b6577; --line:#e8e1f1; --soft:#fdf0ea; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.5; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(60,40,90,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.25); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.25); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.count { text-align:center; color:var(--sub); font-size:13px; margin-top:12px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qno { font-size:14px; font-weight:800; color:var(--pu); }
+.qtext { font-size:21px; font-weight:800; line-height:1.38; margin:6px 0 16px; letter-spacing:-.3px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:20px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:30px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:12px; }
+.sec { padding:16px 20px 4px; }
+.sec h3 { font-size:16px; font-weight:800; margin-bottom:8px; }
+.sec p, .sec li { font-size:15px; color:#433d4d; }
+.sec ul { list-style:none; }
+.sec li { padding-left:20px; position:relative; margin-bottom:6px; }
+.sec li::before { content:"✔"; position:absolute; left:0; color:var(--mint); font-weight:900; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:7px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:110px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; }
+.mix .row b { width:40px; text-align:right; flex:none; }
+.pair { display:flex; gap:10px; }
+.pair div { flex:1; background:var(--soft); border-radius:14px; padding:10px 12px; font-size:14px; }
+.pair b { display:block; font-size:13px; color:var(--sub); margin-bottom:2px; }
+.ctas { padding:10px 20px 18px; }
+.note { font-size:12px; color:#9a94a5; text-align:center; margin-top:16px; line-height:1.6; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#2f2b36; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+.both { margin-top:16px; font-size:14px; font-weight:700; color:var(--sub); text-align:center; }
+.both + .btn.main { margin-top:8px; }
+.others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
+.others button { border:0; background:var(--soft); border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; text-align:left; }
+.others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
+.invite { background:#fff4d6; border-radius:14px; padding:10px 14px; font-size:15px; font-weight:700; margin-top:12px; }
+.compat { margin:16px 20px 4px; background:linear-gradient(135deg,var(--soft),#fff4f0); border:2px solid var(--line); border-radius:18px; padding:16px; text-align:center; }
+.compat .ct { font-size:14px; font-weight:800; color:var(--sub); }
+.compat .cp { font-size:17px; font-weight:800; margin-top:6px; }
+.compat .cs { font-size:40px; font-weight:900; color:var(--pu); line-height:1.1; margin-top:6px; }
+.compat .cs small { font-size:18px; }
+.compat .cn { font-size:18px; font-weight:900; margin-top:2px; }
+.compat .cd { font-size:15px; color:#433d4d; margin-top:8px; text-align:left; }
+.compat .ctip { font-size:14px; color:var(--mint); font-weight:700; margin-top:8px; text-align:left; }
+.more { margin:8px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:56px; height:70px; object-fit:cover; border-radius:10px; flex:none; }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">대신골라줌 · 1분 테스트</div>
+
+  <section id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="밤 소파에서 휴대폰 쇼핑을 고민하는 커플"></div>
+    <div class="pad">
+      <h1>장바구니에 3주째 넣어 둔 그거,<br><em>나만 그래?</em></h1>
+      <p class="lead">쇼핑할 때 행동으로 보는<br>7문항 1분 쇼핑 유형 테스트</p>
+      <div class="invite hide" id="invite"></div>
+      <div class="chips" id="chips"></div>
+      <p class="both" id="both">가족·애인·친구랑 둘 다 하면 쇼핑 궁합이 나와요 🛒</p>
+      <button class="btn main" id="btnmom" onclick="begin()">💬 테스트 시작하기</button>
+      <p class="count" id="count"></p>
+    </div>
+  </section>
+
+  <section id="quiz" class="card hide"><div class="pad">
+    <div class="qno" id="qno"></div>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back" onclick="prev()">← 이전 문항</button>
+  </div></section>
+
+  <section id="result" class="card hide">
+    <div class="rtop">
+      <div class="rsmall" id="rsmall"></div>
+      <div class="rname" id="rname"></div>
+      <div class="rline" id="rline"></div>
+      <button class="btn line hide" id="mybtn" onclick="backMine()" style="margin-top:12px;padding:10px;font-size:15px">← 내 결과로 돌아가기</button>
+    </div>
+    <img class="rimg" id="rimg" alt="">
+    <div class="sec"><p id="rdesc"></p></div>
+    <div class="sec mix" id="mixsec"><h3 id="hmix"></h3><div id="mix"></div></div>
+    <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
+    <div class="sec"><h3 id="htips"></h3><ul id="rtips"></ul></div>
+    <div class="compat hide" id="compat"></div>
+    <div class="sec"><div class="pair">
+      <div><b id="lbest"></b><span id="rbest"></span></div>
+      <div><b id="lworst"></b><span id="rworst"></span></div>
+    </div></div>
+    <div class="ctas">
+      <button class="btn main" id="sharebtn" onclick="shareTest()"></button>
+      <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
+      <a class="btn line" href="https://www.instagram.com/daesin_golla/" target="_blank" rel="noopener" onclick="track('follow')">📷 대신골라줌 인스타 구경하기</a>
+      <button class="btn line" onclick="restart()" style="border-color:#d8d2e0;color:var(--sub)">↺ 다시 하기</button>
+    </div>
+    <div class="more" id="more"></div>
+    <div class="sec" style="padding-top:8px"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
+    <div class="others" id="others"></div>
+    <p class="note" id="rnote" style="padding:0 20px 18px"></p>
+  </section>
+
+  <canvas id="cv" width="1080" height="1350" class="hide"></canvas>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const D = {"slug": "buy", "brand": "대신골라줌", "title": "살까 말까, 나는 무슨 고민 유형?", "main": "#e0603a", "label": {"result": "살까 말까 앞에서 나는", "mix": "📊 나의 쇼핑 성분표", "tips": "💡 나에게 맞는 쇼핑 꿀팁", "best": "쇼핑 찰떡 짝꿍", "worst": "장바구니 엇갈리는", "compat": "우리 쇼핑 궁합", "compatShort": "쇼핑 궁합", "card": "@daesin_golla · 살까 말까 1분 테스트"}, "types": {"A": {"emoji": "⚡", "name": "3초 결제러", "short": "3초 결제러", "color": "#e0603a", "line": "\"마음에 들면 그게 답이야\"", "desc": "고민은 사치예요. 보는 순간 '이거다' 싶으면 바로 결제해요. 가끔 후회도 하지만 금방 털고 다음 쇼핑으로 넘어가요. 결정이 빠른 만큼 쇼핑 스트레스도 제일 적어요.", "good": ["결정이 빨라요", "고민으로 시간 낭비가 없어요", "후회도 빨리 털어요"], "tips": ["결제 전 딱 10초만 숨 고르기", "같은 물건 집에 있는지 한 번 확인"], "best": "D", "worst": "B"}, "B": {"emoji": "📊", "name": "비교표 작성러", "short": "비교표 작성러", "color": "#3a7be0", "line": "\"탭 12개는 기본이지\"", "desc": "가격, 배송비, 후기, 스펙까지 다 비교해야 마음이 놓여요. 머릿속에 비교표가 자동으로 그려져요. 그러다 지쳐서 결국 처음 본 걸 사는 날도 있지만, 실패 확률은 제일 낮아요.", "good": ["실패가 거의 없어요", "알뜰하게 사요", "주변에서 물어보러 와요"], "tips": ["비교는 3개까지만", "'적당히 좋은 것'도 정답"], "best": "C", "worst": "A"}, "C": {"emoji": "🫙", "name": "장바구니 숙성러", "short": "장바구니 숙성러", "color": "#8a5bc4", "line": "\"일단 담아 두고… 묵혀 볼게\"", "desc": "마음에 들면 일단 장바구니에 넣어요. 그리고 묵혀요. 며칠 지나도 생각나면 그때 사요. 덕분에 충동구매는 적지만, 품절 알림에 땅을 치는 날도 있어요.", "good": ["충동구매가 적어요", "진짜 필요한 것만 남아요", "장바구니가 위시리스트예요"], "tips": ["꼭 살 건 기한 정해 두기", "품절 잘 되는 건 알림 켜 두기"], "best": "A", "worst": "D"}, "D": {"emoji": "🙋", "name": "대신 골라줘러", "short": "대신 골라줘러", "color": "#2f9e7a", "line": "\"너라면 뭐 살래?\"", "desc": "고르기 전에 꼭 누군가에게 물어봐요. 캡처 보내고, 투표 올리고, 의견을 모아요. 혼자 고르면 불안하지만 함께 고르면 즐거워요. 그래서 대신골라줌이 있는 거죠 😉", "good": ["함께 고르는 재미를 알아요", "주변 의견을 잘 들어요", "선택 후 만족도가 높아요"], "tips": ["마지막 한 표는 내 마음으로", "보기 2개로 줄여서 물어보기"], "best": "A", "worst": "C"}}, "questions": [["마음에 드는 걸 발견했다", [["A", "바로 결제"], ["B", "최저가 검색부터"], ["C", "장바구니에 쏙"], ["D", "친구한테 캡처 전송"]]], ["같은 물건인데 3,000원 차이가 난다", [["A", "그냥 지금 보는 데서 산다"], ["B", "배송비·쿠폰까지 계산한다"], ["C", "더 내려갈 때까지 기다린다"], ["D", "'어디서 사?' 물어본다"]]], ["후기 볼 때 나는", [["A", "별점만 보고 끝"], ["B", "사진 후기 100개 정독"], ["C", "읽다가 일단 담아 둔다"], ["D", "아는 사람 후기가 제일 믿음"]]], ["담아 둔 물건 품절 알림이 왔다", [["A", "난 이미 샀지"], ["B", "비슷한 거 다시 비교"], ["C", "아… 담아만 뒀는데"], ["D", "'이거 품절이래 어떡해?' 단톡"]]], ["결제 버튼 앞, 내 손은", [["A", "이미 눌렀다"], ["B", "마지막으로 한 번 더 비교"], ["C", "장바구니로 뒤로 가기"], ["D", "'진짜 사도 될까?' 물어본다"]]], ["산 물건이 마음에 안 들 때", [["A", "다음에 잘 사면 되지"], ["B", "비교를 덜 했나…"], ["C", "역시 더 기다릴 걸"], ["D", "'네가 사라며!'"]]], ["내 쇼핑을 한 단어로 하면?", [["A", "스피드"], ["B", "연구"], ["C", "숙성"], ["D", "협업"]]]], "compat": {"AA": {"s": 72, "t": "택배 폭탄 커플", "d": "둘 다 3초 결제라 현관에 택배가 끊이지 않아요. 고민 없는 대신 카드 내역이 놀라워요.", "tip": "한 달에 한 번 '우리 뭐 샀나' 같이 보기"}, "AB": {"s": 60, "t": "벌써 샀어? vs 아직 비교 중", "d": "결제러가 이미 산 걸 비교러가 '더 싼 데 있던데'라고 해요. 서로 답답해요.", "tip": "큰돈은 비교러, 작은 건 결제러"}, "AC": {"s": 84, "t": "가속 페달과 브레이크", "d": "결제러는 밀고, 숙성러는 기다려요. 둘이 합치면 딱 좋은 속도가 나와요.", "tip": "숙성러 장바구니에서 하나씩 결제러가 골라 주기"}, "AD": {"s": 92, "t": "골라 주는 사람과 믿는 사람", "d": "골라줘러가 물으면 결제러가 3초 만에 답해요. 가장 빠르고 즐거운 쇼핑 조합이에요.", "tip": "결제러 취향만 밀지 않기"}, "BB": {"s": 70, "t": "비교표 회의 커플", "d": "둘 다 비교러라 물건 하나에 회의가 열려요. 실패는 없지만 시간이 오래 걸려요.", "tip": "마감 시간 정해 놓고 비교하기"}, "BC": {"s": 88, "t": "꼼꼼 알뜰 커플", "d": "비교러가 조사하고, 숙성러가 기다려요. 제일 좋은 가격에 제일 필요한 것만 사요.", "tip": "가끔은 그냥 사는 날도 만들기"}, "BD": {"s": 86, "t": "자료 제공자와 질문러", "d": "골라줘러가 물으면 비교러가 비교표로 답해요. 든든한 쇼핑 비서 조합이에요.", "tip": "비교러도 가끔은 의견을 물어보기"}, "CC": {"s": 66, "t": "장바구니 박물관 커플", "d": "둘 다 담아 두고 묵혀요. 장바구니가 둘이 합쳐 100개, 결제는 0개예요.", "tip": "월말에 하나씩 꺼내 사기"}, "CD": {"s": 62, "t": "묵히는 사람과 묻는 사람", "d": "골라줘러는 물어보고, 숙성러는 '좀 더 생각해 보자'고 해요. 결정이 자꾸 미뤄져요.", "tip": "둘 중 한 명이 결정 담당 하기"}, "DD": {"s": 78, "t": "단톡 투표 커플", "d": "둘 다 남의 의견을 물어서 고르니 친구들이 바빠요. 고르는 과정은 제일 즐거워요.", "tip": "보기 2개로 줄여서 서로에게 묻기"}}, "note": ""};
+const REC = [{"url": "https://07161228min-ai.github.io/d/sale/", "img": "https://07161228min-ai.github.io/d/sale/img/cover.jpg", "title": "할인 앞에서, 나는 무슨 유형?", "sub": "타임딜 반사신경러? 할인 해탈러?"}];
+const TYPES = D.types, ORDER = Object.keys(TYPES), Q = D.questions;
+let cur = 0, ans = [];
+const $ = id => document.getElementById(id);
+const QS = new URLSearchParams(location.search);
+const from = QS.get("from") || "direct";
+const WHO = QS.get("who")==="dad" ? "dad" : "mom";
+const ROLE = "나", OTHER = "상대";
+const BG = QS.get("b")==="1", BGQ = BG ? "&b=1" : "";
+const PT = TYPES[QS.get("pt")] ? QS.get("pt") : null;
+const R = s => s;
+const RO = s => s;
+const F = s => s.replaceAll("{ROLE}", ROLE).replaceAll("{OTHER}", OTHER);
+const nm = k => TYPES[k].name;
+const ptName = k => TYPES[k].name;
+const short = k => TYPES[k].short || TYPES[k].name;
+const ckey = (a,b) => [a,b].sort((x,y)=>ORDER.indexOf(x)-ORDER.indexOf(y)).join("");
+const getCompat = (a,b) => D.compat[ckey(a,b)];
+
+function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
+function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
+function startAs(){ const q=new URLSearchParams(location.search); ['r','m','v','pt'].forEach(x=>q.delete(x)); q.set('who','dad'); q.set('go','1'); location.replace(location.pathname+'?'+q.toString()); }
+function begin(){ cur=0; ans=[]; show("quiz"); render(); track('start'); }
+function render(){
+  const [q, opts] = Q[cur];
+  $("qno").textContent = `Q${cur+1} / ${Q.length}`;
+  $("prog").style.width = `${cur/Q.length*100}%`;
+  $("qtext").textContent = R(q);
+  $("opts").innerHTML = "";
+  const shuffled = opts.map((o,i)=>[o,(i*7+cur*3)%4]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  shuffled.forEach(([t,label])=>{
+    const b=document.createElement("button"); b.className="opt"; b.textContent=R(label);
+    if (ans[cur]===t) b.classList.add("on");
+    b.onclick=()=>{ b.classList.add("on"); ans[cur]=t; setTimeout(next,170); };
+    $("opts").appendChild(b);
+  });
+  $("back").style.visibility = cur ? "visible" : "hidden";
+}
+function next(){ if (cur < Q.length-1){ cur++; render(); } else finish(); }
+function prev(){ if (cur>0){ cur--; render(); } }
+function scores(a){ const s={}; ORDER.forEach(k=>s[k]=0); a.forEach(t=>s[t]++); return s; }
+function finish(){
+  const s = scores(ans);
+  let top = ORDER.reduce((a,b)=> s[b]>s[a]?b:a, ORDER[0]);
+  const tied = ORDER.filter(k=>s[k]===s[top]);
+  if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
+  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}${BGQ}`;
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k].toString(16)).join("")}${keep}`);
+  window._mine = top;
+  showResult(top, s);
+  track('finish');
+}
+function showResult(k, s, pk=false){
+  const t = TYPES[k];
+  $("mixsec").classList.toggle("hide", pk); $("mybtn").classList.toggle("hide", !pk);
+  $("rsmall").textContent = pk ? "다른 유형 구경 중 👀" : F(D.label.result);
+  $("rname").textContent = `${t.emoji} ${nm(k)}`;
+  $("rname").style.color = t.color;
+  $("rline").textContent = R(t.line);
+  $("rimg").src = `img/${k}.jpg`; $("rimg").alt = nm(k);
+  $("rdesc").textContent = R(t.desc);
+  $("hmix").textContent = D.label.mix;
+  $("htips").textContent = D.label.tips;
+  $("rgood").innerHTML = t.good.map(x=>`<li>${R(x)}</li>`).join("");
+  $("rtips").innerHTML = t.tips.map(x=>`<li>${R(x)}</li>`).join("");
+  $("lbest").textContent = F(D.label.best); $("lworst").textContent = F(D.label.worst);
+  $("rbest").textContent = `${TYPES[t.best].emoji} ${ptName(t.best)}`;
+  $("rworst").textContent = `${TYPES[t.worst].emoji} ${ptName(t.worst)}`;
+  const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+  $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
+    return `<div class="row"><span>${TYPES[x].emoji} ${short(x)}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="${x===(window._mine||k)?'backMine()':`peek('${x}')`}"><img src="img/${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
+  const mine = window._mine || k;
+  if (PT && k===mine && !pk){
+    const c = getCompat(mine, PT);
+    const momK = WHO==="mom" ? mine : PT, dadK = WHO==="mom" ? PT : mine;
+    $("compat").innerHTML = `<div class="ct">💑 ${D.label.compat}</div>
+      <div class="cp">나 ${TYPES[mine].emoji} ${short(mine)} × 상대 ${TYPES[PT].emoji} ${short(PT)}</div>
+      <div class="cs">${c.s}<small>점</small></div><div class="cn">${c.t}</div>
+      <div class="cd">${c.d}</div><div class="ctip">💡 ${c.tip}</div>`;
+    $("compat").classList.remove("hide");
+    $("sharebtn").textContent = `💑 우리 궁합 결과 보내기`;
+  } else {
+    $("compat").classList.add("hide");
+    $("sharebtn").textContent = "🛒 같이 쇼핑하는 사람 유형 확인하기 보내기";
+  }
+  window._res = {k: mine, s};
+  show("result");
+}
+function peek(x){ const s = window._res ? window._res.s : scores([]); showResult(x, s, true); }
+function backMine(){ if (window._res) showResult(window._res.k, window._res.s); }
+function restart(){ const q = [PT?"pt="+PT:"", BG?"b=1":"", from!=="direct"?"from="+from:""].filter(Boolean).join("&"); history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
+
+async function shareTest(){
+  track('share');
+  const k = window._res ? window._res.k : ORDER[0];
+  const base = location.origin + location.pathname;
+  let url, text;
+  if (PT){
+    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x].toString(16)).join("");
+    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share${BGQ}`;
+    text = `우리 ${D.label.compatShort} ${c.s}점, '${c.t}'래 😆 나는 ${TYPES[k].emoji} ${nm(k)}!`;
+  } else {
+    url = `${base}?pt=${k}&from=share${BGQ}`;
+    text = `나는 ${TYPES[k].emoji} ${nm(k)}래 😂 너는 무슨 유형이야? 1분이면 끝, 둘 다 하면 우리 궁합 나와!`;
+  }
+  if (navigator.share){ try { await navigator.share({title:D.title, text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
+  try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("링크를 복사했어요. 카톡에 붙여 넣어 보내세요!"); }
+  catch(e){ prompt("이 주소를 복사해서 보내 주세요", url); }
+}
+
+function saveCard(){
+  track('save');
+  const {k, s} = window._res; const t = TYPES[k];
+  const cv = $("cv"), ctx = cv.getContext("2d");
+  const img = new Image(); img.src = `img/${k}.jpg`;
+  img.onload = () => {
+    ctx.fillStyle = "#fbf8f3"; ctx.fillRect(0,0,1080,1350);
+    const GH = 700, sh = img.width * GH / 1080;
+    ctx.drawImage(img, 0, img.height*0.04, img.width, sh, 0, 0, 1080, GH);
+    const gy = GH + 20;
+    ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.roundRect(40, GH-60, 1000, 1350-GH+20, 40); ctx.fill();
+    ctx.textAlign = "center"; ctx.fillStyle = "#6b6577"; ctx.font = "700 36px Pretendard, sans-serif";
+    ctx.fillText(F(D.label.result), 540, gy);
+    ctx.fillStyle = t.color; ctx.font = "900 80px Pretendard, sans-serif";
+    ctx.fillText(`${t.emoji} ${nm(k)}`, 540, gy+100);
+    ctx.fillStyle = "#2f2b36"; ctx.font = "700 38px Pretendard, sans-serif";
+    ctx.fillText(R(t.line), 540, gy+170);
+    const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+    ctx.textAlign = "left"; ctx.font = "700 32px Pretendard, sans-serif";
+    ORDER.forEach((x,i)=>{ const y = gy+235+i*52, p = Math.round(s[x]/total*100);
+      ctx.fillStyle="#2f2b36"; ctx.fillText(`${TYPES[x].emoji} ${short(x)}`, 100, y+28);
+      ctx.fillStyle="#efeaf5"; ctx.beginPath(); ctx.roundRect(380, y+6, 500, 26, 13); ctx.fill();
+      ctx.fillStyle=TYPES[x].color; ctx.beginPath(); ctx.roundRect(380, y+6, Math.max(26,500*p/100), 26, 13); ctx.fill();
+      ctx.fillStyle="#2f2b36"; ctx.textAlign="right"; ctx.fillText(`${p}%`, 980, y+30); ctx.textAlign="left"; });
+    ctx.textAlign = "center";
+    if (PT){ const c = getCompat(k, PT);
+      ctx.fillStyle = D.main; ctx.font = "900 38px Pretendard, sans-serif";
+      ctx.fillText(`💑 ${D.label.compatShort} ${c.s}점 · ${c.t}`, 540, 1250); }
+    ctx.fillStyle = D.main; ctx.font = "800 30px Pretendard, sans-serif";
+    ctx.fillText(D.label.card, 540, 1310);
+    cv.toBlob(async b => {
+      const f = new File([b], `${D.slug}_${nm(k)}.png`, {type:"image/png"});
+      if (navigator.canShare && navigator.canShare({files:[f]})){ try { await navigator.share({files:[f]}); return; } catch(e){ if (e.name==="AbortError") return; } }
+      const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = f.name; a.click();
+      toast("결과 카드를 저장했어요");
+    }, "image/png");
+  };
+}
+
+(function(){
+  if (PT){ $('both').classList.add('hide'); $('btnmom').textContent = '💬 내 유형도 확인하기'; }
+  if (QS.get('go')==='1'){ const q=new URLSearchParams(location.search); q.delete('go'); history.replaceState(null,'',location.pathname+'?'+q.toString()); setTimeout(begin,0); }
+  const r = QS.get("r"), m = QS.get("m");
+  $("chips").innerHTML = ORDER.map(k=>`<span class="chip">${TYPES[k].emoji} ${short(k)}</span>`).join("");
+  $("count").textContent = `${Q.length}문항 · 약 1분 · 답은 저장되지 않아요`;
+  $("rnote").innerHTML = `재미로 보는 테스트예요. 정답인 유형은 없어요 💜${D.note?"<br>"+D.note:""}<br>${D.brand} · @daesin_golla`;
+  if (!REC.length) $("more").classList.add("hide");
+  $("more").innerHTML = `<h3>🎲 이 테스트도 해 보세요</h3>` + REC.map(x=>`<a href="${x.url}?from=rec${BGQ}" onclick="track('rec')"><img src="${x.img}" alt="" loading="lazy"><div><b>${x.title}</b><span>${x.sub}</span></div></a>`).join("");
+  if (PT){ $("invite").innerHTML = `보낸 사람은 ${TYPES[PT].emoji} <b>${ptName(PT)}</b>래요!<br>내 유형까지 알면 💑 우리 궁합이 나와요`; $("invite").classList.remove("hide"); }
+  if (r && TYPES[r] && m && new RegExp(`^[0-9a-f]{${ORDER.length}}$`).test(m) && (from==="direct" || QS.get("v")==="1")){
+    const s={}; ORDER.forEach((k,i)=>s[k]=parseInt(m[i],16)); window._mine = r; showResult(r, s); }
+})();
+</script>
+</body>
+</html>
