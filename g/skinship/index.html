@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>스킨십 속도, 나는 무슨 유형? | 태오와 지민</title>
+<meta name="description" content="7문항 1분! 스킨십 속도, 나는 무슨 유형일까? 직진 허그러·장난 스킨십러·천천히 손깍지러·분위기 반전러. 애인이랑 둘 다 하면 스킨십 궁합까지!">
+<meta property="og:title" content="스킨십 속도, 나는 무슨 유형? 🫶">
+<meta property="og:description" content="7문항 1분 테스트 · 애인이랑 둘 다 하면 '우리 스킨십 궁합'까지!">
+<meta property="og:image" content="https://07161228min-ai.github.io/g/skinship/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#c94f8f; --pu2:#e08ab8; --mint:#3d8a68; --bg:#fbf8f3; --ink:#2f2b36; --sub:#6b6577; --line:#e8e1f1; --soft:#fbedf5; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.5; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(60,40,90,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.25); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.25); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.count { text-align:center; color:var(--sub); font-size:13px; margin-top:12px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qno { font-size:14px; font-weight:800; color:var(--pu); }
+.qtext { font-size:21px; font-weight:800; line-height:1.38; margin:6px 0 16px; letter-spacing:-.3px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:20px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:30px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:12px; }
+.sec { padding:16px 20px 4px; }
+.sec h3 { font-size:16px; font-weight:800; margin-bottom:8px; }
+.sec p, .sec li { font-size:15px; color:#433d4d; }
+.sec ul { list-style:none; }
+.sec li { padding-left:20px; position:relative; margin-bottom:6px; }
+.sec li::before { content:"✔"; position:absolute; left:0; color:var(--mint); font-weight:900; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:7px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:110px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; }
+.mix .row b { width:40px; text-align:right; flex:none; }
+.pair { display:flex; gap:10px; }
+.pair div { flex:1; background:var(--soft); border-radius:14px; padding:10px 12px; font-size:14px; }
+.pair b { display:block; font-size:13px; color:var(--sub); margin-bottom:2px; }
+.ctas { padding:10px 20px 18px; }
+.note { font-size:12px; color:#9a94a5; text-align:center; margin-top:16px; line-height:1.6; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#2f2b36; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+.both { margin-top:16px; font-size:14px; font-weight:700; color:var(--sub); text-align:center; }
+.both + .btn.main { margin-top:8px; }
+.others { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:4px 20px 6px; }
+.others button { border:0; background:var(--soft); border-radius:14px; padding:8px; font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer; display:flex; align-items:center; gap:8px; text-align:left; }
+.others img { width:42px; height:52px; object-fit:cover; border-radius:8px; }
+.invite { background:#fff4d6; border-radius:14px; padding:10px 14px; font-size:15px; font-weight:700; margin-top:12px; }
+.compat { margin:16px 20px 4px; background:linear-gradient(135deg,var(--soft),#fff4f0); border:2px solid var(--line); border-radius:18px; padding:16px; text-align:center; }
+.compat .ct { font-size:14px; font-weight:800; color:var(--sub); }
+.compat .cp { font-size:17px; font-weight:800; margin-top:6px; }
+.compat .cs { font-size:40px; font-weight:900; color:var(--pu); line-height:1.1; margin-top:6px; }
+.compat .cs small { font-size:18px; }
+.compat .cn { font-size:18px; font-weight:900; margin-top:2px; }
+.compat .cd { font-size:15px; color:#433d4d; margin-top:8px; text-align:left; }
+.compat .ctip { font-size:14px; color:var(--mint); font-weight:700; margin-top:8px; text-align:left; }
+.more { margin:8px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:56px; height:70px; object-fit:cover; border-radius:10px; flex:none; }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">태오와 지민 · 1분 테스트</div>
+
+  <section id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="소파에서 지민을 백허그하는 태오"></div>
+    <div class="pad">
+      <h1>손 잡을까 말까 고민하다 집 앞 도착,<br><em>나만 그래?</em></h1>
+      <p class="lead">연애할 때 행동으로 보는<br>7문항 1분 스킨십 유형 테스트</p>
+      <div class="invite hide" id="invite"></div>
+      <div class="chips" id="chips"></div>
+      <p class="both" id="both">애인·썸 상대랑 둘 다 하면 커플 궁합이 나와요 💑</p>
+      <button class="btn main" id="btnmom" onclick="begin()">💬 테스트 시작하기</button>
+      <p class="count" id="count"></p>
+    </div>
+  </section>
+
+  <section id="quiz" class="card hide"><div class="pad">
+    <div class="qno" id="qno"></div>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back" onclick="prev()">← 이전 문항</button>
+  </div></section>
+
+  <section id="result" class="card hide">
+    <div class="rtop">
+      <div class="rsmall" id="rsmall"></div>
+      <div class="rname" id="rname"></div>
+      <div class="rline" id="rline"></div>
+      <button class="btn line hide" id="mybtn" onclick="backMine()" style="margin-top:12px;padding:10px;font-size:15px">← 내 결과로 돌아가기</button>
+    </div>
+    <img class="rimg" id="rimg" alt="">
+    <div class="sec"><p id="rdesc"></p></div>
+    <div class="sec mix" id="mixsec"><h3 id="hmix"></h3><div id="mix"></div></div>
+    <div class="sec"><h3>💪 이 유형의 무기</h3><ul id="rgood"></ul></div>
+    <div class="sec"><h3 id="htips"></h3><ul id="rtips"></ul></div>
+    <div class="compat hide" id="compat"></div>
+    <div class="sec"><div class="pair">
+      <div><b id="lbest"></b><span id="rbest"></span></div>
+      <div><b id="lworst"></b><span id="rworst"></span></div>
+    </div></div>
+    <div class="ctas">
+      <button class="btn main" id="sharebtn" onclick="shareTest()"></button>
+      <button class="btn line" onclick="saveCard()">📸 결과 카드 저장하기</button>
+      <a class="btn line" href="https://www.instagram.com/growup_couple/" target="_blank" rel="noopener" onclick="track('follow')">📷 태오·지민 인스타 구경하기</a>
+      <button class="btn line" onclick="restart()" style="border-color:#d8d2e0;color:var(--sub)">↺ 다시 하기</button>
+    </div>
+    <div class="more" id="more"></div>
+    <div class="sec" style="padding-top:8px"><h3 style="font-size:14px;color:var(--sub)">다른 유형도 구경하기</h3></div>
+    <div class="others" id="others"></div>
+    <p class="note" id="rnote" style="padding:0 20px 18px"></p>
+  </section>
+
+  <canvas id="cv" width="1080" height="1350" class="hide"></canvas>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const D = {"slug": "skinship", "brand": "태오와 지민", "title": "스킨십 속도, 나는 무슨 유형?", "main": "#c94f8f", "label": {"result": "스킨십 앞에서 나는", "mix": "📊 나의 스킨십 성분표", "tips": "💡 나에게 맞는 스킨십 꿀팁", "best": "스킨십 찰떡 짝꿍", "worst": "속도 엇갈리는", "compat": "우리 스킨십 궁합", "compatShort": "스킨십 궁합", "card": "@growup_couple · 스킨십 속도 1분 테스트"}, "types": {"A": {"emoji": "🚀", "name": "직진 허그러", "short": "직진 허그러", "color": "#c94f8f", "line": "\"좋으면 안아야지, 왜 참아?\"", "desc": "만나자마자 꽉 안아 주고, 길을 걸으면 이미 팔짱이에요. 좋아하는 마음을 몸으로 바로 표현해요. 같이 있으면 사랑받는 느낌이 가득한 사람이에요.", "good": ["애정 표현이 확실해요", "상대를 안심시켜요", "같이 있으면 따뜻해요"], "tips": ["상대 속도 한 번씩 확인하기", "사람 많은 곳에선 손잡기까지만"], "best": "D", "worst": "C"}, "B": {"emoji": "🐾", "name": "장난 스킨십러", "short": "장난 스킨십러", "color": "#e08a3d", "line": "\"볼 콕, 옆구리 콕, 간지럼 공격!\"", "desc": "볼 꼬집기, 옆구리 찌르기, 간지럼 공격이 특기예요. 장난 속에 애정이 듬뿍 들어 있어요. 같이 있으면 웃음이 끊이지 않지만, 가끔은 진지한 스킨십도 필요해요.", "good": ["분위기를 밝게 만들어요", "어색함이 없어요", "같이 있으면 웃겨요"], "tips": ["장난 말고 진심 허그도 가끔", "상대 기분 안 좋을 땐 장난 쉬기"], "best": "C", "worst": "D"}, "C": {"emoji": "🌷", "name": "천천히 손깍지러", "short": "천천히 손깍지러", "color": "#3d8a68", "line": "\"손잡는 것만으로도 심장이 터질 것 같아\"", "desc": "손이 살짝 닿기만 해도 하루 종일 그 순간을 떠올려요. 서두르지 않고 한 걸음씩 가까워지는 게 좋아요. 그만큼 하나하나의 스킨십이 소중하고 특별한 사람이에요.", "good": ["순수한 설렘이 있어요", "관계를 소중히 여겨요", "상대를 배려해요"], "tips": ["좋으면 먼저 손 내밀어 보기", "설렌다고 말로 표현하기"], "best": "B", "worst": "A"}, "D": {"emoji": "🧲", "name": "분위기 반전러", "short": "분위기 반전러", "color": "#5b5bc4", "line": "\"평소엔 무심한데… 분위기 오면 달라져\"", "desc": "평소엔 장난도 잘 안 치고 무심해 보여요. 그런데 분위기가 무르익으면 눈빛부터 달라져요. 그 반전이 상대를 가장 설레게 만드는 비밀 무기예요.", "good": ["반전 매력이 있어요", "분위기를 잘 읽어요", "설렘이 오래가요"], "tips": ["평소에도 작은 스킨십 하나씩", "무심해 보일 땐 눈빛이라도"], "best": "A", "worst": "B"}}, "questions": [["사귄 지 3일째, 길을 걷는다", [["A", "이미 팔짱 끼고 있음"], ["B", "옆구리를 콕 찌른다"], ["C", "손잡을까 말까 100번 고민"], ["D", "분위기 보다가 손을 잡는다"]]], ["영화관 팔걸이 위에서 나는?", [["A", "내가 먼저 손을 올린다"], ["B", "팝콘을 입에 넣어 준다"], ["C", "손이 닿으면 깜짝 놀란다"], ["D", "분위기 있는 장면에서 손을 잡는다"]]], ["애인이 운동하고 왔다", [["A", "바로 백허그"], ["B", "팔뚝을 꾹 눌러 본다"], ["C", "'수고했어' 하고 물을 건넨다"], ["D", "땀 닦아 주다 눈이 마주친다"]]], ["가장 좋아하는 스킨십은?", [["A", "꽉 안기"], ["B", "볼 꼬집기"], ["C", "손깍지"], ["D", "이마 맞대기"]]], ["친구들 앞에서 나는?", [["A", "평소처럼 붙어 있음"], ["B", "장난을 더 친다"], ["C", "손도 안 잡음"], ["D", "테이블 밑으로 몰래 손잡기"]]], ["애인이 먼저 다가올 때 나는?", [["A", "더 다가간다"], ["B", "간지럼으로 반격"], ["C", "얼굴이 빨개진다"], ["D", "눈을 맞추고 분위기를 즐긴다"]]], ["나의 스킨십을 음악으로 하면?", [["A", "신나는 댄스곡"], ["B", "통통 튀는 동요"], ["C", "잔잔한 발라드"], ["D", "끈적한 재즈"]]]], "compat": {"AA": {"s": 76, "t": "껌딱지 커플", "d": "둘 다 직진이라 만나면 떨어질 줄을 몰라요. 친구들이 눈 둘 곳을 못 찾아요.", "tip": "사람 많은 곳에선 손잡기까지만"}, "AB": {"s": 84, "t": "허그와 간지럼", "d": "허그러가 안으면 장난러가 간지럼으로 반격해요. 늘 웃음소리가 나는 커플이에요.", "tip": "장난 끝엔 진짜 허그 한 번"}, "AC": {"s": 62, "t": "로켓과 거북이", "d": "허그러는 이미 안고 싶은데, 손깍지러는 아직 손도 떨려요. 속도 차이가 커요.", "tip": "허그러가 손깍지부터 천천히"}, "AD": {"s": 90, "t": "직진과 반전", "d": "허그러가 다가가면 반전러의 숨은 다정함이 깨어나요. 서로를 가장 설레게 하는 조합이에요.", "tip": "반전러도 평소에 한 번씩 먼저"}, "BB": {"s": 80, "t": "장난꾸러기 커플", "d": "둘 다 장난이 특기라 데이트가 늘 간지럼 전쟁이에요. 연애가 놀이 같아요.", "tip": "가끔은 진지한 분위기도"}, "BC": {"s": 88, "t": "웃음으로 다가가는 커플", "d": "장난러의 장난 덕분에 손깍지러의 긴장이 풀려요. 어느새 자연스럽게 손을 잡고 있어요.", "tip": "장난 뒤에 손 꼭 잡아 주기"}, "BD": {"s": 70, "t": "장난과 무심", "d": "장난러가 콕 찌르면 반전러는 무심하게 '왜'. 분위기 잡히기까지 시간이 걸려요.", "tip": "반전러가 장난에 한 번 웃어 주기"}, "CC": {"s": 74, "t": "천천히 커플", "d": "둘 다 조심스러워서 손 한 번 잡는 데 한 달이 걸려요. 그만큼 순간마다 설레요.", "tip": "누구든 먼저 손 내밀기"}, "CD": {"s": 82, "t": "설렘 저장 커플", "d": "손깍지러의 수줍음과 반전러의 눈빛이 만나요. 천천히, 하지만 깊게 가까워져요.", "tip": "분위기 좋은 날 손깍지부터"}, "DD": {"s": 78, "t": "반전 대결", "d": "평소엔 둘 다 무심한데 분위기만 오면 둘 다 달라져요. 그 순간을 기다리는 커플이에요.", "tip": "분위기 만드는 데이트 정해 두기"}}, "note": ""};
+const REC = [{"url": "https://07161228min-ai.github.io/g/reply/", "img": "https://07161228min-ai.github.io/g/reply/img/cover.jpg", "title": "연애할 때 나는 무슨 답장 유형?", "sub": "1초 답장러 · 장문 정성러 · 읽고 생각 중 · 짤 대화러"}, {"url": "https://07161228min-ai.github.io/g/gym/", "img": "https://07161228min-ai.github.io/g/gym/img/cover.jpg", "title": "헬스장에서 나는 무슨 유형?", "sub": "루틴 장인 · 거울 셀카러 · 기구 탐험가 · 회원권 기부러"}, {"url": "https://07161228min-ai.github.io/g/fight/", "img": "https://07161228min-ai.github.io/g/fight/img/cover.jpg", "title": "싸울 때 나는 무슨 유형?", "sub": "바로 직진러 · 동굴 입장러 · 조목조목 변호사 · 맛있는 거 화해러"}];
+const TYPES = D.types, ORDER = Object.keys(TYPES), Q = D.questions;
+let cur = 0, ans = [];
+const $ = id => document.getElementById(id);
+const QS = new URLSearchParams(location.search);
+const from = QS.get("from") || "direct";
+const WHO = QS.get("who")==="dad" ? "dad" : "mom";
+const ROLE = "나", OTHER = "애인";
+const BG = QS.get("b")==="1", BGQ = BG ? "&b=1" : "";
+const PT = TYPES[QS.get("pt")] ? QS.get("pt") : null;
+const R = s => s;
+const RO = s => s;
+const F = s => s.replaceAll("{ROLE}", ROLE).replaceAll("{OTHER}", OTHER);
+const nm = k => TYPES[k].name;
+const ptName = k => TYPES[k].name;
+const short = k => TYPES[k].short || TYPES[k].name;
+const ckey = (a,b) => [a,b].sort((x,y)=>ORDER.indexOf(x)-ORDER.indexOf(y)).join("");
+const getCompat = (a,b) => D.compat[ckey(a,b)];
+
+function track(ev){ try{ if (window.gtag) gtag('event', ev, {from}); }catch(e){} }
+function show(id){ ["start","quiz","result"].forEach(s=>$(s).classList.toggle("hide", s!==id)); window.scrollTo(0,0); }
+function startAs(){ const q=new URLSearchParams(location.search); ['r','m','v','pt'].forEach(x=>q.delete(x)); q.set('who','dad'); q.set('go','1'); location.replace(location.pathname+'?'+q.toString()); }
+function begin(){ cur=0; ans=[]; show("quiz"); render(); track('start'); }
+function render(){
+  const [q, opts] = Q[cur];
+  $("qno").textContent = `Q${cur+1} / ${Q.length}`;
+  $("prog").style.width = `${cur/Q.length*100}%`;
+  $("qtext").textContent = R(q);
+  $("opts").innerHTML = "";
+  const shuffled = opts.map((o,i)=>[o,(i*7+cur*3)%4]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  shuffled.forEach(([t,label])=>{
+    const b=document.createElement("button"); b.className="opt"; b.textContent=R(label);
+    if (ans[cur]===t) b.classList.add("on");
+    b.onclick=()=>{ b.classList.add("on"); ans[cur]=t; setTimeout(next,170); };
+    $("opts").appendChild(b);
+  });
+  $("back").style.visibility = cur ? "visible" : "hidden";
+}
+function next(){ if (cur < Q.length-1){ cur++; render(); } else finish(); }
+function prev(){ if (cur>0){ cur--; render(); } }
+function scores(a){ const s={}; ORDER.forEach(k=>s[k]=0); a.forEach(t=>s[t]++); return s; }
+function finish(){
+  const s = scores(ans);
+  let top = ORDER.reduce((a,b)=> s[b]>s[a]?b:a, ORDER[0]);
+  const tied = ORDER.filter(k=>s[k]===s[top]);
+  if (tied.length>1){ for (let i=ans.length-1;i>=0;i--){ if (tied.includes(ans[i])){ top=ans[i]; break; } } }
+  const keep = `${WHO==="dad"?"&who=dad":""}${PT?"&pt="+PT:""}${from!=="direct"?"&from="+from:""}${BGQ}`;
+  history.replaceState(null,"",`?r=${top}&m=${ORDER.map(k=>s[k].toString(16)).join("")}${keep}`);
+  window._mine = top;
+  showResult(top, s);
+  track('finish');
+}
+function showResult(k, s, pk=false){
+  const t = TYPES[k];
+  $("mixsec").classList.toggle("hide", pk); $("mybtn").classList.toggle("hide", !pk);
+  $("rsmall").textContent = pk ? "다른 유형 구경 중 👀" : F(D.label.result);
+  $("rname").textContent = `${t.emoji} ${nm(k)}`;
+  $("rname").style.color = t.color;
+  $("rline").textContent = R(t.line);
+  $("rimg").src = `img/${k}.jpg`; $("rimg").alt = nm(k);
+  $("rdesc").textContent = R(t.desc);
+  $("hmix").textContent = D.label.mix;
+  $("htips").textContent = D.label.tips;
+  $("rgood").innerHTML = t.good.map(x=>`<li>${R(x)}</li>`).join("");
+  $("rtips").innerHTML = t.tips.map(x=>`<li>${R(x)}</li>`).join("");
+  $("lbest").textContent = F(D.label.best); $("lworst").textContent = F(D.label.worst);
+  $("rbest").textContent = `${TYPES[t.best].emoji} ${ptName(t.best)}`;
+  $("rworst").textContent = `${TYPES[t.worst].emoji} ${ptName(t.worst)}`;
+  const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+  $("mix").innerHTML = ORDER.map(x=>{ const p=Math.round(s[x]/total*100);
+    return `<div class="row"><span>${TYPES[x].emoji} ${short(x)}</span><div class="track"><i style="width:${p}%;background:${TYPES[x].color}"></i></div><b>${p}%</b></div>`; }).join("");
+  $("others").innerHTML = ORDER.filter(x=>x!==k).map(x=>`<button onclick="${x===(window._mine||k)?'backMine()':`peek('${x}')`}"><img src="img/${x}.jpg" alt="">${TYPES[x].emoji} ${nm(x)}</button>`).join("");
+  const mine = window._mine || k;
+  if (PT && k===mine && !pk){
+    const c = getCompat(mine, PT);
+    const momK = WHO==="mom" ? mine : PT, dadK = WHO==="mom" ? PT : mine;
+    $("compat").innerHTML = `<div class="ct">💑 ${D.label.compat}</div>
+      <div class="cp">나 ${TYPES[mine].emoji} ${short(mine)} × 상대 ${TYPES[PT].emoji} ${short(PT)}</div>
+      <div class="cs">${c.s}<small>점</small></div><div class="cn">${c.t}</div>
+      <div class="cd">${c.d}</div><div class="ctip">💡 ${c.tip}</div>`;
+    $("compat").classList.remove("hide");
+    $("sharebtn").textContent = `💑 우리 궁합 결과 보내기`;
+  } else {
+    $("compat").classList.add("hide");
+    $("sharebtn").textContent = "💌 애인·썸 상대 유형 확인하기 보내기";
+  }
+  window._res = {k: mine, s};
+  show("result");
+}
+function peek(x){ const s = window._res ? window._res.s : scores([]); showResult(x, s, true); }
+function backMine(){ if (window._res) showResult(window._res.k, window._res.s); }
+function restart(){ const q = [PT?"pt="+PT:"", BG?"b=1":"", from!=="direct"?"from="+from:""].filter(Boolean).join("&"); history.replaceState(null,"",location.pathname+(q?"?"+q:"")); window._mine=null; show("start"); }
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
+
+async function shareTest(){
+  track('share');
+  const k = window._res ? window._res.k : ORDER[0];
+  const base = location.origin + location.pathname;
+  let url, text;
+  if (PT){
+    const c = getCompat(k, PT), m = ORDER.map(x=>window._res.s[x].toString(16)).join("");
+    url = `${base}?r=${k}&m=${m}${WHO==="dad"?"&who=dad":""}&pt=${PT}&v=1&from=share${BGQ}`;
+    text = `우리 ${D.label.compatShort} ${c.s}점, '${c.t}'래 😆 나는 ${TYPES[k].emoji} ${nm(k)}!`;
+  } else {
+    url = `${base}?pt=${k}&from=share${BGQ}`;
+    text = `나는 ${TYPES[k].emoji} ${nm(k)}래 😂 너는 무슨 유형이야? 1분이면 끝, 둘 다 하면 우리 궁합 나와!`;
+  }
+  if (navigator.share){ try { await navigator.share({title:D.title, text, url}); return; } catch(e){ if (e.name==="AbortError") return; } }
+  try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("링크를 복사했어요. 카톡에 붙여 넣어 보내세요!"); }
+  catch(e){ prompt("이 주소를 복사해서 보내 주세요", url); }
+}
+
+function saveCard(){
+  track('save');
+  const {k, s} = window._res; const t = TYPES[k];
+  const cv = $("cv"), ctx = cv.getContext("2d");
+  const img = new Image(); img.src = `img/${k}.jpg`;
+  img.onload = () => {
+    ctx.fillStyle = "#fbf8f3"; ctx.fillRect(0,0,1080,1350);
+    const GH = 700, sh = img.width * GH / 1080;
+    ctx.drawImage(img, 0, img.height*0.04, img.width, sh, 0, 0, 1080, GH);
+    const gy = GH + 20;
+    ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.roundRect(40, GH-60, 1000, 1350-GH+20, 40); ctx.fill();
+    ctx.textAlign = "center"; ctx.fillStyle = "#6b6577"; ctx.font = "700 36px Pretendard, sans-serif";
+    ctx.fillText(F(D.label.result), 540, gy);
+    ctx.fillStyle = t.color; ctx.font = "900 80px Pretendard, sans-serif";
+    ctx.fillText(`${t.emoji} ${nm(k)}`, 540, gy+100);
+    ctx.fillStyle = "#2f2b36"; ctx.font = "700 38px Pretendard, sans-serif";
+    ctx.fillText(R(t.line), 540, gy+170);
+    const total = ORDER.reduce((a,b)=>a+s[b],0) || 1;
+    ctx.textAlign = "left"; ctx.font = "700 32px Pretendard, sans-serif";
+    ORDER.forEach((x,i)=>{ const y = gy+235+i*52, p = Math.round(s[x]/total*100);
+      ctx.fillStyle="#2f2b36"; ctx.fillText(`${TYPES[x].emoji} ${short(x)}`, 100, y+28);
+      ctx.fillStyle="#efeaf5"; ctx.beginPath(); ctx.roundRect(380, y+6, 500, 26, 13); ctx.fill();
+      ctx.fillStyle=TYPES[x].color; ctx.beginPath(); ctx.roundRect(380, y+6, Math.max(26,500*p/100), 26, 13); ctx.fill();
+      ctx.fillStyle="#2f2b36"; ctx.textAlign="right"; ctx.fillText(`${p}%`, 980, y+30); ctx.textAlign="left"; });
+    ctx.textAlign = "center";
+    if (PT){ const c = getCompat(k, PT);
+      ctx.fillStyle = D.main; ctx.font = "900 38px Pretendard, sans-serif";
+      ctx.fillText(`💑 ${D.label.compatShort} ${c.s}점 · ${c.t}`, 540, 1250); }
+    ctx.fillStyle = D.main; ctx.font = "800 30px Pretendard, sans-serif";
+    ctx.fillText(D.label.card, 540, 1310);
+    cv.toBlob(async b => {
+      const f = new File([b], `${D.slug}_${nm(k)}.png`, {type:"image/png"});
+      if (navigator.canShare && navigator.canShare({files:[f]})){ try { await navigator.share({files:[f]}); return; } catch(e){ if (e.name==="AbortError") return; } }
+      const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = f.name; a.click();
+      toast("결과 카드를 저장했어요");
+    }, "image/png");
+  };
+}
+
+(function(){
+  if (PT){ $('both').classList.add('hide'); $('btnmom').textContent = '💬 내 유형도 확인하기'; }
+  if (QS.get('go')==='1'){ const q=new URLSearchParams(location.search); q.delete('go'); history.replaceState(null,'',location.pathname+'?'+q.toString()); setTimeout(begin,0); }
+  const r = QS.get("r"), m = QS.get("m");
+  $("chips").innerHTML = ORDER.map(k=>`<span class="chip">${TYPES[k].emoji} ${short(k)}</span>`).join("");
+  $("count").textContent = `${Q.length}문항 · 약 1분 · 답은 저장되지 않아요`;
+  $("rnote").innerHTML = `재미로 보는 테스트예요. 정답인 유형은 없어요 💜${D.note?"<br>"+D.note:""}<br>${D.brand} · @growup_couple`;
+  if (!REC.length) $("more").classList.add("hide");
+  $("more").innerHTML = `<h3>🎲 이 테스트도 해 보세요</h3>` + REC.map(x=>`<a href="${x.url}?from=rec${BGQ}" onclick="track('rec')"><img src="${x.img}" alt="" loading="lazy"><div><b>${x.title}</b><span>${x.sub}</span></div></a>`).join("");
+  if (PT){ $("invite").innerHTML = `보낸 사람은 ${TYPES[PT].emoji} <b>${ptName(PT)}</b>래요!<br>내 유형까지 알면 💑 우리 궁합이 나와요`; $("invite").classList.remove("hide"); }
+  if (r && TYPES[r] && m && new RegExp(`^[0-9a-f]{${ORDER.length}}$`).test(m) && (from==="direct" || QS.get("v")==="1")){
+    const s={}; ORDER.forEach((k,i)=>s[k]=parseInt(m[i],16)); window._mine = r; showResult(r, s); }
+})();
+</script>
+</body>
+</html>
