@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>우리 아이 잠자리 습관 5분 체크리스트 | 맘들의 정보터</title>
+<meta name="description" content="15문항 5분! 우리 아이 잠자리 습관을 체크하고, 우리 집에 맞는 재우기 솔루션을 받아 보세요.">
+<meta property="og:title" content="우리 아이 잠자리 습관 5분 체크리스트 🌙">
+<meta property="og:description" content="15문항 5분 · 우리 아이 잠자리 습관 유형 + 맞춤 솔루션">
+<meta property="og:image" content="https://07161228min-ai.github.io/check/sleep/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#2f8f6b; --pu2:#6cc4a0; --mint:#2f8f6b; --bg:#f6f8f4; --ink:#26302b; --sub:#66716b; --line:#dde7e1; --soft:#e7f4ee; --warn:#e2563b; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.55; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(30,60,45,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; background:var(--soft); }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.22); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.22); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qtop { display:flex; justify-content:space-between; font-size:13px; font-weight:800; color:var(--pu); }
+.qtop span:last-child { color:var(--sub); font-weight:700; }
+.qtext { font-size:21px; font-weight:800; line-height:1.4; margin:8px 0 6px; letter-spacing:-.3px; }
+.qhint { font-size:14px; color:var(--sub); margin-bottom:16px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:700; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:22px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:29px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:14px; background:var(--soft); }
+.band { margin:16px 20px 0; border-radius:16px; padding:14px 16px; font-size:15px; font-weight:700; }
+.band b { display:block; font-size:17px; margin-bottom:2px; }
+.sec { padding:18px 20px 4px; }
+.sec h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.sec p { font-size:15px; color:#3c4741; }
+.scenes { list-style:none; }
+.scenes li { background:#fffaf0; border-left:4px solid #f2c26b; border-radius:10px; padding:10px 12px; margin-bottom:8px; font-size:15px; color:#3c4741; }
+.sol { list-style:none; counter-reset:s; }
+.sol li { counter-increment:s; position:relative; padding:12px 12px 12px 48px; background:var(--soft); border-radius:14px; margin-bottom:8px; font-size:15px; color:#2d3832; }
+.sol li::before { content:counter(s); position:absolute; left:12px; top:12px; width:26px; height:26px; border-radius:50%; background:var(--pu); color:#fff; font-weight:900; font-size:14px; display:flex; align-items:center; justify-content:center; }
+.sol li b { display:block; font-size:16px; margin-bottom:2px; }
+.say { display:flex; flex-direction:column; gap:8px; }
+.say div { border-radius:14px; padding:10px 12px; font-size:15px; }
+.say .no { background:#fdeeee; color:#8a3b3b; text-decoration:line-through; text-decoration-color:rgba(138,59,59,.5); }
+.say .yes { background:#eaf6ff; color:#1f4f75; font-weight:700; }
+.week { list-style:none; }
+.week li { display:flex; gap:10px; align-items:flex-start; padding:9px 0; border-bottom:1px dashed var(--line); font-size:15px; }
+.week li input { width:20px; height:20px; accent-color:var(--pu); flex:none; margin-top:2px; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:8px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:118px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; background:var(--pu2); }
+.mix .row.top .track i { background:var(--pu); }
+.mix .row b { width:42px; text-align:right; flex:none; }
+.doc { margin:16px 20px 0; border:2px solid var(--warn); background:#fff5f2; border-radius:16px; padding:14px 16px; font-size:15px; color:#6b2a1c; }
+.doc b { display:block; font-size:16px; margin-bottom:4px; color:var(--warn); }
+.prod { margin:18px 20px 0; border-radius:18px; border:2px solid var(--line); overflow:hidden; background:#fff; }
+.prod .ph { display:flex; gap:12px; padding:14px; align-items:center; }
+.prod img { width:92px; height:92px; object-fit:contain; background:#f4f6f5; border-radius:12px; flex:none; }
+.prod .tag { font-size:12px; font-weight:800; color:var(--pu); }
+.prod .pn { font-size:17px; font-weight:900; line-height:1.3; margin-top:2px; }
+.prod .pd { font-size:14px; color:var(--sub); margin-top:4px; }
+.prod a { display:block; background:var(--pu); color:#fff; text-align:center; font-weight:800; padding:13px; text-decoration:none; font-size:16px; }
+.prod .fine { font-size:11.5px; color:#8c958f; padding:8px 14px 10px; line-height:1.5; }
+.sol li .qq { display:block; font-size:12.5px; font-weight:700; color:var(--pu); margin-bottom:3px; }
+.ebook { margin:18px 20px 0; padding:16px; border-radius:18px; background:#eef5ff; border:2px solid #cfe0f7; }
+.ebook h3 { font-size:16px; font-weight:900; margin-bottom:10px; }
+.ebook a { display:flex; align-items:center; gap:10px; background:#fff; border-radius:14px; padding:12px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.ebook .ei { font-size:22px; flex:none; }
+.ebook b { font-size:14.5px; line-height:1.4; flex:1; }
+.ebook .eg { font-size:12px; font-weight:800; color:#2c6fb7; flex:none; }
+.wsave { font-size:12.5px; color:var(--pu); font-weight:700; margin-top:8px; }
+.resume { background:#fff7e6; border:2px solid #f2c26b; border-radius:16px; padding:14px; margin-top:16px; }
+.resume b { display:block; font-size:16px; }
+.resume span { font-size:14px; color:var(--sub); }
+.imgov { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:50; display:flex; align-items:center; justify-content:center; padding:16px; }
+.imgov > div { background:#fff; border-radius:18px; padding:14px; max-width:420px; width:100%; max-height:92vh; overflow:auto; text-align:center; }
+.imgov p { font-weight:800; margin-bottom:8px; }
+.imgov img { width:100%; border-radius:10px; border:1px solid var(--line); }
+.ctas { padding:14px 20px 20px; }
+.more { margin:16px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:16px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:52px; height:65px; object-fit:cover; border-radius:10px; flex:none; background:var(--soft); }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+.note { font-size:12px; color:#8c958f; text-align:center; margin-top:16px; line-height:1.6; padding:0 8px; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#26302b; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">맘들의 정보터 · 5분 체크리스트</div>
+
+  <!-- 시작 -->
+  <div id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="잠자리에서 아이에게 책을 읽어 주려는 엄마"></div>
+    <div class="pad">
+      <h1>"이제 자자!"<br>오늘 몇 번 외쳤어요?<br><em>우리 아이 잠자리 습관 5분 체크리스트</em></h1>
+      <p class="lead">요즘 우리 아이 저녁~잠들기 전 모습을 떠올리며 15문항만 체크해 주세요.<br>우리 아이 잠자리 습관 유형과 <b>오늘 밤부터 해 볼 수 있는 솔루션</b>을 알려 드려요.</p>
+      <div class="chips"><span class="chip">15문항</span><span class="chip">5분</span><span class="chip">체크한 항목별 솔루션</span><span class="chip">7일 미션</span></div>
+      <button class="btn main" onclick="go(0)">체크 시작하기</button>
+      <p class="note">진단이 아닌 생활 습관 점검용이에요. 2~7세 아이 부모님을 위해 만들었어요.</p>
+    </div>
+  </div>
+
+  <!-- 문항 -->
+  <div id="quiz" class="card hide">
+    <div class="pad">
+      <div class="qtop"><span id="qsec"></span><span id="qno"></span></div>
+      <div class="bar"><i id="qbar"></i></div>
+      <div class="qtext" id="qtext"></div>
+      <div class="qhint" id="qhint"></div>
+      <div id="opts"></div>
+      <button class="back" id="qback" onclick="prev()">← 이전 문항</button>
+    </div>
+  </div>
+
+  <!-- 결과 -->
+  <div id="result" class="card hide"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SLUG = "sleep";
+const PRODUCT = null;
+const AREAS = {
+  A: { label: "📱 잠들기 전 화면·자극" },
+  B: { label: "⏰ 잠자리 시간·순서" },
+  C: { label: "🍪 저녁·낮 리듬" },
+  D: { label: "🧸 잠자리 협상·불안" }
+};
+const Q = [
+  ["A", "잠자기 1시간 안에도 영상·게임을 본다", "\"이것만 보고 잘게\"가 매일 나와요"],
+  ["A", "잠들기 직전까지 뛰고 소리 지르며 논다", "아빠 퇴근 뒤 몸놀이가 늦게 시작되는 집도 많아요"],
+  ["A", "아이가 자는 방에 TV·태블릿 불빛이 켜져 있다", ""],
+  ["B", "잠드는 시간이 날마다 1시간 넘게 들쭉날쭉하다", ""],
+  ["B", "주말엔 평일보다 훨씬 늦게 자고 늦게 일어난다", ""],
+  ["B", "씻기→양치→책처럼 정해진 잠자리 순서가 없다", ""],
+  ["B", "밤 10시가 넘어서 잠드는 날이 많다", ""],
+  ["C", "저녁을 늦게 먹거나, 자기 직전에 간식·우유를 찾는다", "양치 끝났는데 \"배고파…\" 익숙하죠?"],
+  ["C", "오후 늦게(4시 이후) 낮잠을 자는 날이 있다", "하원 차에서 깜빡 잠든 것도 포함이에요"],
+  ["C", "낮에 밖에서 뛰어노는 시간이 거의 없다", ""],
+  ["D", "\"책 한 권만 더\", \"물 마실래\" 하며 잠자리가 30분 넘게 늘어진다", ""],
+  ["D", "엄마·아빠가 옆에 누워 있어야만 잠든다", "나가면 바로 따라 나와요"],
+  ["D", "\"무서워\", \"괴물 나와\" 하며 잠들기 힘들어한다", ""],
+  ["X", "잘 때 코를 크게 골거나, 숨을 멈췄다가 몰아쉬는 모습을 본 적이 있다", "입을 벌리고 자는 날이 많은 것도 여기에 체크해 주세요"],
+  ["X", "밤에 자주 깨서 심하게 울거나, 낮에도 너무 졸려 해서 생활이 힘들다", ""]
+];
+const SOLQ = [
+  ["화면은 '잠 1시간 전 퇴근'", "잠들기 1시간 전에 화면을 끄는 '화면 퇴근 시간'을 아이와 같이 정해요. 끝나기 10분 전에 타이머로 미리 알려 주면 실랑이가 줄어요.", "화면 퇴근 시간 정하고 10분 전 알림"],
+  ["몸놀이는 저녁 먹고 바로", "신나는 몸놀이는 저녁 먹은 직후에 하고, 잠들기 30분 전부터는 불을 낮추고 책·퍼즐처럼 조용한 놀이로 바꿔요.", "잠 30분 전 '조용한 놀이'로 바꾸기"],
+  ["아이 방은 '불빛 없는 방'", "TV·태블릿은 아이 방 밖에 두고, 수면등은 어둡고 따뜻한 색 하나만 켜요.", "태블릿·TV 아이 방 밖으로"],
+  ["잠드는 시간보다 '불 끄는 시간' 고정", "매일 같은 시간에 불을 끄면 몸이 그 시간을 기억해요. 30분 안쪽으로만 맞춰도 충분해요.", "매일 같은 시간에 불 끄기"],
+  ["주말 기상도 평일과 1시간 안쪽", "주말에 몰아서 늦게 자고 늦게 일어나면 월요일 밤이 힘들어요. 일어나는 시간만이라도 평일과 1시간 안쪽으로 맞춰요.", "주말 기상 시간 평일과 맞추기"],
+  ["그림 잠자리 순서표", "씻기 → 잠옷 → 양치 → 책 1권 → 불 끄기. 그림으로 붙여 두고 아이가 하나씩 떼게 하면 놀이처럼 따라와요.", "잠자리 순서표 만들어 붙이기"],
+  ["사흘마다 15분씩 당기기", "한 번에 확 당기면 오히려 더 안 자요. 사흘마다 15분씩 불 끄는 시간을 앞당겨 보세요.", "불 끄는 시간 15분 당기기"],
+  ["저녁은 잠 2시간 전에", "저녁을 조금 일찍 먹고, 자기 전 배고프다고 하면 바나나 반 개처럼 가볍게 줘요. 양치는 그다음에!", "저녁 시간 30분 당기기"],
+  ["늦은 낮잠은 짧게, 이르게", "오후 늦게 자면 밤잠이 밀려요. 낮잠은 이른 오후에 끝내고, 하원 차에서 졸려 하면 노래·끝말잇기로 깨워 주세요.", "하원길 '잠 깨우기 노래' 정하기"],
+  ["낮에 햇빛 보며 30분", "낮에 밖에서 햇빛 받고 뛰어놀면 밤에 더 쉽게 잠들어요. 놀이터·산책 30분이면 충분해요.", "낮에 바깥 놀이 30분"],
+  ["'마지막 한 번'은 미리 약속", "책은 몇 권, 물은 한 번, 화장실은 불 끄기 전. 미리 정해 두고 \"이제 마지막이야\" 대신 순서표를 가리켜요.", "책 권수·물 한 번 미리 약속하기"],
+  ["옆자리에서 '한 칸씩 멀어지기'", "처음엔 옆에 누웠다가, 며칠마다 침대 옆 의자 → 방문 앞으로 조금씩 거리를 늘려요. \"5분 뒤에 다시 볼게\" 약속은 꼭 지켜요.", "누워 있는 자리 한 칸 멀어지기"],
+  ["무서움은 '해결 도구'로", "\"괴물 없어!\" 대신 \"괴물 퇴치 스프레이(물 분무기) 뿌려 줄게\"처럼 아이 상상 속에서 해결해 줘요. 애착 인형도 큰 힘이 돼요.", "애착 인형·수면등 함께 고르기"]
+];
+const D = id => "https://drive.google.com/file/d/" + id + "/preview";
+const EB = {
+  routine: ["4~7세 옷 입기·씻기·정리·등원 준비, 잔소리 없이 습관 만들기", D("1LNcBlqrg6EwmSFStLNPLewJEn67jXwtG")],
+  phone: ["초등 스마트폰, 사용 시간 약속 30가지", D("1X1-SPmmgA74TWM-z0SG6QBwGmoM3YgIA")],
+  game: ["게임·스마트폰 때문에 매일 싸우는 집 · 부모가 알아야 할 규칙 20가지", D("1iHbS28S-ZUTuc-QDhx18gM-7CKGBwBM8")],
+  play: ["추운 날 집에서 하는 10분 놀이 30가지", D("1khujr_QcLpmU5U5WRTFPRVUWpIJ_r-Nm")],
+  focus: ["아이 집중력 키우는 생활습관", D("1njW7BzJJm42MQmq80rV30Xe5NdcRoHZs")],
+  sep: ["울며 등원하는 아이 · 분리불안 극복과 행복한 적응 실전 가이드", D("1vkLwCUYaM7w7TCzS3Kuap4nt32tIR94H")],
+  tantrum: ["1~3세 떼쓰기·고집·분노폭발에 부모가 바로 써먹는 말 30가지", D("1VL_gjBuuMgMuB8Ct2kClweWgu0VnGkQc")]
+};
+const EBT = { A: ["phone", "game"], B: ["routine", "focus"], C: ["play", "routine"], D: ["sep", "tantrum"] };
+const OPT = [["그래요, 자주 그래요", 2], ["가끔 그래요", 1], ["아니에요", 0]];
+const OPTX = [["네, 본 적 있어요", 2], ["잘 모르겠어요", 1], ["아니에요", 0]];
+
+const TYPES = {
+  A: {
+    name: "이것만 보고 잘래러", emoji: "📱", img: "img/A.jpg",
+    line: "\"하나만 더!\" 그 사이 시계는 벌써 10시",
+    scenes: [
+      "\"이것만 보고 잘게\" 해 놓고 영상이 끝나면 다음 영상이 자동으로 시작돼요.",
+      "불 끄고 누웠는데 아이 눈은 말똥말똥, 머릿속은 아직 영상 속이에요.",
+      "아빠 오면 시작되는 비행기 놀이, 끝나면 이미 잘 시간이 지났어요.",
+      "\"졸려\" 소리는 안 나오고 \"심심해\"만 나와요."
+    ],
+    why: "아이가 말을 안 들어서가 아니에요. 화면을 보거나 신나게 뛰고 나면 머리가 계속 신이 나 있어서 쉽게 잠으로 넘어가지 못해요. <b>잠들기 전 1시간</b>을 조용하게 바꿔 주는 게 첫 단추예요.",
+    sol: [
+      ["화면은 '잠 1시간 전 퇴근'", "화면 끄는 시간을 아이와 같이 정해요."],
+      ["몸놀이는 저녁 먹고 바로", "잠 30분 전부터는 조용한 놀이로 바꿔요."],
+      ["아이 방은 '불빛 없는 방'", "TV·태블릿은 아이 방 밖으로!"]
+    ],
+    no: "\"몇 시인데 아직도 보고 있어! 당장 꺼!\"",
+    yes: "\"10분 뒤에 화면 퇴근이야~ 마지막으로 뭐 볼지 골라 볼까?\"",
+    week: ["화면 퇴근 시간 정하고 10분 전 알림", "잠 30분 전 '조용한 놀이'로 바꾸기", "태블릿·TV 아이 방 밖으로", "잠자리 순서표 만들어 붙이기", "낮에 바깥 놀이 30분", "주말 기상 시간 평일과 맞추기", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: false
+  },
+  B: {
+    name: "매일 다른 시간러", emoji: "⏰", img: "img/B.jpg",
+    line: "어제는 9시, 오늘은 10시 반, 주말은 자정",
+    scenes: [
+      "손님 온 날, 외출한 날, 아빠 늦게 온 날… 잠드는 시간이 매일 달라요.",
+      "주말에 늦게 자고 늦게 일어나서, 일요일 밤엔 도무지 잠을 안 자요.",
+      "씻기고 양치하고 책 읽는 순서가 그날그날 달라요.",
+      "밤 10시, 침대 위에서 트램펄린 뛰듯 신이 나 있어요."
+    ],
+    why: "몸은 '매일 같은 시간'을 좋아해요. 잠드는 시간과 순서가 들쭉날쭉하면 몸이 언제 잘 준비를 해야 할지 헷갈려요. <b>불 끄는 시간과 잠자리 순서</b>만 고정해도 훨씬 쉬워져요.",
+    sol: [
+      ["잠드는 시간보다 '불 끄는 시간' 고정", "매일 같은 시간에 불을 꺼요."],
+      ["그림 잠자리 순서표", "씻기 → 잠옷 → 양치 → 책 → 불 끄기."],
+      ["주말 기상도 평일과 1시간 안쪽", "일어나는 시간만이라도 맞춰요."]
+    ],
+    no: "\"빨리 안 자? 내일 또 못 일어나려고!\"",
+    yes: "\"순서표 다음은 뭐더라? 잠옷 입기 미션 출발!\"",
+    week: ["매일 같은 시간에 불 끄기", "잠자리 순서표 만들어 붙이기", "주말 기상 시간 평일과 맞추기", "불 끄는 시간 15분 당기기", "낮에 바깥 놀이 30분", "잠 30분 전 '조용한 놀이'로 바꾸기", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: false
+  },
+  C: {
+    name: "밤 간식 파티러", emoji: "🍪", img: "img/C.jpg",
+    line: "양치 끝났는데 \"엄마… 배고파\"",
+    scenes: [
+      "저녁을 늦게 먹은 날은 꼭 늦게 자요.",
+      "양치까지 다 했는데 갑자기 우유랑 과자가 먹고 싶대요.",
+      "하원 차에서 20분 잠들고 오면, 그날 밤은 끝이에요.",
+      "비 오는 날 하루 종일 집에만 있었더니 밤에 쌩쌩해요."
+    ],
+    why: "언제 먹고, 언제 자고, 낮에 얼마나 움직였는지가 밤잠을 정해요. 저녁이 늦거나 오후 낮잠이 길면 밤에 잠이 밀려요. <b>저녁 시간, 낮잠, 바깥 놀이</b>부터 맞춰 보세요.",
+    sol: [
+      ["저녁은 잠 2시간 전에", "배고프다면 바나나 반 개처럼 가볍게."],
+      ["늦은 낮잠은 짧게, 이르게", "하원길엔 노래·끝말잇기로 깨워요."],
+      ["낮에 햇빛 보며 30분", "놀이터·산책이면 충분해요."]
+    ],
+    no: "\"양치했는데 무슨 과자야! 안 돼!\"",
+    yes: "\"배고팠구나. 바나나 반 개 먹고, 우리 양치 한 번 더 하자!\"",
+    week: ["저녁 시간 30분 당기기", "하원길 '잠 깨우기 노래' 정하기", "낮에 바깥 놀이 30분", "자기 전 간식은 바나나 반 개까지", "매일 같은 시간에 불 끄기", "잠자리 순서표 만들어 붙이기", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: false
+  },
+  D: {
+    name: "한 권만 더 협상가", emoji: "🧸", img: "img/D.jpg",
+    line: "\"책 한 권만 더! 물! 쉬! 한 번만 안아 줘!\"",
+    scenes: [
+      "책 한 권 읽어 주면 \"한 권만 더\", 두 권 읽어 주면 \"진짜 마지막\".",
+      "불 끄자마자 \"물 마실래\", 다녀오면 \"쉬 마려워\".",
+      "엄마가 일어나기만 하면 바로 따라 나와요.",
+      "\"무서워, 괴물 나올 것 같아\" 하며 이불을 머리끝까지 덮어요."
+    ],
+    why: "잠자리 협상은 아이가 엄마·아빠와 더 있고 싶다는 마음이기도 해요. 혼내기보다 <b>마지막을 미리 정해 주고</b>, 불안한 마음은 놀이처럼 풀어 주면 잠자리가 짧아져요.",
+    sol: [
+      ["'마지막 한 번'은 미리 약속", "책 몇 권, 물 한 번을 미리 정해요."],
+      ["옆자리에서 '한 칸씩 멀어지기'", "며칠마다 조금씩 거리를 늘려요."],
+      ["무서움은 '해결 도구'로", "괴물 퇴치 스프레이, 애착 인형 출동!"]
+    ],
+    no: "\"진짜 마지막이라고 했지! 이제 그만 좀 해!\"",
+    yes: "\"오늘 약속은 책 두 권! 다 읽으면 꼭 안아 주고 불 끌게.\"",
+    week: ["책 권수·물 한 번 미리 약속하기", "누워 있는 자리 한 칸 멀어지기", "애착 인형·수면등 함께 고르기", "잠자리 순서표 만들어 붙이기", "잠들기 전 '오늘 제일 좋았던 일' 이야기", "매일 같은 시간에 불 끄기", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: false
+  }
+};
+const MORE = [
+  { url: "https://07161228min-ai.github.io/jamjari/", img: "https://07161228min-ai.github.io/jamjari/img/cover.jpg", title: "우리 집 재우기 전쟁 유형은?", sub: "1분 재미 테스트" },
+  { url: "https://07161228min-ai.github.io/sleeppose/", img: "https://07161228min-ai.github.io/sleeppose/img/cover.jpg", title: "잠버릇으로 보는 우리 아이는?", sub: "1분 재미 테스트" },
+  { url: "https://07161228min-ai.github.io/dungwon/", img: "https://07161228min-ai.github.io/dungwon/img/cover.jpg", title: "아침 등원 전쟁, 나는 무슨 엄마?", sub: "1분 재미 테스트" }
+];
+
+let i = 0, ans = [];
+const $ = id => document.getElementById(id);
+function show(id) { ["start", "quiz", "result"].forEach(x => $(x).classList.toggle("hide", x !== id)); scrollTo(0, 0); }
+function go(n) { i = n; show("quiz"); render(); }
+function render() {
+  const [area, text, hint] = Q[i];
+  $("qsec").textContent = area === "X" ? "🔍 꼭 한 번 봐 주세요" : AREAS[area].label;
+  $("qno").textContent = (i + 1) + " / " + Q.length;
+  $("qbar").style.width = (i / Q.length * 100) + "%";
+  $("qtext").textContent = text;
+  $("qhint").textContent = hint;
+  $("qhint").classList.toggle("hide", !hint);
+  const opts = area === "X" ? OPTX : OPT;
+  $("opts").innerHTML = opts.map(([t, v]) => `<button class="opt${ans[i] === v ? " on" : ""}" onclick="pick(${v})">${t}</button>`).join("");
+  $("qback").classList.toggle("hide", i === 0);
+}
+function pick(v) { ans[i] = v; if (i < Q.length - 1) { i++; render(); } else result(); }
+function prev() { if (i > 0) { i--; render(); } }
+
+function result() {
+  const sum = {}, max = {};
+  Q.forEach(([a], k) => { if (a === "X") return; sum[a] = (sum[a] || 0) + ans[k]; max[a] = (max[a] || 0) + 2; });
+  const pct = {}; Object.keys(sum).forEach(a => pct[a] = Math.round(sum[a] / max[a] * 100));
+  const order = Object.keys(pct).sort((a, b) => pct[b] - pct[a] || sum[b] - sum[a]);
+  const top = order[0];
+  const total = Object.values(sum).reduce((x, y) => x + y, 0); // 0~26
+  const t = total === 0 ? { ...TYPES[top], name: "꿀잠 모범생", emoji: "🌱", img: "img/cover.jpg", line: "체크된 습관이 하나도 없어요! 지금처럼만 지켜 주세요",
+    scenes: [], why: "", no: "\"빨리 자!\"", yes: "\"오늘도 순서대로 척척! 꿀잠 자자~\"", product: false } : TYPES[top];
+  const snore = ans[13], night = ans[14];
+  let band;
+  if (total <= 7) band = ["🌱 지금처럼만 해 주세요", "잠자리 습관이 꽤 좋은 편이에요. 아래 솔루션 중 하나만 더해도 충분해요.", "#eef8f1", "#2f6b4c"];
+  else if (total <= 15) band = ["🌤 잠자리 습관 점검이 필요해요", "잠드는 시간이 밀리는 순간이 자주 보여요. 오늘 솔루션 3가지부터 시작해 보세요.", "#fff7e6", "#7a5410"];
+  else band = ["🔥 이번 주는 잠자리 집중 주간", "잠을 방해하는 습관이 여러 곳에서 보여요. 7일 미션을 가족이 같이 해 보세요.", "#fff0ec", "#8a3320"];
+  const allZero = total === 0;
+  const rank = a => order.indexOf(a);
+  const hit = Q.map((q, k) => k).filter(k => Q[k][0] !== "X" && ans[k] > 0)
+    .sort((x, y) => ans[y] - ans[x] || rank(Q[x][0]) - rank(Q[y][0]) || x - y);
+  let week = hit.slice(0, 6).map(k => SOLQ[k][2]);
+  if (week.length < 6) week = week.concat(t.week.filter(w => !week.includes(w) && !/다시 하기/.test(w)).slice(0, 6 - week.length));
+  week.push("일주일 뒤 체크리스트 다시 하기 (점수 비교!)");
+  const ebKeys = [...EBT[top]];
+  if (night > 0) ebKeys.unshift("tantrum");
+  const ebs = [...new Set(ebKeys)].slice(0, 3).map(k => EB[k]);
+
+  let h = `
+  <div class="rtop">
+    <div class="rsmall">우리 아이 잠자리 습관 유형은</div>
+    <div class="rname">${t.emoji} ${t.name}</div>
+    <div class="rline">${t.line}</div>
+  </div>
+  <img class="rimg" src="${t.img}" alt="${t.name}">
+  <div class="band" style="background:${band[2]};color:${band[3]}"><b>${band[0]} <span style="font-size:14px">(${total}/26점)</span></b>${band[1]}</div>
+  ${snore === 2 || night === 2 ? `<div class="doc"><b>🏥 이건 병원에서 한 번 봐 주세요</b>${snore === 2 ? "잘 때 코를 크게 골거나 숨을 멈췄다가 몰아쉬는 모습은 생활 습관과 별개로 <b>소아청소년과나 이비인후과</b>에서 확인받는 게 좋아요. 자는 모습을 30초쯤 영상으로 찍어 가면 설명하기 쉬워요." : ""}${snore === 2 && night === 2 ? "<br><br>" : ""}${night === 2 ? "밤에 자주 깨서 심하게 울거나 낮에도 너무 졸려 해서 생활이 힘들면 <b>소아청소년과</b>에서 한 번 상담받아 보세요. 확인해 두면 마음이 편해요." : ""}</div>` : ""}
+  ${snore !== 2 && night !== 2 && (snore === 1 || night === 1) ? `<div class="doc" style="border-color:#f0b54a;background:#fffaf0;color:#6b4d12"><b style="color:#c4860f">🔍 오늘 밤 30초만 지켜봐 주세요</b>아이가 잠든 뒤 코골이가 큰지, 숨이 잠깐 멈추는지, 입을 벌리고 자는지 살펴봐 주세요. 자주 보이면 소아청소년과에서 한 번 상담받아 보세요.</div>` : ""}
+  ${t.scenes.length ? `<div class="sec">
+    <h3>😮 이런 장면, 익숙하죠?</h3>
+    <ul class="scenes">${t.scenes.map(s => `<li>${s}</li>`).join("")}</ul>
+  </div>
+  <div class="sec">
+    <h3>🤔 왜 그럴까요?</h3>
+    <p>${t.why}</p>
+  </div>` : ""}
+  ${hit.length ? `
+  <div class="sec">
+    <h3>✅ 우리 아이 맞춤 솔루션 <span style="font-size:13px;color:var(--sub);font-weight:700">(체크하신 ${hit.length}개 항목)</span></h3>
+    <ol class="sol">${hit.map((k, n) => `<li class="${n >= 4 ? "xtra hide" : ""}"><span class="qq">${ans[k] === 2 ? "자주" : "가끔"} · ${Q[k][1]}</span><b>${SOLQ[k][0]}</b>${SOLQ[k][1]}</li>`).join("")}</ol>
+    ${hit.length > 4 ? `<button class="btn line" style="margin-top:4px;padding:12px;font-size:15px" onclick="document.querySelectorAll('.xtra').forEach(e=>e.classList.remove('hide'));this.remove()">나머지 솔루션 ${hit.length - 4}개 더 보기</button>` : ""}
+  </div>` : `
+  <div class="sec">
+    <h3>✅ 지금처럼 지켜 주면 좋은 3가지</h3>
+    <ol class="sol">${t.sol.map(([b, d]) => `<li><b>${b}</b>${d}</li>`).join("")}</ol>
+  </div>`}
+  <div class="sec">
+    <h3>💬 잔소리 대신 이렇게 말해 보세요</h3>
+    <div class="say"><div class="no">${t.no}</div><div class="yes">${t.yes}</div></div>
+  </div>
+  <div class="sec">
+    <h3>📅 우리 아이 7일 미션 (체크해 보세요)</h3>
+    <ul class="week">${week.map((w, k) => `<li><input type="checkbox" id="w${k}" onchange="saveChecks()"><label for="w${k}">${w}</label></li>`).join("")}</ul>
+    <p class="wsave">✔ 체크하면 이 휴대폰에 자동 저장돼요. 다음에 들어와도 그대로 있어요.</p>
+    <button class="btn line" style="margin-top:8px" onclick="missionImage()">🖼️ 미션표 이미지로 저장하기</button>
+  </div>
+  <div class="sec mix">
+    <h3>📊 우리 아이 잠자리 습관 한눈에</h3>
+    ${order.map(a => `<div class="row${a === top ? " top" : ""}"><span>${AREAS[a].label}</span><div class="track"><i style="width:${pct[a]}%"></i></div><b>${pct[a]}%</b></div>`).join("")}
+    <p style="font-size:13px;color:var(--sub);margin-top:4px">두 번째로 높은 <b>${AREAS[order[1]].label}</b>도 함께 챙겨 주면 좋아요.</p>
+  </div>`;
+  if (t.product && !allZero) {
+    h += `
+  <div class="prod">
+    <div class="ph"><img src="${PRODUCT.img}" alt="${PRODUCT.name}"><div><div class="tag">${PRODUCT.tag}</div><div class="pn">${PRODUCT.name}</div><div class="pd">${PRODUCT.desc}</div></div></div>
+    <a href="${PRODUCT.url}" target="_blank" rel="noopener">제품 보러 가기</a>
+    <div class="fine">${PRODUCT.fine}</div>
+  </div>`;
+  }
+  h += `
+  <div class="ebook">
+    <h3>📘 더 자세히 알고 싶다면 · 무료 전자책</h3>
+    ${ebs.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener"><span class="ei">📖</span><b>${n}</b><span class="eg">무료로 보기 ›</span></a>`).join("")}
+  </div>
+  <div class="more">
+    <h3>🎲 1분 재미 테스트도 해 보세요</h3>
+    ${MORE.map(m => `<a href="${m.url}?from=check_${SLUG}"><img src="${m.img}" alt=""><div><b>${m.title}</b><span>${m.sub}</span></div></a>`).join("")}
+  </div>
+  <div class="ctas">
+    <button class="btn main" onclick="share()">📤 다른 엄마에게 공유하기</button>
+    <button class="btn line" onclick="ans=[];go(0)">다시 체크하기</button>
+    <p class="note">이 체크리스트는 진단이 아니에요. 잠자리 습관을 돌아보는 참고용이에요.<br>코골이·숨 멈춤이나 잠 문제가 걱정되면 소아청소년과에서 상담해 주세요.<br>© 맘들의 정보터</p>
+  </div>`;
+  $("result").innerHTML = h;
+  show("result");
+  CUR = { ans: ans.slice(), name: t.emoji + " " + t.name, week, date: (saved && restoring) ? saved.date : today(), checks: (saved && restoring) ? (saved.checks || []) : [] };
+  CUR.checks.forEach((c, k) => { const el = $("w" + k); if (el) el.checked = !!c; });
+  store(CUR);
+}
+
+// ---- 저장 (이 휴대폰에만, 실패해도 페이지는 그대로 동작) ----
+const KEY = SLUG + "_check_v1";
+let CUR = null, saved = null, restoring = false;
+function today() { const d = new Date(); return (d.getMonth() + 1) + "월 " + d.getDate() + "일"; }
+function store(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+function load() { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { return null; } }
+function saveChecks() { if (!CUR) return; CUR.checks = CUR.week.map((w, k) => !!($("w" + k) && $("w" + k).checked)); store(CUR); }
+function resume() { if (!saved) return; ans = saved.ans.slice(); restoring = true; result(); restoring = false; }
+function restart() { saved = null; ans = []; go(0); }
+(function init() {
+  saved = load();
+  if (saved && saved.ans && saved.ans.length === Q.length) {
+    const done = (saved.checks || []).filter(Boolean).length;
+    const box = document.createElement("div");
+    box.className = "resume";
+    box.innerHTML = `<b>📌 ${saved.date}에 체크한 결과가 있어요</b><span>${saved.name} · 7일 미션 ${done}/${saved.week.length} 완료</span>
+      <button class="btn main" style="margin-top:10px" onclick="resume()">이어서 보기</button>
+      <button class="btn line" onclick="restart()">처음부터 다시 체크하기</button>`;
+    const pad = document.querySelector("#start .pad");
+    pad.insertBefore(box, pad.querySelector(".btn.main"));
+    pad.querySelector(":scope > .btn.main").classList.add("hide");
+  }
+})();
+
+// ---- 미션표 이미지 (냉장고용) ----
+async function missionImage() {
+  if (!CUR) return;
+  saveChecks();
+  try { await document.fonts.ready; } catch (e) {}
+  const W = 1080, P = 70, rowH = 112, H = 520 + CUR.week.length * rowH + 200;
+  const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const g = c.getContext("2d"), F = '"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
+  g.fillStyle = "#f6f8f4"; g.fillRect(0, 0, W, H);
+  g.fillStyle = "#fff"; round(g, 40, 40, W - 80, H - 80, 44); g.fill();
+  g.fillStyle = "#2f8f6b"; round(g, 40, 40, W - 80, 230, 44); g.fill(); g.fillRect(40, 200, W - 80, 70);
+  g.fillStyle = "#fff"; g.textAlign = "center";
+  g.font = "700 34px " + F; g.fillText("맘들의 정보터 · 우리 아이 잠자리 체크리스트", W / 2, 120);
+  g.font = "900 64px " + F; g.fillText("우리 아이 7일 꿀잠 미션", W / 2, 205);
+  g.fillStyle = "#26302b"; g.font = "800 44px " + F; g.fillText(CUR.name, W / 2, 350);
+  g.fillStyle = "#66716b"; g.font = "600 32px " + F; g.fillText(CUR.date + " 시작 · 하나씩 체크해 보세요", W / 2, 410);
+  g.textAlign = "left";
+  CUR.week.forEach((w, k) => {
+    const y = 480 + k * rowH;
+    g.strokeStyle = "#2f8f6b"; g.lineWidth = 5; round(g, P + 20, y, 62, 62, 14); g.stroke();
+    if (CUR.checks[k]) { g.fillStyle = "#2f8f6b"; round(g, P + 20, y, 62, 62, 14); g.fill(); g.fillStyle = "#fff"; g.font = "900 46px " + F; g.fillText("✓", P + 33, y + 48); }
+    g.fillStyle = "#2f8f6b"; g.font = "800 28px " + F; g.fillText((k + 1) + "일", P + 110, y + 26);
+    g.fillStyle = "#26302b"; g.font = "700 36px " + F; wrap(g, w, P + 110, y + 70, W - P * 2 - 130, 40);
+    g.strokeStyle = "#dde7e1"; g.lineWidth = 2; g.setLineDash([8, 8]); g.beginPath(); g.moveTo(P + 20, y + rowH - 14); g.lineTo(W - P - 20, y + rowH - 14); g.stroke(); g.setLineDash([]);
+  });
+  g.fillStyle = "#8c958f"; g.font = "600 26px " + F; g.textAlign = "center";
+  g.fillText("진단이 아닌 생활 습관 참고용이에요 · 일주일 뒤 다시 체크해 보세요", W / 2, H - 90);
+  const blob = await new Promise(r => c.toBlob(r, "image/png"));
+  const file = new File([blob], "우리아이_꿀잠미션.png", { type: "image/png" });
+  try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: "우리 아이 7일 꿀잠 미션" }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+  const url = URL.createObjectURL(blob);
+  const ov = document.createElement("div"); ov.className = "imgov";
+  ov.innerHTML = `<div><p>이미지를 꾹 눌러 저장하세요</p><img src="${url}" alt="7일 미션표"><a class="btn main" href="${url}" download="우리아이_꿀잠미션.png">다운로드</a><button class="btn line" onclick="this.closest('.imgov').remove()">닫기</button></div>`;
+  document.body.appendChild(ov);
+}
+function round(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+function wrap(g, s, x, y, max, lh) { let line = ""; for (const ch of s) { if (g.measureText(line + ch).width > max) { g.fillText(line, x, y); line = ch; y += lh; } else line += ch; } g.fillText(line, x, y); }
+function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1800); }
+async function share() {
+  const url = location.href.split("?")[0] + "?from=share";
+  const data = { title: "우리 아이 잠자리 습관 5분 체크리스트", text: "15문항 5분! 우리 아이 잠자리 습관 유형이랑 재우기 솔루션 알려 줘요 🌙", url };
+  try { if (navigator.share) { await navigator.share(data); return; } } catch (e) { return; }
+  try { await navigator.clipboard.writeText(url); toast("링크를 복사했어요"); } catch (e) { prompt("링크를 복사해 주세요", url); }
+}
+</script>
+</body>
+</html>
