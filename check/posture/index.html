@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>우리 아이 자세 5분 체크리스트 | 맘들의 정보터</title>
+<meta name="description" content="15문항 5분! 우리 아이 자세 습관을 체크하고, 우리 아이에게 맞는 생활 솔루션을 받아 보세요.">
+<meta property="og:title" content="우리 아이 자세 5분 체크리스트 🧒">
+<meta property="og:description" content="15문항 5분 · 우리 아이 자세 습관 유형 + 맞춤 솔루션">
+<meta property="og:image" content="https://07161228min-ai.github.io/check/posture/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#2f8f6b; --pu2:#6cc4a0; --mint:#2f8f6b; --bg:#f6f8f4; --ink:#26302b; --sub:#66716b; --line:#dde7e1; --soft:#e7f4ee; --warn:#e2563b; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.55; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(30,60,45,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; background:var(--soft); }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.22); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.22); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qtop { display:flex; justify-content:space-between; font-size:13px; font-weight:800; color:var(--pu); }
+.qtop span:last-child { color:var(--sub); font-weight:700; }
+.qtext { font-size:21px; font-weight:800; line-height:1.4; margin:8px 0 6px; letter-spacing:-.3px; }
+.qhint { font-size:14px; color:var(--sub); margin-bottom:16px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:700; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:22px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:29px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:14px; background:var(--soft); }
+.band { margin:16px 20px 0; border-radius:16px; padding:14px 16px; font-size:15px; font-weight:700; }
+.band b { display:block; font-size:17px; margin-bottom:2px; }
+.sec { padding:18px 20px 4px; }
+.sec h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.sec p { font-size:15px; color:#3c4741; }
+.scenes { list-style:none; }
+.scenes li { background:#fffaf0; border-left:4px solid #f2c26b; border-radius:10px; padding:10px 12px; margin-bottom:8px; font-size:15px; color:#3c4741; }
+.sol { list-style:none; counter-reset:s; }
+.sol li { counter-increment:s; position:relative; padding:12px 12px 12px 48px; background:var(--soft); border-radius:14px; margin-bottom:8px; font-size:15px; color:#2d3832; }
+.sol li::before { content:counter(s); position:absolute; left:12px; top:12px; width:26px; height:26px; border-radius:50%; background:var(--pu); color:#fff; font-weight:900; font-size:14px; display:flex; align-items:center; justify-content:center; }
+.sol li b { display:block; font-size:16px; margin-bottom:2px; }
+.say { display:flex; flex-direction:column; gap:8px; }
+.say div { border-radius:14px; padding:10px 12px; font-size:15px; }
+.say .no { background:#fdeeee; color:#8a3b3b; text-decoration:line-through; text-decoration-color:rgba(138,59,59,.5); }
+.say .yes { background:#eaf6ff; color:#1f4f75; font-weight:700; }
+.week { list-style:none; }
+.week li { display:flex; gap:10px; align-items:flex-start; padding:9px 0; border-bottom:1px dashed var(--line); font-size:15px; }
+.week li input { width:20px; height:20px; accent-color:var(--pu); flex:none; margin-top:2px; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:8px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:118px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; background:var(--pu2); }
+.mix .row.top .track i { background:var(--pu); }
+.mix .row b { width:42px; text-align:right; flex:none; }
+.doc { margin:16px 20px 0; border:2px solid var(--warn); background:#fff5f2; border-radius:16px; padding:14px 16px; font-size:15px; color:#6b2a1c; }
+.doc b { display:block; font-size:16px; margin-bottom:4px; color:var(--warn); }
+.prod { margin:18px 20px 0; border-radius:18px; border:2px solid var(--line); overflow:hidden; background:#fff; }
+.prod .ph { display:flex; gap:12px; padding:14px; align-items:center; }
+.prod img { width:92px; height:92px; object-fit:contain; background:#f4f6f5; border-radius:12px; flex:none; }
+.prod .tag { font-size:12px; font-weight:800; color:var(--pu); }
+.prod .pn { font-size:17px; font-weight:900; line-height:1.3; margin-top:2px; }
+.prod .pd { font-size:14px; color:var(--sub); margin-top:4px; }
+.prod a { display:block; background:var(--pu); color:#fff; text-align:center; font-weight:800; padding:13px; text-decoration:none; font-size:16px; }
+.prod .fine { font-size:11.5px; color:#8c958f; padding:8px 14px 10px; line-height:1.5; }
+.sol li .qq { display:block; font-size:12.5px; font-weight:700; color:var(--pu); margin-bottom:3px; }
+.ebook { margin:18px 20px 0; padding:16px; border-radius:18px; background:#eef5ff; border:2px solid #cfe0f7; }
+.ebook h3 { font-size:16px; font-weight:900; margin-bottom:10px; }
+.ebook a { display:flex; align-items:center; gap:10px; background:#fff; border-radius:14px; padding:12px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.ebook .ei { font-size:22px; flex:none; }
+.ebook b { font-size:14.5px; line-height:1.4; flex:1; }
+.ebook .eg { font-size:12px; font-weight:800; color:#2c6fb7; flex:none; }
+.wsave { font-size:12.5px; color:var(--pu); font-weight:700; margin-top:8px; }
+.resume { background:#fff7e6; border:2px solid #f2c26b; border-radius:16px; padding:14px; margin-top:16px; }
+.resume b { display:block; font-size:16px; }
+.resume span { font-size:14px; color:var(--sub); }
+.imgov { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:50; display:flex; align-items:center; justify-content:center; padding:16px; }
+.imgov > div { background:#fff; border-radius:18px; padding:14px; max-width:420px; width:100%; max-height:92vh; overflow:auto; text-align:center; }
+.imgov p { font-weight:800; margin-bottom:8px; }
+.imgov img { width:100%; border-radius:10px; border:1px solid var(--line); }
+.ctas { padding:14px 20px 20px; }
+.more { margin:16px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:16px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:52px; height:65px; object-fit:cover; border-radius:10px; flex:none; background:var(--soft); }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+.note { font-size:12px; color:#8c958f; text-align:center; margin-top:16px; line-height:1.6; padding:0 8px; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#26302b; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">맘들의 정보터 · 5분 체크리스트</div>
+
+  <!-- 시작 -->
+  <div id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="아이의 등과 어깨를 살펴보는 엄마"></div>
+    <div class="pad">
+      <h1>"허리 펴!" 오늘만 몇 번 했어요?<br><em>우리 아이 자세 5분 체크리스트</em></h1>
+      <p class="lead">아이 평소 모습을 떠올리며 15문항만 체크해 주세요.<br>우리 아이 자세 습관 유형과 <b>바로 해 볼 수 있는 솔루션</b>을 알려 드려요.</p>
+      <div class="chips"><span class="chip">15문항</span><span class="chip">5분</span><span class="chip">유형별 맞춤 솔루션</span><span class="chip">7일 미션</span></div>
+      <button class="btn main" onclick="go(0)">체크 시작하기</button>
+      <p class="note">진단이 아닌 생활 습관 점검용이에요.</p>
+    </div>
+  </div>
+
+  <!-- 문항 -->
+  <div id="quiz" class="card hide">
+    <div class="pad">
+      <div class="qtop"><span id="qsec"></span><span id="qno"></span></div>
+      <div class="bar"><i id="qbar"></i></div>
+      <div class="qtext" id="qtext"></div>
+      <div class="qhint" id="qhint"></div>
+      <div id="opts"></div>
+      <button class="back" id="qback" onclick="prev()">← 이전 문항</button>
+    </div>
+  </div>
+
+  <!-- 결과 -->
+  <div id="result" class="card hide"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const PRODUCT = {
+  url: "https://mkt.shopping.naver.com/link/6ad0369d57f8153efa4ebf53",
+  img: "img/product.png",
+  tag: "닥터코어런 · 어린이 전용",
+  name: "아이 혼자 차는 어린이 자세밴드",
+  desc: "겨드랑이 쿠션 패드라 아이 혼자 입고 벗어요. 숙제·영상 시간에 '허리 펴!' 잔소리 대신 써 보세요.",
+  fine: "의료기기가 아닌 생활용품이에요. 자세 교정이나 치료 효과를 약속하지 않으며, 아이가 불편해하면 바로 벗겨 주세요."
+};
+const AREAS = {
+  A: { label: "🐢 화면 보는 자세" },
+  B: { label: "🪑 앉는 자세" },
+  C: { label: "🎒 한쪽 쏠림" },
+  D: { label: "🛋️ 늘어짐·활동" }
+};
+const Q = [
+  ["A", "핸드폰·태블릿을 볼 때 고개가 화면 쪽으로 쭉 빠져 있다", "옆에서 보면 귀가 어깨보다 한참 앞에 있어요"],
+  ["A", "화면을 무릎이나 배 위에 두고 고개를 푹 숙여 본다", "턱이 가슴에 닿을 듯한 그 자세요"],
+  ["A", "영상·게임 시간이 하루 2시간을 넘는 날이 많다", "주말을 떠올리면 더 정확해요"],
+  ["A", "화면을 보다가 \"목 아파\", \"어깨 주물러 줘\" 소리를 한다", ""],
+  ["B", "숙제할 때 책상에 엎드리듯 코를 박고 쓴다", "공책과 눈 사이가 한 뼘도 안 돼요"],
+  ["B", "의자 위에 한쪽 다리를 올리거나 쪼그려 앉는다", "식탁 의자에서도요"],
+  ["B", "바닥에 앉을 때 무릎을 꿇고 두 발을 엉덩이 양옆으로 빼서 앉는다", "흔히 말하는 W자 앉기예요"],
+  ["B", "\"허리 펴!\" 하면 3초 펴고 다시 구부정해진다", ""],
+  ["C", "가방을 한쪽 어깨에만 메고 다닌다", "등원·등교, 학원 가방 모두요"],
+  ["C", "서 있을 때 한쪽 다리에만 기대 짝다리를 짚는다", ""],
+  ["D", "소파에 비스듬히 누워 TV를 본다", "앉아 있다 보면 어느새 누워 있어요"],
+  ["D", "밖에서 뛰어노는 시간이 하루 30분도 안 되는 날이 많다", "학원·실내 생활이 많을수록 그래요"],
+  ["D", "엎드려서 책을 보거나 게임을 한다", ""],
+  ["X", "아이를 뒤에서 보면 양쪽 어깨 높이가 달라 보인다", "아이를 편하게 세우고 뒤에서 봐 주세요"],
+  ["X", "아이가 허리를 앞으로 숙였을 때, 등 한쪽이 더 튀어나와 보인다", "두 팔을 늘어뜨리고 천천히 숙이게 한 뒤 뒤에서 봐 주세요"]
+];
+// 문항별 맞춤 솔루션: [제목, 방법, 7일 미션]  (Q의 0~12번과 같은 순서)
+const SOLQ = [
+  ["화면은 눈높이로 올려 주세요", "화면이 낮을수록 고개가 따라 내려가요. 태블릿 거치대나 책 몇 권으로 화면을 눈높이까지 올려 주세요.", "태블릿 거치대(또는 책 받침) 준비하기"],
+  ["무릎 위 화면 대신 '테이블 위 화면'", "화면을 무릎·배 위에 두면 고개가 푹 숙여져요. 테이블에 세워 두고 등받이에 기대서 보게 해 주세요.", "영상은 테이블 위에 세워서 보기"],
+  ["영상 시간은 아이와 같이 정하기", "엄마가 정한 시간보다 아이가 정한 약속을 더 잘 지켜요. 하루 총시간과 '끝나는 신호(타이머)'를 아이가 직접 고르게 해 주세요.", "오늘 영상 시간 약속 아이와 정하기"],
+  ["20분마다 '기린 타임'", "타이머가 울리면 같이 일어나 목을 기린처럼 길게 쭉, 어깨를 으쓱 5번. 놀이처럼 하면 아이가 먼저 챙겨요.", "기린 타임 타이머(20분) 맞추기"],
+  ["책상 높이와 공책 각도 맞추기", "책상이 너무 높거나 공책이 평평하면 얼굴이 내려가요. 책상은 팔꿈치 높이쯤, 공책은 독서대나 책으로 비스듬히 세워 주세요.", "공책 비스듬히 세워서 쓰기"],
+  ["발 받침 하나면 곡예가 줄어요", "발이 바닥에 안 닿으면 아이는 다리를 의자 위로 올려요. 상자나 두꺼운 책으로 발 받침을 놓아 무릎이 90도쯤 되게 해 주세요.", "의자 앞에 발 받침 놓기"],
+  ["W자 대신 '나비 다리·다리 뻗기'", "바닥에 앉을 때 \"우리 나비 다리 해 볼까?\", \"다리 쭉 뻗고 발가락 인사!\"처럼 다른 앉는 법을 놀이로 알려 주세요.", "바닥에선 나비 다리 놀이 하기"],
+  ["\"허리 펴!\" 대신 '25분 앉고 5분 일어나기'", "오래 앉으면 어른도 자세가 무너져요. 짧게 앉고 자주 일어나게 하고, 바르게 앉은 순간을 바로 칭찬해 주세요.", "공부 25분 + 5분 일어나기 타이머"],
+  ["가방은 양쪽으로, 무게는 가볍게", "가방 무게는 몸무게의 10% 이하가 기준이에요. 안 쓰는 책은 빼고, 가방끈을 줄여 가방 아래가 허리선쯤 오게 해 주세요.", "가방 무게 재고 안 쓰는 물건 빼기"],
+  ["짝다리는 '양발 시소 놀이'로", "기다릴 때 \"양발에 똑같이 힘 주기, 누가 오래 버티나!\" 같은 놀이로 바꿔 보세요. 혼내는 것보다 훨씬 잘 먹혀요.", "줄 설 때 양발 시소 놀이"],
+  ["TV는 '앉아서 보기' 규칙", "누우면 잠깐 멈춤! 규칙을 아이와 같이 정하고, 등받이에 쿠션을 받쳐 편하게 앉을 자리를 만들어 주세요.", "TV는 앉아서 보기 규칙 정하기"],
+  ["하루 30분 '뛰는 시간'", "몸을 쓰는 시간이 적으면 오래 버티는 힘도 적어서 자꾸 기대고 눕고 싶어져요. 놀이터, 줄넘기, 집 안 댄스 타임 모두 좋아요.", "하루 30분 뛰어놀기 (놀이터·줄넘기·댄스)"],
+  ["엎드리기 대신 '쿠션 책상'", "바닥에 엎드리고 싶어 하면 낮은 좌식 책상이나 큰 쿠션을 앞에 두고 앉아서 보게 해 주세요.", "좌식 책상이나 큰 쿠션 준비하기"]
+];
+// 관련 전자책 (인포크 mdcr7과 같은 주소)
+const EB = {
+  phone: ["초등 스마트폰, 사용 시간 약속 30가지", "https://drive.google.com/file/d/1X1-SPmmgA74TWM-z0SG6QBwGmoM3YgIA/preview"],
+  game: ["게임·스마트폰 때문에 매일 싸우는 집 · 부모가 알아야 할 규칙 20가지", "https://drive.google.com/file/d/1iHbS28S-ZUTuc-QDhx18gM-7CKGBwBM8/preview"],
+  focus: ["아이 집중력 키우는 생활습관", "https://drive.google.com/file/d/1njW7BzJJm42MQmq80rV30Xe5NdcRoHZs/preview"],
+  height: ["우리 아이 키 성장, 부모가 지키는 생활 습관 30가지", "https://drive.google.com/file/d/1sv0VXusWVXWg4MffojKwFMJYk2MRP_rX/preview"],
+  tilt: ["우리 아이 몸이 한쪽으로 기울어 보인다면 · 성장기 체형 비대칭 체크 20가지", "https://drive.google.com/file/d/1sVbVWKJGZcnXh_Ti5DVu2NnCzs2HSWFl/preview"],
+  play: ["추운 날 집에서 하는 10분 놀이 30가지", "https://drive.google.com/file/d/1khujr_QcLpmU5U5WRTFPRVUWpIJ_r-Nm/preview"]
+};
+const EBT = { A: ["phone", "game"], B: ["focus", "height"], C: ["tilt", "height"], D: ["play", "height"] };
+const OPT = [["그래요, 자주 그래요", 2], ["가끔 그래요", 1], ["아니에요", 0]];
+const OPTX = [["네, 그렇게 보여요", 2], ["잘 모르겠어요", 1], ["아니에요", 0]];
+
+const TYPES = {
+  A: {
+    name: "고개 쭉 화면러", emoji: "🐢", img: "img/A.jpg",
+    line: "\"엄마, 이것만 보고!\" 그 사이 목은 화면 속으로",
+    scenes: [
+      "영상 하나 틀어 주면 조용해서 좋은데… 돌아보면 고개가 화면에 빨려 들어가 있어요.",
+      "\"고개 들어!\" 하면 들었다가, 다음 영상 시작하면 다시 쭉.",
+      "태블릿은 꼭 무릎 위에 두고, 몸은 동그랗게 말려 있어요.",
+      "저녁쯤 \"목 아파~\" 하면서 엄마한테 어깨를 내밀어요."
+    ],
+    why: "아이가 일부러 그러는 게 아니에요. 화면이 낮고 가까울수록 몸은 자연스럽게 화면을 따라가요. 그래서 잔소리보다 <b>화면 위치와 시간</b>을 바꿔 주는 게 훨씬 잘 먹혀요.",
+    sol: [
+      ["화면을 눈높이로 올려 주세요", "태블릿 거치대나 책 몇 권만 받쳐도 고개가 덜 숙여져요. 무릎 위 태블릿은 오늘부터 금지!"],
+      ["20분마다 '기린 타임'", "타이머가 울리면 같이 일어나 목을 길게 쭉~ 기린처럼 늘려요. 놀이처럼 하면 아이가 먼저 챙겨요."],
+      ["영상은 '앉는 자리'를 정해 주세요", "소파에 눕거나 바닥에 엎드려 보지 않게, 등받이 있는 자리 하나를 '영상 자리'로 정해요."]
+    ],
+    no: "\"고개 좀 들라고 몇 번을 말해!\"",
+    yes: "\"우리 기린 타임이다! 목 길게 누가 더 길어지나 해 볼까?\"",
+    week: ["태블릿 거치대(또는 책 받침) 준비", "영상 볼 때 '기린 타임' 타이머 맞추기", "영상 자리 정하기", "하루 영상 시간 아이와 같이 정하기", "저녁에 어깨 주물러 주며 '오늘 목 괜찮았어?' 묻기", "주말 바깥 놀이 1시간", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: true
+  },
+  B: {
+    name: "의자 위 곡예러", emoji: "🪑", img: "img/B.jpg",
+    line: "숙제하라고 앉혔더니, 5분 뒤엔 의자 위 서커스",
+    scenes: [
+      "분명 바르게 앉아서 시작했는데, 돌아보면 한쪽 다리가 의자 위에 올라가 있어요.",
+      "글씨 쓸 때 공책에 코가 닿을 듯 엎드려요.",
+      "바닥에선 W자로 앉는 게 제일 편하대요.",
+      "\"허리 펴!\" 하면 딱 3초 펴요. 그리고 다시 원래대로…"
+    ],
+    why: "아이 몸에 의자·책상이 안 맞으면 아이는 스스로 편한 자세를 찾아 꼼지락거려요. 다리가 붕 뜨거나 책상이 높으면 곡예가 시작돼요. 먼저 <b>의자와 책상 높이</b>부터 봐 주세요.",
+    sol: [
+      ["발이 바닥에 닿게 해 주세요", "발이 붕 뜨면 발 받침(상자·두꺼운 책)을 놓아 주세요. 무릎이 90도쯤 되면 딱 좋아요."],
+      ["공부는 '25분 앉고 5분 일어나기'", "오래 앉을수록 자세는 무너져요. 짧게 앉고 자주 일어나는 게 오히려 집중에도 좋아요."],
+      ["W자 앉기 대신 '책상다리·다리 뻗기'", "바닥에 앉을 땐 \"우리 나비 다리 해 볼까?\"처럼 다른 앉는 법을 놀이로 알려 주세요."]
+    ],
+    no: "\"똑바로 앉아! 몇 번을 말해야 알아들어?\"",
+    yes: "\"발 받침에 발 쿵! 엉덩이는 의자 끝까지 쏙~ 준비 완료!\"",
+    week: ["의자 높이·발 받침 맞추기", "공부 25분 + 5분 일어나기 타이머", "책상 위 공책은 비스듬히 세워 보기", "바닥에선 나비 다리로 앉기 놀이", "자세 좋은 순간 바로 칭찬하기(하루 3번)", "주말 바깥 놀이 1시간", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: true
+  },
+  C: {
+    name: "한쪽 쏠림러", emoji: "🎒", img: "img/C.jpg",
+    line: "가방은 늘 오른쪽, 짝다리도 늘 오른쪽",
+    scenes: [
+      "가방끈 두 개 중 하나는 늘 놀고 있어요.",
+      "줄 서서 기다릴 때 꼭 한쪽 다리에 기대 서 있어요.",
+      "사진을 찍으면 몸이 살짝 기울어져 있어요.",
+      "\"양쪽으로 메!\" 하면 \"이게 편해~\"가 돌아와요."
+    ],
+    why: "한쪽으로 메고 서는 건 대부분 '습관'과 '편함' 때문이에요. 가방이 무거울수록 한쪽으로 쏠리기 쉬워서, 먼저 <b>가방 무게와 메는 방법</b>을 바꿔 주는 게 좋아요.",
+    sol: [
+      ["가방은 양쪽 어깨, 무게는 가볍게", "가방 무게는 아이 몸무게의 10% 이하가 기준이에요. 매일 안 쓰는 책은 빼 주세요."],
+      ["가방끈은 등에 딱 붙게", "가방이 엉덩이까지 처지면 몸이 앞으로 숙여져요. 가방 아래가 허리선쯤 오게 끈을 줄여 주세요."],
+      ["짝다리는 '양발 시소 놀이'로", "기다릴 때 \"양발에 똑같이 힘 주기, 누가 오래 버티나!\" 같은 놀이로 바꿔 보세요."]
+    ],
+    no: "\"가방 똑바로 메라니까!\"",
+    yes: "\"오늘은 가방 양쪽 출근이야! 끈 길이 맞춰 볼까?\"",
+    week: ["가방 무게 재 보기(몸무게의 10% 이하)", "안 쓰는 책·장난감 빼기", "가방끈 길이 맞추기", "등원·등교 때 양쪽으로 메면 하이파이브", "줄 설 때 '양발 시소 놀이'", "주말 바깥 놀이 1시간", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: false
+  },
+  D: {
+    name: "소파 녹아내림러", emoji: "🛋️", img: "img/D.jpg",
+    line: "앉아 있었는데… 어느새 소파와 한 몸",
+    scenes: [
+      "TV 앞에 앉혀 놓으면 10분 뒤엔 반쯤 누워 있어요.",
+      "책은 꼭 엎드려서 보고, 게임도 엎드려서 해요.",
+      "밖에 나가자고 하면 \"집이 좋아~\"",
+      "몸이 말랑말랑 젤리처럼 어디든 늘어져 있어요."
+    ],
+    why: "몸을 쓰는 시간이 적으면 오래 버티는 힘도 적어서, 아이는 자꾸 기대고 눕고 싶어져요. 자세보다 먼저 <b>몸을 움직이는 시간</b>을 늘려 주는 게 순서예요.",
+    sol: [
+      ["하루 30분은 꼭 '뛰는 시간'", "놀이터, 줄넘기, 집 안 댄스 타임 모두 좋아요. 땀이 살짝 날 정도면 충분해요."],
+      ["TV는 '앉아서 보기' 규칙", "누우면 잠깐 멈춤! 규칙을 아이와 같이 정하면 지키는 힘이 커요."],
+      ["엎드려 보기 대신 '쿠션 책상'", "바닥에 엎드리고 싶어 하면 낮은 좌식 책상이나 쿠션을 받쳐 앉아서 보게 해 주세요."]
+    ],
+    no: "\"또 누워 있어? 좀 일어나!\"",
+    yes: "\"광고 나오면 우리 댄스 타임! 누가 더 웃기게 추나 볼까?\"",
+    week: ["하루 30분 뛰는 시간 정하기", "TV는 앉아서 보기 규칙 만들기", "광고 시간 댄스 타임", "엎드려 보기 대신 좌식 책상·쿠션 준비", "저녁 산책 10분", "주말 바깥 놀이 1시간", "일주일 뒤 이 체크리스트 다시 하기"],
+    product: false
+  }
+};
+const MORE = [
+  { url: "https://07161228min-ai.github.io/sitting/", img: "https://07161228min-ai.github.io/sitting/img/cover.jpg", title: "우리 아이 앉는 자세는 무슨 동물?", sub: "1분 재미 테스트" },
+  { url: "https://07161228min-ai.github.io/backpack/", img: "https://07161228min-ai.github.io/backpack/img/cover.jpg", title: "우리 아이 책가방 메는 유형?", sub: "1분 재미 테스트" },
+  { url: "https://07161228min-ai.github.io/sofa/", img: "https://07161228min-ai.github.io/sofa/img/cover.jpg", title: "소파에서 나는 무슨 동물?", sub: "1분 재미 테스트" }
+];
+
+let i = 0, ans = [];
+const $ = id => document.getElementById(id);
+function show(id) { ["start", "quiz", "result"].forEach(x => $(x).classList.toggle("hide", x !== id)); scrollTo(0, 0); }
+function go(n) { i = n; show("quiz"); render(); }
+function render() {
+  const [area, text, hint] = Q[i];
+  $("qsec").textContent = area === "X" ? "🔍 꼭 한 번 봐 주세요" : AREAS[area].label;
+  $("qno").textContent = (i + 1) + " / " + Q.length;
+  $("qbar").style.width = (i / Q.length * 100) + "%";
+  $("qtext").textContent = text;
+  $("qhint").textContent = hint;
+  $("qhint").classList.toggle("hide", !hint);
+  const opts = area === "X" ? OPTX : OPT;
+  $("opts").innerHTML = opts.map(([t, v]) => `<button class="opt${ans[i] === v ? " on" : ""}" onclick="pick(${v})">${t}</button>`).join("");
+  $("qback").classList.toggle("hide", i === 0);
+}
+function pick(v) { ans[i] = v; if (i < Q.length - 1) { i++; render(); } else result(); }
+function prev() { if (i > 0) { i--; render(); } }
+
+function result() {
+  const sum = {}, max = {};
+  Q.forEach(([a], k) => { if (a === "X") return; sum[a] = (sum[a] || 0) + ans[k]; max[a] = (max[a] || 0) + 2; });
+  const pct = {}; Object.keys(sum).forEach(a => pct[a] = Math.round(sum[a] / max[a] * 100));
+  const order = Object.keys(pct).sort((a, b) => pct[b] - pct[a] || sum[b] - sum[a]);
+  const top = order[0];
+  const total = Object.values(sum).reduce((x, y) => x + y, 0); // 0~26
+  const t = total === 0 ? { ...TYPES[top], name: "자세 모범생", emoji: "🌱", img: "img/cover.jpg", line: "체크된 습관이 하나도 없어요! 지금처럼만 지켜 주세요",
+    scenes: [], why: "", no: "\"허리 펴!\"", yes: "\"오늘 앉은 자세 멋지다! 엄마도 따라 해 볼게\"", product: false } : TYPES[top];
+  const red = ans[13] === 2 || ans[14] === 2, unsure = ans[13] === 1 || ans[14] === 1;
+  let band;
+  if (total <= 7) band = ["🌱 지금처럼만 해 주세요", "자세 습관이 꽤 좋은 편이에요. 아래 솔루션 중 하나만 더해도 충분해요.", "#eef8f1", "#2f6b4c"];
+  else if (total <= 15) band = ["🌤 습관 점검이 필요해요", "자세가 무너지는 순간이 자주 보여요. 오늘 솔루션 3가지부터 시작해 보세요.", "#fff7e6", "#7a5410"];
+  else band = ["🔥 이번 주는 집중 관리 주간", "자세가 흐트러지는 습관이 여러 곳에서 보여요. 7일 미션을 꼭 같이 해 보세요.", "#fff0ec", "#8a3320"];
+  const allZero = total === 0;
+  // 체크한 문항: '자주' 먼저, 같은 점수면 우리 아이 대표 유형 영역 먼저, 그다음 영역 점수 순
+  const rank = a => order.indexOf(a);
+  const hit = Q.map((q, k) => k).filter(k => Q[k][0] !== "X" && ans[k] > 0)
+    .sort((x, y) => ans[y] - ans[x] || rank(Q[x][0]) - rank(Q[y][0]) || x - y);
+  let week = hit.slice(0, 6).map(k => SOLQ[k][2]);
+  if (week.length < 6) week = week.concat(t.week.filter(w => !week.includes(w) && !/다시 하기/.test(w)).slice(0, 6 - week.length));
+  week.push("일주일 뒤 체크리스트 다시 하기 (점수 비교!)");
+  const ebKeys = [...EBT[top]];
+  if (red || unsure) ebKeys.unshift("tilt");
+  const ebs = [...new Set(ebKeys)].slice(0, 3).map(k => EB[k]);
+
+  let h = `
+  <div class="rtop">
+    <div class="rsmall">우리 아이 자세 습관 유형은</div>
+    <div class="rname">${t.emoji} ${t.name}</div>
+    <div class="rline">${t.line}</div>
+  </div>
+  <img class="rimg" src="${t.img}" alt="${t.name}">
+  <div class="band" style="background:${band[2]};color:${band[3]}"><b>${band[0]} <span style="font-size:14px">(${total}/26점)</span></b>${band[1]}</div>
+  ${red ? `<div class="doc"><b>🏥 이건 병원에서 한 번 봐 주세요</b>어깨 높이가 달라 보이거나 숙였을 때 등 한쪽이 더 튀어나와 보이면, 생활 습관과 별개로 <b>소아청소년과나 정형외과</b>에서 한 번 확인받는 게 좋아요. 대부분 별일 아니지만, 확인해 두면 마음이 편해요.</div>` : ""}
+  ${!red && unsure ? `<div class="doc" style="border-color:#f0b54a;background:#fffaf0;color:#6b4d12"><b style="color:#c4860f">🔍 오늘 저녁 30초만 확인해 보세요</b>아이를 편하게 세우고 뒤에서 양쪽 어깨 높이를 봐 주세요. 그다음 두 팔을 늘어뜨리고 천천히 앞으로 숙이게 한 뒤 등 양쪽 높이를 비교해 보세요. 한쪽이 확실히 높아 보이면 병원에서 한 번 확인받아 보세요.</div>` : ""}
+  ${t.scenes.length ? `<div class="sec">
+    <h3>😮 이런 장면, 익숙하죠?</h3>
+    <ul class="scenes">${t.scenes.map(s => `<li>${s}</li>`).join("")}</ul>
+  </div>
+  <div class="sec">
+    <h3>🤔 왜 그럴까요?</h3>
+    <p>${t.why}</p>
+  </div>` : ""}
+  ${hit.length ? `
+  <div class="sec">
+    <h3>✅ 우리 아이 맞춤 솔루션 <span style="font-size:13px;color:var(--sub);font-weight:700">(체크하신 ${hit.length}개 항목)</span></h3>
+    <ol class="sol">${hit.map((k, n) => `<li class="${n >= 4 ? "xtra hide" : ""}"><span class="qq">${ans[k] === 2 ? "자주" : "가끔"} · ${Q[k][1]}</span><b>${SOLQ[k][0]}</b>${SOLQ[k][1]}</li>`).join("")}</ol>
+    ${hit.length > 4 ? `<button class="btn line" style="margin-top:4px;padding:12px;font-size:15px" onclick="document.querySelectorAll('.xtra').forEach(e=>e.classList.remove('hide'));this.remove()">나머지 솔루션 ${hit.length - 4}개 더 보기</button>` : ""}
+  </div>` : `
+  <div class="sec">
+    <h3>✅ 지금처럼 지켜 주면 좋은 3가지</h3>
+    <ol class="sol">${t.sol.map(([b, d]) => `<li><b>${b}</b>${d}</li>`).join("")}</ol>
+  </div>`}
+  <div class="sec">
+    <h3>💬 잔소리 대신 이렇게 말해 보세요</h3>
+    <div class="say"><div class="no">${t.no}</div><div class="yes">${t.yes}</div></div>
+  </div>
+  <div class="sec">
+    <h3>📅 우리 아이 7일 미션 (체크해 보세요)</h3>
+    <ul class="week">${week.map((w, k) => `<li><input type="checkbox" id="w${k}" onchange="saveChecks()"><label for="w${k}">${w}</label></li>`).join("")}</ul>
+    <p class="wsave">✔ 체크하면 이 휴대폰에 자동 저장돼요. 다음에 들어와도 그대로 있어요.</p>
+    <button class="btn line" style="margin-top:8px" onclick="missionImage()">🖼️ 미션표 이미지로 저장하기</button>
+  </div>
+  <div class="sec mix">
+    <h3>📊 우리 아이 자세 습관 한눈에</h3>
+    ${order.map(a => `<div class="row${a === top ? " top" : ""}"><span>${AREAS[a].label}</span><div class="track"><i style="width:${pct[a]}%"></i></div><b>${pct[a]}%</b></div>`).join("")}
+    <p style="font-size:13px;color:var(--sub);margin-top:4px">두 번째로 높은 <b>${AREAS[order[1]].label}</b>도 함께 챙겨 주면 좋아요.</p>
+  </div>`;
+  if (t.product && !allZero) {
+    h += `
+  <div class="prod">
+    <div class="ph"><img src="${PRODUCT.img}" alt="${PRODUCT.name}"><div><div class="tag">${PRODUCT.tag}</div><div class="pn">${PRODUCT.name}</div><div class="pd">${PRODUCT.desc}</div></div></div>
+    <a href="${PRODUCT.url}" target="_blank" rel="noopener">제품 보러 가기</a>
+    <div class="fine">${PRODUCT.fine}</div>
+  </div>`;
+  }
+  h += `
+  <div class="ebook">
+    <h3>📘 더 자세히 알고 싶다면 · 무료 전자책</h3>
+    ${ebs.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener"><span class="ei">📖</span><b>${n}</b><span class="eg">무료로 보기 ›</span></a>`).join("")}
+  </div>
+  <div class="more">
+    <h3>🎲 1분 재미 테스트도 해 보세요</h3>
+    ${MORE.map(m => `<a href="${m.url}?from=check_posture"><img src="${m.img}" alt=""><div><b>${m.title}</b><span>${m.sub}</span></div></a>`).join("")}
+  </div>
+  <div class="ctas">
+    <button class="btn main" onclick="share()">📤 다른 엄마에게 공유하기</button>
+    <button class="btn line" onclick="ans=[];go(0)">다시 체크하기</button>
+    <p class="note">이 체크리스트는 진단이 아니에요. 생활 습관을 돌아보는 참고용이에요.<br>통증이 계속되거나 걱정되는 모습이 있으면 소아청소년과·정형외과에서 상담해 주세요.<br>© 맘들의 정보터</p>
+  </div>`;
+  $("result").innerHTML = h;
+  show("result");
+  CUR = { ans: ans.slice(), name: t.emoji + " " + t.name, week, date: (saved && restoring) ? saved.date : today(), checks: (saved && restoring) ? (saved.checks || []) : [] };
+  CUR.checks.forEach((c, k) => { const el = $("w" + k); if (el) el.checked = !!c; });
+  store(CUR);
+}
+
+// ---- 저장 (이 휴대폰에만, 실패해도 페이지는 그대로 동작) ----
+const KEY = "posture_check_v1";
+let CUR = null, saved = null, restoring = false;
+function today() { const d = new Date(); return (d.getMonth() + 1) + "월 " + d.getDate() + "일"; }
+function store(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+function load() { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { return null; } }
+function saveChecks() { if (!CUR) return; CUR.checks = CUR.week.map((w, k) => !!($("w" + k) && $("w" + k).checked)); store(CUR); }
+function resume() { if (!saved) return; ans = saved.ans.slice(); restoring = true; result(); restoring = false; }
+function restart() { saved = null; ans = []; go(0); }
+(function init() {
+  saved = load();
+  if (saved && saved.ans && saved.ans.length === Q.length) {
+    const done = (saved.checks || []).filter(Boolean).length;
+    const box = document.createElement("div");
+    box.className = "resume";
+    box.innerHTML = `<b>📌 ${saved.date}에 체크한 결과가 있어요</b><span>${saved.name} · 7일 미션 ${done}/${saved.week.length} 완료</span>
+      <button class="btn main" style="margin-top:10px" onclick="resume()">이어서 보기</button>
+      <button class="btn line" onclick="restart()">처음부터 다시 체크하기</button>`;
+    const pad = document.querySelector("#start .pad");
+    pad.insertBefore(box, pad.querySelector(".btn.main"));
+    pad.querySelector(":scope > .btn.main").classList.add("hide");
+  }
+})();
+
+// ---- 미션표 이미지 (냉장고용) ----
+async function missionImage() {
+  if (!CUR) return;
+  saveChecks();
+  try { await document.fonts.ready; } catch (e) {}
+  const W = 1080, P = 70, rowH = 112, H = 520 + CUR.week.length * rowH + 200;
+  const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const g = c.getContext("2d"), F = '"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
+  g.fillStyle = "#f6f8f4"; g.fillRect(0, 0, W, H);
+  g.fillStyle = "#fff"; round(g, 40, 40, W - 80, H - 80, 44); g.fill();
+  g.fillStyle = "#2f8f6b"; round(g, 40, 40, W - 80, 230, 44); g.fill(); g.fillRect(40, 200, W - 80, 70);
+  g.fillStyle = "#fff"; g.textAlign = "center";
+  g.font = "700 34px " + F; g.fillText("맘들의 정보터 · 우리 아이 자세 체크리스트", W / 2, 120);
+  g.font = "900 64px " + F; g.fillText("우리 아이 7일 미션", W / 2, 205);
+  g.fillStyle = "#26302b"; g.font = "800 44px " + F; g.fillText(CUR.name, W / 2, 350);
+  g.fillStyle = "#66716b"; g.font = "600 32px " + F; g.fillText(CUR.date + " 시작 · 하나씩 체크해 보세요", W / 2, 410);
+  g.textAlign = "left";
+  CUR.week.forEach((w, k) => {
+    const y = 480 + k * rowH;
+    g.strokeStyle = "#2f8f6b"; g.lineWidth = 5; round(g, P + 20, y, 62, 62, 14); g.stroke();
+    if (CUR.checks[k]) { g.fillStyle = "#2f8f6b"; round(g, P + 20, y, 62, 62, 14); g.fill(); g.fillStyle = "#fff"; g.font = "900 46px " + F; g.fillText("✓", P + 33, y + 48); }
+    g.fillStyle = "#2f8f6b"; g.font = "800 28px " + F; g.fillText((k + 1) + "일", P + 110, y + 26);
+    g.fillStyle = "#26302b"; g.font = "700 36px " + F; wrap(g, w, P + 110, y + 70, W - P * 2 - 130, 40);
+    g.strokeStyle = "#dde7e1"; g.lineWidth = 2; g.setLineDash([8, 8]); g.beginPath(); g.moveTo(P + 20, y + rowH - 14); g.lineTo(W - P - 20, y + rowH - 14); g.stroke(); g.setLineDash([]);
+  });
+  g.fillStyle = "#8c958f"; g.font = "600 26px " + F; g.textAlign = "center";
+  g.fillText("진단이 아닌 생활 습관 참고용이에요 · 일주일 뒤 다시 체크해 보세요", W / 2, H - 90);
+  const blob = await new Promise(r => c.toBlob(r, "image/png"));
+  const file = new File([blob], "우리아이_7일미션.png", { type: "image/png" });
+  try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: "우리 아이 7일 미션" }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+  const url = URL.createObjectURL(blob);
+  const ov = document.createElement("div"); ov.className = "imgov";
+  ov.innerHTML = `<div><p>이미지를 꾹 눌러 저장하세요</p><img src="${url}" alt="7일 미션표"><a class="btn main" href="${url}" download="우리아이_7일미션.png">다운로드</a><button class="btn line" onclick="this.closest('.imgov').remove()">닫기</button></div>`;
+  document.body.appendChild(ov);
+}
+function round(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+function wrap(g, s, x, y, max, lh) { let line = ""; for (const ch of s) { if (g.measureText(line + ch).width > max) { g.fillText(line, x, y); line = ch; y += lh; } else line += ch; } g.fillText(line, x, y); }
+function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1800); }
+async function share() {
+  const url = location.href.split("?")[0] + "?from=share";
+  const data = { title: "우리 아이 자세 5분 체크리스트", text: "15문항 5분! 우리 아이 자세 습관 유형이랑 솔루션 알려 줘요 🧒", url };
+  try { if (navigator.share) { await navigator.share(data); return; } } catch (e) { return; }
+  try { await navigator.clipboard.writeText(url); toast("링크를 복사했어요"); } catch (e) { prompt("링크를 복사해 주세요", url); }
+}
+</script>
+</body>
+</html>
