@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>우리 집 육아 분담 5분 체크리스트 | 맘들의 정보터</title>
+<meta name="description" content="15문항 5분! 우리 집 육아가 한쪽으로 기울어 있지 않은지 체크하고, 부부가 같이 해 볼 맞춤 솔루션을 받아 보세요.">
+<meta property="og:title" content="우리 집 육아, 한쪽으로 기울어 있을까? 👫">
+<meta property="og:description" content="15문항 5분 · 우리 집 육아 분담 유형 + 맞춤 솔루션">
+<meta property="og:image" content="https://07161228min-ai.github.io/check/share/img/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root { --pu:#2f8f6b; --pu2:#6cc4a0; --mint:#2f8f6b; --bg:#f6f8f4; --ink:#26302b; --sub:#66716b; --line:#dde7e1; --soft:#e7f4ee; --warn:#e2563b; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { background:var(--bg); }
+body { font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink); word-break:keep-all; line-height:1.55; }
+.wrap { max-width:460px; margin:0 auto; padding:18px 18px 40px; min-height:100vh; }
+.brand { text-align:center; font-size:13px; font-weight:700; color:var(--pu); letter-spacing:.5px; margin-bottom:12px; }
+.card { background:#fff; border-radius:22px; box-shadow:0 6px 24px rgba(30,60,45,.10); overflow:hidden; }
+.hero img { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; background:var(--soft); }
+.pad { padding:20px 20px 22px; }
+h1 { font-size:25px; line-height:1.3; font-weight:800; letter-spacing:-.5px; }
+h1 em { font-style:normal; color:var(--pu); }
+.lead { color:var(--sub); font-size:15px; margin-top:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.chip { font-size:13px; font-weight:700; background:var(--soft); color:var(--pu); padding:4px 10px; border-radius:99px; }
+.btn { display:block; width:100%; border:0; border-radius:16px; padding:16px; font:inherit; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+.btn.main { background:var(--pu); color:#fff; margin-top:18px; box-shadow:0 4px 0 rgba(0,0,0,.22); }
+.btn.main:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,.22); }
+.btn.line { background:#fff; color:var(--pu); border:2px solid var(--pu); margin-top:10px; }
+.bar { height:8px; background:var(--soft); border-radius:99px; overflow:hidden; margin:4px 0 14px; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--pu2),var(--pu)); border-radius:99px; transition:width .3s; }
+.qtop { display:flex; justify-content:space-between; font-size:13px; font-weight:800; color:var(--pu); }
+.qtop span:last-child { color:var(--sub); font-weight:700; }
+.qtext { font-size:21px; font-weight:800; line-height:1.4; margin:8px 0 6px; letter-spacing:-.3px; }
+.qhint { font-size:14px; color:var(--sub); margin-bottom:16px; }
+.opt { display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:15px 16px; font:inherit; font-size:16px; font-weight:700; color:var(--ink); margin-bottom:10px; cursor:pointer; transition:.12s; }
+.opt:active, .opt.on { border-color:var(--pu); background:var(--soft); }
+.back { background:none; border:0; color:var(--sub); font:inherit; font-size:14px; margin-top:6px; cursor:pointer; padding:6px; }
+.rtop { text-align:center; padding:22px 20px 6px; }
+.rsmall { font-size:14px; color:var(--sub); font-weight:700; }
+.rname { font-size:29px; font-weight:900; margin-top:4px; letter-spacing:-.6px; }
+.rline { font-size:16px; color:var(--pu); font-weight:800; margin-top:6px; }
+.rimg { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; margin-top:14px; background:var(--soft); }
+.band { margin:16px 20px 0; border-radius:16px; padding:14px 16px; font-size:15px; font-weight:700; }
+.band b { display:block; font-size:17px; margin-bottom:2px; }
+.sec { padding:18px 20px 4px; }
+.sec h3 { font-size:17px; font-weight:900; margin-bottom:10px; }
+.sec p { font-size:15px; color:#3c4741; }
+.scenes { list-style:none; }
+.scenes li { background:#fffaf0; border-left:4px solid #f2c26b; border-radius:10px; padding:10px 12px; margin-bottom:8px; font-size:15px; color:#3c4741; }
+.sol { list-style:none; counter-reset:s; }
+.sol li { counter-increment:s; position:relative; padding:12px 12px 12px 48px; background:var(--soft); border-radius:14px; margin-bottom:8px; font-size:15px; color:#2d3832; }
+.sol li::before { content:counter(s); position:absolute; left:12px; top:12px; width:26px; height:26px; border-radius:50%; background:var(--pu); color:#fff; font-weight:900; font-size:14px; display:flex; align-items:center; justify-content:center; }
+.sol li b { display:block; font-size:16px; margin-bottom:2px; }
+.say { display:flex; flex-direction:column; gap:8px; }
+.say div { border-radius:14px; padding:10px 12px; font-size:15px; }
+.say .no { background:#fdeeee; color:#8a3b3b; text-decoration:line-through; text-decoration-color:rgba(138,59,59,.5); }
+.say .yes { background:#eaf6ff; color:#1f4f75; font-weight:700; }
+.week { list-style:none; }
+.week li { display:flex; gap:10px; align-items:flex-start; padding:9px 0; border-bottom:1px dashed var(--line); font-size:15px; }
+.week li input { width:20px; height:20px; accent-color:var(--pu); flex:none; margin-top:2px; }
+.mix .row { display:flex; align-items:center; gap:8px; margin-bottom:8px; font-size:14px; font-weight:700; }
+.mix .row span:first-child { width:118px; flex:none; }
+.mix .track { flex:1; height:12px; background:var(--soft); border-radius:99px; overflow:hidden; }
+.mix .track i { display:block; height:100%; border-radius:99px; background:var(--pu2); }
+.mix .row.top .track i { background:var(--pu); }
+.mix .row b { width:42px; text-align:right; flex:none; }
+.doc { margin:16px 20px 0; border:2px solid var(--warn); background:#fff5f2; border-radius:16px; padding:14px 16px; font-size:15px; color:#6b2a1c; }
+.doc b { display:block; font-size:16px; margin-bottom:4px; color:var(--warn); }
+.prod { margin:18px 20px 0; border-radius:18px; border:2px solid var(--line); overflow:hidden; background:#fff; }
+.prod .ph { display:flex; gap:12px; padding:14px; align-items:center; }
+.prod img { width:92px; height:92px; object-fit:contain; background:#f4f6f5; border-radius:12px; flex:none; }
+.prod .tag { font-size:12px; font-weight:800; color:var(--pu); }
+.prod .pn { font-size:17px; font-weight:900; line-height:1.3; margin-top:2px; }
+.prod .pd { font-size:14px; color:var(--sub); margin-top:4px; }
+.prod a { display:block; background:var(--pu); color:#fff; text-align:center; font-weight:800; padding:13px; text-decoration:none; font-size:16px; }
+.prod .fine { font-size:11.5px; color:#8c958f; padding:8px 14px 10px; line-height:1.5; }
+.sol li .qq { display:block; font-size:12.5px; font-weight:700; color:var(--pu); margin-bottom:3px; }
+.ebook { margin:18px 20px 0; padding:16px; border-radius:18px; background:#eef5ff; border:2px solid #cfe0f7; }
+.ebook h3 { font-size:16px; font-weight:900; margin-bottom:10px; }
+.ebook a { display:flex; align-items:center; gap:10px; background:#fff; border-radius:14px; padding:12px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.ebook .ei { font-size:22px; flex:none; }
+.ebook b { font-size:14.5px; line-height:1.4; flex:1; }
+.ebook .eg { font-size:12px; font-weight:800; color:#2c6fb7; flex:none; }
+.wsave { font-size:12.5px; color:var(--pu); font-weight:700; margin-top:8px; }
+.resume { background:#fff7e6; border:2px solid #f2c26b; border-radius:16px; padding:14px; margin-top:16px; }
+.resume b { display:block; font-size:16px; }
+.resume span { font-size:14px; color:var(--sub); }
+.imgov { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:50; display:flex; align-items:center; justify-content:center; padding:16px; }
+.imgov > div { background:#fff; border-radius:18px; padding:14px; max-width:420px; width:100%; max-height:92vh; overflow:auto; text-align:center; }
+.imgov p { font-weight:800; margin-bottom:8px; }
+.imgov img { width:100%; border-radius:10px; border:1px solid var(--line); }
+.ctas { padding:14px 20px 20px; }
+.more { margin:16px 20px 6px; padding:16px; border-radius:18px; background:#fff8ec; border:2px dashed #f0c987; }
+.more h3 { font-size:16px; font-weight:900; margin-bottom:10px; }
+.more a { display:flex; align-items:center; gap:12px; background:#fff; border-radius:14px; padding:8px; margin-bottom:8px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.more a img { width:52px; height:65px; object-fit:cover; border-radius:10px; flex:none; background:var(--soft); }
+.more a b { font-size:15px; display:block; line-height:1.35; }
+.more a span { font-size:12px; color:var(--sub); }
+.note { font-size:12px; color:#8c958f; text-align:center; margin-top:16px; line-height:1.6; padding:0 8px; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%); background:#26302b; color:#fff; padding:10px 16px; border-radius:99px; font-size:14px; opacity:0; transition:.25s; pointer-events:none; }
+.toast.on { opacity:.95; }
+.hide { display:none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">맘들의 정보터 · 5분 체크리스트</div>
+
+  <!-- 시작 -->
+  <div id="start" class="card">
+    <div class="hero"><img src="img/cover.jpg" alt="아이를 사이에 두고 육아를 나누는 엄마와 아빠"></div>
+    <div class="pad">
+      <h1>둘이 키우는데,<br>왜 한 명만 지칠까?<br><em>우리 집 육아 분담 5분 체크리스트</em></h1>
+      <p class="lead">요즘 우리 집 하루를 떠올리며 15문항만 체크해 주세요. 엄마·아빠 누가 해도 돼요.<br>우리 집 육아 분담 유형과 <b>둘이 같이 해 볼 수 있는 솔루션</b>을 알려 드려요.</p>
+      <div class="chips"><span class="chip">15문항</span><span class="chip">5분</span><span class="chip">체크한 항목별 솔루션</span><span class="chip">7일 미션</span></div>
+      <button class="btn main" onclick="go(0)">체크 시작하기</button>
+      <p class="note">누가 잘못했는지 가리는 테스트가 아니에요. 0~7세 아이를 키우는 엄마·아빠를 위해 만들었어요.</p>
+    </div>
+  </div>
+
+  <!-- 문항 -->
+  <div id="quiz" class="card hide">
+    <div class="pad">
+      <div class="qtop"><span id="qsec"></span><span id="qno"></span></div>
+      <div class="bar"><i id="qbar"></i></div>
+      <div class="qtext" id="qtext"></div>
+      <div class="qhint" id="qhint"></div>
+      <div id="opts"></div>
+      <button class="back" id="qback" onclick="prev()">← 이전 문항</button>
+    </div>
+  </div>
+
+  <!-- 결과 -->
+  <div id="result" class="card hide"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SLUG = "share";
+const PRODUCT = null;
+const AREAS = {
+  A: { label: "🧠 보이지 않는 육아" },
+  B: { label: "🌙 밤·주말·아픈 날" },
+  C: { label: "🗣️ 부탁과 말투" },
+  D: { label: "💛 쉼과 마음" }
+};
+const Q = [
+  ["A", "예방접종·병원 일정을 한 사람만 기억한다", ""],
+  ["A", "어린이집 알림장·준비물을 한 사람만 챙긴다", ""],
+  ["A", "아이 옷 사이즈, 떨어진 기저귀·간식을 한 사람만 안다", "\"어디 있어?\" 질문이 늘 한 사람에게 가요"],
+  ["A", "아이 반찬·식단을 한 사람만 고민한다", ""],
+  ["B", "밤에 아이가 깨면 늘 같은 사람이 일어난다", ""],
+  ["B", "주말 아침에 늦잠을 자는 사람이 늘 정해져 있다", ""],
+  ["B", "아이가 아플 때 휴가·조퇴는 늘 한 사람이 낸다", ""],
+  ["C", "한 사람이 육아를 \"도와줄게\"라고 말한다", "같이 하는 일인데 '도와준다'는 말이 나와요"],
+  ["C", "하나하나 말해야만 움직인다", "\"말하면 하잖아\"가 익숙하다면 체크!"],
+  ["C", "내 방식대로 안 하면 지적하게 되고, 상대는 손을 놓는다", ""],
+  ["D", "둘 중 한 사람은 일주일에 혼자 1시간 쉬는 시간이 없다", ""],
+  ["D", "육아 이야기를 꺼내면 자주 싸움으로 끝난다", ""],
+  ["D", "서로에게 \"고마워\"를 말한 지 오래됐다", ""],
+  ["X", "둘 중 한 사람이 2주 넘게 우울하고, 잠·입맛이 달라지고, 아무것도 하기 싫어한다", ""],
+  ["X", "다툴 때 물건을 던지거나, 겁을 주는 말·행동이 나온 적이 있다", ""]
+];
+const SOLQ = [
+  ["가족 캘린더 '같이 보기'", "예방접종·병원·어린이집 일정은 휴대폰 공유 캘린더에 넣고 알림을 두 사람 다 받게 해요. 기억하는 일도 나눠야 해요.", "공유 캘린더 만들고 일정 3개 넣기"],
+  ["알림장은 '요일 담당'", "어린이집 앱 알림을 두 사람 다 받고, 준비물은 요일마다 담당을 정해요. 월·수·금은 엄마, 화·목은 아빠처럼요.", "알림장·준비물 요일 담당 정하기"],
+  ["'우리 집 육아 메모' 한 장", "아이 옷 사이즈, 좋아하는 간식, 기저귀 단계, 비상약 위치를 한 장에 적어 냉장고에 붙여요. \"어디 있어?\" 질문이 줄어요.", "육아 메모 한 장 써서 냉장고에 붙이기"],
+  ["식단은 '일주일에 한 번 같이'", "주말에 10분, 다음 주 반찬·장보기 목록을 같이 정해요. 고민하는 일을 한 사람이 혼자 들고 있지 않게요.", "주말 10분 식단·장보기 같이 정하기"],
+  ["밤 당번 '번갈아 하기'", "밤에 깨는 아이는 요일을 나눠 번갈아 맡아요. 당번이 아닌 날엔 귀마개를 하고 푹 자도 돼요.", "밤 당번 요일 정하기"],
+  ["주말 늦잠 '교대권'", "토요일은 엄마, 일요일은 아빠처럼 늦잠 자는 날을 번갈아 정해요. 쉬는 날이 보장되면 마음이 훨씬 너그러워져요.", "주말 늦잠 교대 정하기"],
+  ["아픈 날 '1순위·2순위' 미리", "아이가 아플 때 누가 먼저 휴가를 낼지, 안 되면 누가 할지 미리 정해 둬요. 아빠도 쓸 수 있는 가족돌봄휴가·육아휴직 제도를 같이 알아봐요.", "아이 아픈 날 1·2순위 정하기"],
+  ["'도와줄게' 대신 '내가 할게'", "\"도와줄게\"는 육아가 한 사람 일이라는 뜻처럼 들려요. \"오늘 목욕은 내가 할게\"처럼 말만 바꿔도 분위기가 달라져요.", "'내가 할게'로 말 바꾸기"],
+  ["부탁 말고 '통째로 맡기기'", "\"기저귀 좀 갈아 줘\"처럼 하나씩 부탁하기보다 '목욕 전체', '등원 준비 전체'처럼 한 덩어리를 통째로 맡겨요. 맡은 사람이 처음부터 끝까지 챙겨요.", "육아 일 하나 통째로 맡기기"],
+  ["맡겼으면 '방식은 상대에게'", "맡긴 일은 내 방식과 달라도 위험하지 않으면 지켜봐요. 지적 대신 \"이렇게 하니까 아이가 좋아하네\"라고 말해 줘요.", "맡긴 일 방식에 지적 안 하기"],
+  ["각자 '혼자 시간' 일주일 1번", "일주일에 한 번, 각자 1~2시간은 아이 없이 쉬는 시간을 달력에 적어요. 쉬어야 다시 웃으며 육아해요.", "각자 혼자 쉬는 시간 달력에 적기"],
+  ["육아 회의는 '아이 잠든 뒤 15분'", "피곤한 순간에 말하면 싸움이 돼요. 아이 잠든 뒤 15분, 이번 주 힘들었던 것 하나와 바꾸고 싶은 것 하나만 이야기해요.", "아이 잠든 뒤 15분 육아 회의"],
+  ["하루 한 번 '고마워'", "\"오늘 등원시켜 줘서 고마워\"처럼 구체적으로 말해요. 작은 고마움이 쌓여야 큰 부탁도 쉬워져요.", "하루 한 번 구체적으로 '고마워' 말하기"]
+];
+const D = id => "https://drive.google.com/file/d/" + id + "/preview";
+const EB = {
+  husband: ["남편이 출산 전에 꼭 알아야 할 30가지", D("1Rglevfzq-r4zlUr0kDLIuFyDxaqQjKwF")],
+  dadalone: ["아빠 혼자 아기 보는 날 매뉴얼 · 분유, 기저귀, 목욕, 재우기 실전", D("1uQRsX4NfPpc_WhLkVUjDPKlfnmpjyyGS")],
+  regret: ["엄마들이 가장 많이 후회하는 육아 50가지", D("17TcvQnHW7WF9xtKqq_W__bbcl9vGuRZh")],
+  leave: ["아기 낳고 이것부터 챙기세요! 엄마·아빠가 받을 수 있는 휴가와 지원금 20가지", D("1bf7py2BWuA5JaDV-6rM3DrKrrzeeDdtK")],
+  anger: ["아이에게 소리 지르고 후회한 밤, 엄마 화 다루기 30가지", D("1RIu94q8-FUiXzFfEBjEkAqY18GVDqOl0")],
+  pp100: ["산후 100일 엄마 마음 설명서 · 산후우울 도움 가이드", D("13d4Fo36dQJ6kEqW5qaqWqfN1sAj947dE")]
+};
+const EBT = { A: ["husband", "regret"], B: ["leave", "dadalone"], C: ["dadalone", "husband"], D: ["anger", "regret"] };
+const OPT = [["그래요, 자주 그래요", 2], ["가끔 그래요", 1], ["아니에요", 0]];
+const OPTX = [["네, 그래요", 2], ["잘 모르겠어요", 1], ["아니에요", 0]];
+
+const TYPES = {
+  A: {
+    name: "머릿속 육아 한 명형", emoji: "🧠", img: "img/A.jpg",
+    line: "\"여보, 애 양말 어디 있어?\" 오늘만 다섯 번째",
+    scenes: [
+      "다음 주 예방접종 날짜, 어린이집 준비물, 떨어진 기저귀까지 한 사람 머릿속에만 있어요.",
+      "\"말해 주면 할게\"라는데, 말하는 것부터가 일이에요.",
+      "장보기 목록을 쓰다 보면 밤 12시예요.",
+      "몸은 쉬어도 머리는 퇴근을 못 해요."
+    ],
+    why: "기저귀 갈기처럼 눈에 보이는 일보다 <b>기억하고, 챙기고, 고민하는 일</b>이 더 지칠 때가 많아요. 이 일은 티가 안 나서 한 사람에게 쌓이기 쉬워요. 머릿속 일을 종이와 캘린더로 꺼내서 같이 보는 게 첫걸음이에요.",
+    sol: [
+      ["가족 캘린더 '같이 보기'", "알림을 두 사람 다 받아요."],
+      ["'우리 집 육아 메모' 한 장", "냉장고에 붙이면 질문이 줄어요."],
+      ["알림장은 '요일 담당'", "준비물도 나눠서 챙겨요."]
+    ],
+    no: "\"내가 다 기억해야 돼? 당신은 아는 게 뭐야!\"",
+    yes: "\"우리 캘린더 같이 쓰자. 다음 주 접종은 당신이 챙겨 줄래?\"",
+    week: ["공유 캘린더 만들고 일정 3개 넣기", "육아 메모 한 장 써서 냉장고에 붙이기", "알림장·준비물 요일 담당 정하기", "주말 10분 식단·장보기 같이 정하기", "아이 잠든 뒤 15분 육아 회의", "하루 한 번 구체적으로 '고마워' 말하기", "일주일 뒤 둘이 같이 이 체크리스트 다시 하기"],
+    product: false
+  },
+  B: {
+    name: "밤 근무 한 명형", emoji: "🌙", img: "img/B.jpg",
+    line: "새벽 3시, 오늘도 일어나는 사람은 정해져 있다",
+    scenes: [
+      "아이 울음소리에 한 사람은 벌떡, 다른 사람은 쿨쿨.",
+      "주말 아침, 늦잠은 늘 같은 사람 차지예요.",
+      "아이가 열이 나면 회사에 전화하는 사람도 늘 같아요.",
+      "\"나도 피곤해\"가 서로의 입버릇이 됐어요."
+    ],
+    why: "밤·주말·아픈 날처럼 <b>힘든 시간</b>이 한 사람에게 몰리면 피로가 쌓여요. 누가 더 힘든지 따지기보다 당번과 순서를 미리 정해 두면 다툼이 줄고, 둘 다 쉴 수 있어요.",
+    sol: [
+      ["밤 당번 '번갈아 하기'", "당번 아닌 날엔 푹 자도 돼요."],
+      ["주말 늦잠 '교대권'", "토요일 엄마, 일요일 아빠!"],
+      ["아픈 날 '1순위·2순위' 미리", "아빠도 쓸 수 있는 휴가 제도 확인."]
+    ],
+    no: "\"당신은 애 우는 소리도 안 들려?\"",
+    yes: "\"오늘 밤은 당신 당번이야. 나는 귀마개 하고 잘게, 고마워!\"",
+    week: ["밤 당번 요일 정하기", "주말 늦잠 교대 정하기", "아이 아픈 날 1·2순위 정하기", "가족돌봄휴가·육아휴직 제도 같이 찾아보기", "각자 혼자 쉬는 시간 달력에 적기", "하루 한 번 구체적으로 '고마워' 말하기", "일주일 뒤 둘이 같이 이 체크리스트 다시 하기"],
+    product: false
+  },
+  C: {
+    name: "도와줄게형", emoji: "🗣️", img: "img/C.jpg",
+    line: "\"뭐 도와줄까?\" 고마운데… 왜 서운하지?",
+    scenes: [
+      "\"기저귀 좀 갈아 줘\", \"물 좀 떠 줘\"… 부탁하다 하루가 가요.",
+      "말 안 하면 안 하고, 말하면 잔소리가 돼요.",
+      "목욕을 맡겼더니 방식이 달라서 결국 내가 다시 해요.",
+      "\"그럼 당신이 해!\" 하고 손을 놓아 버려요."
+    ],
+    why: "'도와준다'는 말에는 육아가 한 사람 일이라는 생각이 숨어 있어요. 하나씩 부탁하면 맡은 사람은 시키는 일만 하게 되고, 부탁하는 사람은 지쳐요. <b>한 덩어리를 통째로 맡기고, 방식은 믿어 주는 것</b>이 핵심이에요.",
+    sol: [
+      ["'도와줄게' 대신 '내가 할게'", "말만 바꿔도 분위기가 달라져요."],
+      ["부탁 말고 '통째로 맡기기'", "목욕 전체, 등원 준비 전체!"],
+      ["맡겼으면 '방식은 상대에게'", "지적 대신 칭찬 한마디."]
+    ],
+    no: "\"그렇게 하는 거 아니라니까! 그냥 내가 할게.\"",
+    yes: "\"오늘 목욕은 처음부터 끝까지 당신이 맡아 줘. 서아가 아빠 목욕 좋아하더라!\"",
+    week: ["'내가 할게'로 말 바꾸기", "육아 일 하나 통째로 맡기기", "맡긴 일 방식에 지적 안 하기", "육아 메모 한 장 써서 냉장고에 붙이기", "아이 잠든 뒤 15분 육아 회의", "하루 한 번 구체적으로 '고마워' 말하기", "일주일 뒤 둘이 같이 이 체크리스트 다시 하기"],
+    product: false
+  },
+  D: {
+    name: "고마움 바닥형", emoji: "💛", img: "img/D.jpg",
+    line: "둘 다 열심히 하는데, 둘 다 서운하다",
+    scenes: [
+      "아이 재우고 나면 각자 휴대폰만 보다 잠들어요.",
+      "\"오늘 힘들었어\" 한마디가 \"나는 안 힘들어?\"로 돌아와요.",
+      "마지막으로 혼자 카페에 간 게 언제였는지 기억이 안 나요.",
+      "\"고마워\"라는 말, 아이한테만 하고 있어요."
+    ],
+    why: "누가 잘못해서가 아니라, <b>둘 다 쉬지 못해서</b> 마음의 여유가 바닥난 상태예요. 쉬는 시간을 먼저 정하고, 이야기는 피곤한 순간이 아니라 아이 잠든 뒤 짧게 나누면 다툼이 대화로 바뀌어요.",
+    sol: [
+      ["각자 '혼자 시간' 일주일 1번", "쉬어야 다시 웃어요."],
+      ["육아 회의는 '아이 잠든 뒤 15분'", "힘든 것 하나, 바꿀 것 하나."],
+      ["하루 한 번 '고마워'", "구체적으로 말해요."]
+    ],
+    no: "\"나만 힘든 줄 알아? 당신만 힘든 거 아니야!\"",
+    yes: "\"요즘 우리 둘 다 지쳤다. 이번 주 토요일 오후는 당신 혼자 쉬어.\"",
+    week: ["각자 혼자 쉬는 시간 달력에 적기", "아이 잠든 뒤 15분 육아 회의", "하루 한 번 구체적으로 '고마워' 말하기", "둘이 10분 산책하기", "밤 당번 요일 정하기", "서로 힘들었던 순간 하나씩 들어 주기", "일주일 뒤 둘이 같이 이 체크리스트 다시 하기"],
+    product: false
+  }
+};
+const MORE = [
+  { url: "https://07161228min-ai.github.io/danttok/", img: "https://07161228min-ai.github.io/danttok/img/cover.jpg", title: "단톡방에서 나는 어떤 엄마?", sub: "1분 재미 테스트" },
+  { url: "https://07161228min-ai.github.io/jamjari/", img: "https://07161228min-ai.github.io/jamjari/img/cover.jpg", title: "재우기 전쟁, 나는 무슨 엄마?", sub: "1분 재미 테스트" },
+  { url: "https://07161228min-ai.github.io/dungwon/", img: "https://07161228min-ai.github.io/dungwon/img/cover.jpg", title: "아침 등원 전쟁, 나는 무슨 엄마?", sub: "1분 재미 테스트" }
+];
+
+let i = 0, ans = [];
+const $ = id => document.getElementById(id);
+function show(id) { ["start", "quiz", "result"].forEach(x => $(x).classList.toggle("hide", x !== id)); scrollTo(0, 0); }
+function go(n) { i = n; show("quiz"); render(); }
+function render() {
+  const [area, text, hint] = Q[i];
+  $("qsec").textContent = area === "X" ? "🔍 꼭 한 번 봐 주세요" : AREAS[area].label;
+  $("qno").textContent = (i + 1) + " / " + Q.length;
+  $("qbar").style.width = (i / Q.length * 100) + "%";
+  $("qtext").textContent = text;
+  $("qhint").textContent = hint;
+  $("qhint").classList.toggle("hide", !hint);
+  const opts = area === "X" ? OPTX : OPT;
+  $("opts").innerHTML = opts.map(([t, v]) => `<button class="opt${ans[i] === v ? " on" : ""}" onclick="pick(${v})">${t}</button>`).join("");
+  $("qback").classList.toggle("hide", i === 0);
+}
+function pick(v) { ans[i] = v; if (i < Q.length - 1) { i++; render(); } else result(); }
+function prev() { if (i > 0) { i--; render(); } }
+
+function result() {
+  const sum = {}, max = {};
+  Q.forEach(([a], k) => { if (a === "X") return; sum[a] = (sum[a] || 0) + ans[k]; max[a] = (max[a] || 0) + 2; });
+  const pct = {}; Object.keys(sum).forEach(a => pct[a] = Math.round(sum[a] / max[a] * 100));
+  const order = Object.keys(pct).sort((a, b) => pct[b] - pct[a] || sum[b] - sum[a]);
+  const top = order[0];
+  const total = Object.values(sum).reduce((x, y) => x + y, 0); // 0~26
+  const t = total === 0 ? { ...TYPES[top], name: "찰떡 육아 팀", emoji: "🌱", img: "img/cover.jpg", line: "체크된 항목이 하나도 없어요! 지금처럼만 함께해 주세요",
+    scenes: [], why: "", no: "\"당신이 좀 해!\"", yes: "\"오늘도 우리 팀워크 최고였어, 고마워!\"", product: false } : TYPES[top];
+  const blue = ans[13], fight = ans[14];
+  let band;
+  if (total <= 7) band = ["🌱 균형 잡힌 우리 집 육아", "육아를 잘 나누고 계세요. 아래 솔루션 중 하나만 더해도 충분해요.", "#eef8f1", "#2f6b4c"];
+  else if (total <= 15) band = ["🌤 조금 기울어 있어요", "한쪽으로 몰리는 일이 몇 가지 보여요. 오늘 솔루션 3가지를 둘이 같이 정해 보세요.", "#fff7e6", "#7a5410"];
+  else band = ["🔥 이번 주는 육아 분담 다시 짜기", "한 사람에게 많이 몰려 있어요. 이 결과를 배우자에게 보내고, 7일 미션을 같이 해 보세요.", "#fff0ec", "#8a3320"];
+  const allZero = total === 0;
+  const rank = a => order.indexOf(a);
+  const hit = Q.map((q, k) => k).filter(k => Q[k][0] !== "X" && ans[k] > 0)
+    .sort((x, y) => ans[y] - ans[x] || rank(Q[x][0]) - rank(Q[y][0]) || x - y);
+  let week = hit.slice(0, 6).map(k => SOLQ[k][2]);
+  if (week.length < 6) week = week.concat(t.week.filter(w => !week.includes(w) && !/다시 하기/.test(w)).slice(0, 6 - week.length));
+  week.push("일주일 뒤 체크리스트 다시 하기 (점수 비교!)");
+  const ebKeys = [...EBT[top]];
+  if (blue > 0) ebKeys.unshift("pp100");
+  const ebs = [...new Set(ebKeys)].slice(0, 3).map(k => EB[k]);
+
+  let h = `
+  <div class="rtop">
+    <div class="rsmall">우리 집 육아 분담 유형은</div>
+    <div class="rname">${t.emoji} ${t.name}</div>
+    <div class="rline">${t.line}</div>
+  </div>
+  <img class="rimg" src="${t.img}" alt="${t.name}">
+  <div class="band" style="background:${band[2]};color:${band[3]}"><b>${band[0]} <span style="font-size:14px">(${total}/26점)</span></b>${band[1]}</div>
+  ${blue === 2 || fight === 2 ? `<div class="doc"><b>🏥 이건 혼자 견디지 마세요</b>${blue === 2 ? "2주 넘게 우울하고 잠·입맛이 달라졌다면 지쳐서가 아니라 도움이 필요한 신호일 수 있어요. <b>정신건강의학과</b>나 <b>정신건강 위기상담 1577-0199</b>(24시간)에 이야기해 보세요. 나를 해치고 싶은 생각이 든다면 바로 <b>109</b>(자살예방 상담, 24시간)에 전화해 주세요." : ""}${blue === 2 && fight === 2 ? "<br><br>" : ""}${fight === 2 ? "다툼 중에 물건을 던지거나 겁을 주는 일이 있다면 육아 분담보다 <b>안전</b>이 먼저예요. 위험하다고 느끼면 <b>112</b>, 상담이 필요하면 <b>1366</b>(24시간)에 연락해 주세요. 아이가 지켜보고 있다면 더욱 미루지 마세요." : ""}</div>` : ""}
+  ${blue !== 2 && fight !== 2 && (blue === 1 || fight === 1) ? `<div class="doc" style="border-color:#f0b54a;background:#fffaf0;color:#6b4d12"><b style="color:#c4860f">🔍 서로의 마음도 한 번 살펴봐 주세요</b>요즘 배우자의 잠·입맛·표정이 어떤지 한 번 물어봐 주세요. 힘든 상태가 2주 넘게 이어지면 1577-0199에서 상담받을 수 있어요.</div>` : ""}
+  ${t.scenes.length ? `<div class="sec">
+    <h3>😮 이런 장면, 익숙하죠?</h3>
+    <ul class="scenes">${t.scenes.map(s => `<li>${s}</li>`).join("")}</ul>
+  </div>
+  <div class="sec">
+    <h3>🤔 왜 그럴까요?</h3>
+    <p>${t.why}</p>
+  </div>` : ""}
+  ${hit.length ? `
+  <div class="sec">
+    <h3>✅ 우리 집 맞춤 솔루션 <span style="font-size:13px;color:var(--sub);font-weight:700">(체크하신 ${hit.length}개 항목)</span></h3>
+    <ol class="sol">${hit.map((k, n) => `<li class="${n >= 4 ? "xtra hide" : ""}"><span class="qq">${ans[k] === 2 ? "자주" : "가끔"} · ${Q[k][1]}</span><b>${SOLQ[k][0]}</b>${SOLQ[k][1]}</li>`).join("")}</ol>
+    ${hit.length > 4 ? `<button class="btn line" style="margin-top:4px;padding:12px;font-size:15px" onclick="document.querySelectorAll('.xtra').forEach(e=>e.classList.remove('hide'));this.remove()">나머지 솔루션 ${hit.length - 4}개 더 보기</button>` : ""}
+  </div>` : `
+  <div class="sec">
+    <h3>✅ 지금처럼 지켜 주면 좋은 3가지</h3>
+    <ol class="sol">${t.sol.map(([b, d]) => `<li><b>${b}</b>${d}</li>`).join("")}</ol>
+  </div>`}
+  <div class="sec">
+    <h3>💬 싸움 대신 이렇게 말해 보세요</h3>
+    <div class="say"><div class="no">${t.no}</div><div class="yes">${t.yes}</div></div>
+  </div>
+  <div class="sec">
+    <h3>📅 우리 부부 7일 미션 (체크해 보세요)</h3>
+    <ul class="week">${week.map((w, k) => `<li><input type="checkbox" id="w${k}" onchange="saveChecks()"><label for="w${k}">${w}</label></li>`).join("")}</ul>
+    <p class="wsave">✔ 체크하면 이 휴대폰에 자동 저장돼요. 다음에 들어와도 그대로 있어요.</p>
+    <button class="btn line" style="margin-top:8px" onclick="missionImage()">🖼️ 미션표 이미지로 저장하기</button>
+  </div>
+  <div class="sec mix">
+    <h3>📊 우리 집 육아 분담 한눈에</h3>
+    ${order.map(a => `<div class="row${a === top ? " top" : ""}"><span>${AREAS[a].label}</span><div class="track"><i style="width:${pct[a]}%"></i></div><b>${pct[a]}%</b></div>`).join("")}
+    <p style="font-size:13px;color:var(--sub);margin-top:4px">두 번째로 높은 <b>${AREAS[order[1]].label}</b>도 함께 챙겨 주면 좋아요.</p>
+  </div>`;
+  if (t.product && !allZero) {
+    h += `
+  <div class="prod">
+    <div class="ph"><img src="${PRODUCT.img}" alt="${PRODUCT.name}"><div><div class="tag">${PRODUCT.tag}</div><div class="pn">${PRODUCT.name}</div><div class="pd">${PRODUCT.desc}</div></div></div>
+    <a href="${PRODUCT.url}" target="_blank" rel="noopener">제품 보러 가기</a>
+    <div class="fine">${PRODUCT.fine}</div>
+  </div>`;
+  }
+  h += `
+  <div class="ebook">
+    <h3>📘 더 자세히 알고 싶다면 · 무료 전자책</h3>
+    ${ebs.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener"><span class="ei">📖</span><b>${n}</b><span class="eg">무료로 보기 ›</span></a>`).join("")}
+  </div>
+  <div class="more">
+    <h3>🎲 1분 재미 테스트도 해 보세요</h3>
+    ${MORE.map(m => `<a href="${m.url}?from=check_${SLUG}"><img src="${m.img}" alt=""><div><b>${m.title}</b><span>${m.sub}</span></div></a>`).join("")}
+  </div>
+  <div class="ctas">
+    <button class="btn main" onclick="share()">📤 배우자에게 보내서 같이 해 보기</button>
+    <button class="btn line" onclick="ans=[];go(0)">다시 체크하기</button>
+    <p class="note">이 체크리스트는 진단이 아니에요. 우리 집 육아를 돌아보는 참고용이에요.<br>마음이 많이 힘들면 1577-0199(24시간)에서 상담받을 수 있어요.<br>© 맘들의 정보터</p>
+  </div>`;
+  $("result").innerHTML = h;
+  show("result");
+  CUR = { ans: ans.slice(), name: t.emoji + " " + t.name, week, date: (saved && restoring) ? saved.date : today(), checks: (saved && restoring) ? (saved.checks || []) : [] };
+  CUR.checks.forEach((c, k) => { const el = $("w" + k); if (el) el.checked = !!c; });
+  store(CUR);
+}
+
+// ---- 저장 (이 휴대폰에만, 실패해도 페이지는 그대로 동작) ----
+const KEY = SLUG + "_check_v1";
+let CUR = null, saved = null, restoring = false;
+function today() { const d = new Date(); return (d.getMonth() + 1) + "월 " + d.getDate() + "일"; }
+function store(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+function load() { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { return null; } }
+function saveChecks() { if (!CUR) return; CUR.checks = CUR.week.map((w, k) => !!($("w" + k) && $("w" + k).checked)); store(CUR); }
+function resume() { if (!saved) return; ans = saved.ans.slice(); restoring = true; result(); restoring = false; }
+function restart() { saved = null; ans = []; go(0); }
+(function init() {
+  saved = load();
+  if (saved && saved.ans && saved.ans.length === Q.length) {
+    const done = (saved.checks || []).filter(Boolean).length;
+    const box = document.createElement("div");
+    box.className = "resume";
+    box.innerHTML = `<b>📌 ${saved.date}에 체크한 결과가 있어요</b><span>${saved.name} · 7일 미션 ${done}/${saved.week.length} 완료</span>
+      <button class="btn main" style="margin-top:10px" onclick="resume()">이어서 보기</button>
+      <button class="btn line" onclick="restart()">처음부터 다시 체크하기</button>`;
+    const pad = document.querySelector("#start .pad");
+    pad.insertBefore(box, pad.querySelector(".btn.main"));
+    pad.querySelector(":scope > .btn.main").classList.add("hide");
+  }
+})();
+
+// ---- 미션표 이미지 (냉장고용) ----
+async function missionImage() {
+  if (!CUR) return;
+  saveChecks();
+  try { await document.fonts.ready; } catch (e) {}
+  const W = 1080, P = 70, rowH = 112, H = 520 + CUR.week.length * rowH + 200;
+  const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const g = c.getContext("2d"), F = '"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
+  g.fillStyle = "#f6f8f4"; g.fillRect(0, 0, W, H);
+  g.fillStyle = "#fff"; round(g, 40, 40, W - 80, H - 80, 44); g.fill();
+  g.fillStyle = "#2f8f6b"; round(g, 40, 40, W - 80, 230, 44); g.fill(); g.fillRect(40, 200, W - 80, 70);
+  g.fillStyle = "#fff"; g.textAlign = "center";
+  g.font = "700 34px " + F; g.fillText("맘들의 정보터 · 우리 집 육아 분담 체크리스트", W / 2, 120);
+  g.font = "900 64px " + F; g.fillText("우리 부부 7일 육아 분담 미션", W / 2, 205);
+  g.fillStyle = "#26302b"; g.font = "800 44px " + F; g.fillText(CUR.name, W / 2, 350);
+  g.fillStyle = "#66716b"; g.font = "600 32px " + F; g.fillText(CUR.date + " 시작 · 하나씩 체크해 보세요", W / 2, 410);
+  g.textAlign = "left";
+  CUR.week.forEach((w, k) => {
+    const y = 480 + k * rowH;
+    g.strokeStyle = "#2f8f6b"; g.lineWidth = 5; round(g, P + 20, y, 62, 62, 14); g.stroke();
+    if (CUR.checks[k]) { g.fillStyle = "#2f8f6b"; round(g, P + 20, y, 62, 62, 14); g.fill(); g.fillStyle = "#fff"; g.font = "900 46px " + F; g.fillText("✓", P + 33, y + 48); }
+    g.fillStyle = "#2f8f6b"; g.font = "800 28px " + F; g.fillText((k + 1) + "일", P + 110, y + 26);
+    g.fillStyle = "#26302b"; g.font = "700 36px " + F; wrap(g, w, P + 110, y + 70, W - P * 2 - 130, 40);
+    g.strokeStyle = "#dde7e1"; g.lineWidth = 2; g.setLineDash([8, 8]); g.beginPath(); g.moveTo(P + 20, y + rowH - 14); g.lineTo(W - P - 20, y + rowH - 14); g.stroke(); g.setLineDash([]);
+  });
+  g.fillStyle = "#8c958f"; g.font = "600 26px " + F; g.textAlign = "center";
+  g.fillText("진단이 아닌 생활 습관 참고용이에요 · 일주일 뒤 다시 체크해 보세요", W / 2, H - 90);
+  const blob = await new Promise(r => c.toBlob(r, "image/png"));
+  const file = new File([blob], "우리부부_육아분담미션.png", { type: "image/png" });
+  try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: "우리 부부 7일 육아 분담 미션" }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+  const url = URL.createObjectURL(blob);
+  const ov = document.createElement("div"); ov.className = "imgov";
+  ov.innerHTML = `<div><p>이미지를 꾹 눌러 저장하세요</p><img src="${url}" alt="7일 미션표"><a class="btn main" href="${url}" download="우리부부_육아분담미션.png">다운로드</a><button class="btn line" onclick="this.closest('.imgov').remove()">닫기</button></div>`;
+  document.body.appendChild(ov);
+}
+function round(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+function wrap(g, s, x, y, max, lh) { let line = ""; for (const ch of s) { if (g.measureText(line + ch).width > max) { g.fillText(line, x, y); line = ch; y += lh; } else line += ch; } g.fillText(line, x, y); }
+function toast(m) { const t = $("toast"); t.textContent = m; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1800); }
+async function share() {
+  const url = location.href.split("?")[0] + "?from=share";
+  const data = { title: "우리 집 육아 분담 5분 체크리스트", text: "15문항 5분! 우리 집 육아가 한쪽으로 기울어 있는지, 같이 해 볼 솔루션 알려 줘요 👫", url };
+  try { if (navigator.share) { await navigator.share(data); return; } } catch (e) { return; }
+  try { await navigator.clipboard.writeText(url); toast("링크를 복사했어요"); } catch (e) { prompt("링크를 복사해 주세요", url); }
+}
+</script>
+</body>
+</html>
